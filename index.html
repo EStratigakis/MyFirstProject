@@ -17,7 +17,7 @@
         <div class="grid-33"> <a href="https://twitter.com/strpao13" class="twitter-follow-button" data-show-count="false">Follow @strpao13</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
     </section>
     $sql_query = "SELECT * FROM marvelmovis";
-    $result=mysqli_query($db,$sql);
+    $result=sql_query($db,$sql);
     while($row = $result->fetch_array())
     {
     /* the code inside here is repeated for each item in the array
