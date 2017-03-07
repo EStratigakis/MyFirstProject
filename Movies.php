@@ -1,4 +1,4 @@
-include dbConnect.php;
+include ("dbConnect.php");
 
 <?php
 $sql_query = "SELECT * FROM marvelmovies";
