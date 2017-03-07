@@ -1,6 +1,5 @@
-include ("dbConnect.php");
-
 <?php
+include ("dbConnect.php");
 $sql_query = "SELECT * FROM marvelmovies";
 $result=mysqli_query($db,$sql);
 while($row = $result->fetch_array())
