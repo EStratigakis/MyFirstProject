@@ -20,4 +20,8 @@ while($row = $result ->fetch_array())/*runs through the entries in the database 
 }
 ?>
 </body>
+<footer>
+    <A HREF="http://efstratios.azurewebsites.net">Home Page</A>
+
+</footer>
 </html>
