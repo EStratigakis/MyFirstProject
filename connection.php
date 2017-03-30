@@ -1,7 +1,21 @@
 <?php
-define('DB_SERVER', '127.0.0.1');
-define('DB_USERNAME', 'azure@localhost');
-define('DB_PASSWORD', '');
-define('DB_DATABASE', 'user');
-$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-?>
+
+// this will avoid mysql_connect() deprecation error.
+error_reporting( ~E_DEPRECATED & ~E_NOTICE );
+// but I strongly suggest you to use PDO or MySQLi.
+
+define('DBHOST', 'localhost');
+define('DBUSER', 'root');
+define('DBPASS', '');
+define('DBNAME', 'user');
+
+$conn = mysqli_connect(DBHOST,DBUSER,DBPASS);
+$dbcon = mysqli_select_db(DBNAME);
+
+if ( !$conn ) {
+    die("Connection failed : " . mysqli_error());
+}
+
+if ( !$dbcon ) {
+    die("Database Connection failed : " . mysqli_error());
+}
