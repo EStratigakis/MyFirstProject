@@ -8,12 +8,6 @@
 
 <?php
 include ('dbConnect.php');
-define('DB_SERVER', '127.0.0.1:56727');
-define('DB_USERNAME', 'strpao13@hotmail.com');
-define('DB_PASSWORD', 'Stratos-123');
-define('DB_DATABASE', 'info');
-$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {
@@ -26,7 +20,7 @@ $password=$_POST['password'];
 
 $sql="SELECT uid FROM users WHERE username='$username' and password='$password'";
 
-$result=mysqli_query($db,$sql);
+$result=mysqli_query($link,$sql);
 
 if(mysqli_num_rows($result) == 1)
     {
