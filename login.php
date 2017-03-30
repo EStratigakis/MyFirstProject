@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Login</title>
+</head>
+<body>
 
 <?php
 include('connection.php');
@@ -26,4 +33,11 @@ else
 }
 
 ?>
+
+</body>
+<footer>
+    <A HREF="http://efstratios.azurewebsites.net">Home Page</A>
+
+</footer>
+</html>
 
