@@ -1,35 +1,25 @@
-<!DOCTYPE html>
-
-
+<!doctype html>
 <html>
 <head>
-    <title> Frodo and his age</title>
+    <meta charset="utf-8">
+    <title>PHP Login Form without Session</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
+
 <body>
-<p>
-    <?php
-    echo "Hello World";
-    $myname = "Frodo Baggins";
-    $myage = 22;
-    echo "My name is " . $myname . "and I am " . $myage;
+<h1>PHP Login Form with Session</h1>
+<div class="loginBox">
+    <h3>Login Form</h3>
+    <br><br>
+    <form method="post" action="login.php">
+        <label>Username:</label><br>
+        <input type="text" name="username" placeholder="username" /><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" placeholder="password" />  <br><br>
+        <input type="submit" name="submit" value = "login"/>
+    </form>
+    <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 
-    if ($myage >= 16){
-        print "You can buy specs!";
-        if ($myage >= 18){
-            print "You can buy mugs";
-            if ($myage >= 21){
-                print "You can buy sausage rolls";
-            }
-        }
-    }
-    else {
-        print "You cannot buy anything!";
-    }
-
-   ?>
+</div>
 </body>
-<footer>
-    <A HREF="http://efstratios.azurewebsites.net">Home Page</A>
-
-</footer>
 </html>
