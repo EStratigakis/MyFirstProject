@@ -1,8 +1,8 @@
 <?
-$connectstr_dbhost = '127.0.0.1';
-$connectstr_dbname = 'user';
-$connectstr_dbusername = 'azure@localhost';
-$connectstr_dbpassword = 'Stratos-123';
+$connectstr_dbhost = '';
+$connectstr_dbname = '';
+$connectstr_dbusername = '';
+$connectstr_dbpassword = '';
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
         continue;

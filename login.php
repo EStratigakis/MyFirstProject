@@ -7,7 +7,7 @@
 <body>
 
 <?php
-include ('dbConnect.php');
+include('connection.php');
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {
