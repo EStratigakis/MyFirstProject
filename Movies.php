@@ -7,7 +7,7 @@
 <body>
     <?php
     include 'dbConnect.php';
-    mysqli_select_db($link,'marvelmovies');
+    mysqli_select_db($link,'marvelmovie');
     $sql= "SELECT * FROM marvelmovies";
     $result=mysqli_query($link,$sql);
         while($row = mysqli_fetch_array($result))
