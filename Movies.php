@@ -15,7 +15,7 @@
         /* the code inside here is repeated for each item in the array
         You can do things like the following to print out each movie title */
         $movieTitle = $row['title'];/*gets the title of the movie and puts it a string*/
-        echo '<tr>' . $movieTitle .'</tr>';/* prints the movie title to the end user*/
+        echo "<tr>" . $movieTitle ."</tr>";/* prints the movie title to the end user*/
 
         }
     ?>
