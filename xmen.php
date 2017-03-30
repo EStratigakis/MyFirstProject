@@ -8,7 +8,7 @@
 <?php
 include 'dbConnect.php';
 mysqli_select_db($link,'marvelmovie'); /* selects the database that is going to used and uses the connection in dbConnet.php */
-$sql= "SELECT * FROM marvelmovies WHERE productionStudio =  'Marvel Studios'"; /* this is the sql statement to select everything in the database*/
+$sql= "SELECT * FROM marvelmovies WHERE title LIKE 'X-men'"; /* this is the sql statement to select everything in the database*/
 $result=mysqli_query($link,$sql); /*this stores the statement in a string*/
 while($row = $result ->fetch_array())/*runs through the entries in the database one time and puts them in an array*/
 {
