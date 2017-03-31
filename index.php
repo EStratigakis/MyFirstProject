@@ -26,10 +26,10 @@
             $result = $link->query($sql_query);
             while($row=$result->fetch_array())
             {
-                $firstName = $row['firstName'];
-                $lastName = $row['lastName'];
+                $firstname = $row['firstName'];
+                $lastname = $row['lastName'];
                 $id = $row['superheroID'];
-                echo "<li> <a href='displayBattles.php?id={$id}'>Battles for {$firstName} {$lastName}</a></li>";
+                echo "<li> <a href='displayBattles.php?id={$id}'>Battles for {$firstname} {$lastname}</a></li>";
             }
         ?>
 </main>

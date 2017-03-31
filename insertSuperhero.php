@@ -2,11 +2,11 @@
 
 include ("connection.php");
 
-$firstName = $_POST["firstname"];
-$lastName = $_POST["lastname"];
+$firstname = $_POST["firstname"];
+$lastname = $_POST["lastname"];
 $superpower = $_POST["superpower"];
 mysqli_select_db($link,'superbattles');
-$sql = "INSERT INTO superheros (firstName, lastName, mainSuperpower) VALUES ('$firstName','$lastName','$superpower')";
+$sql = "INSERT INTO superheros (firstName, lastName, mainSuperpower) VALUES ('$firstname','$lastname','$superpower')";
 
 if (mysqli_query($link, $sql)) {echo "ok";}
 else {

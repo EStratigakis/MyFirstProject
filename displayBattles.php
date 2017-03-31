@@ -29,13 +29,13 @@
     while($row = $result->fetch_array())
     {
 
-        $firstName = $row['firstname'];
-        $lastName = $row['lastname'];
+        $firstname = $row['firstname'];
+        $lastname = $row['lastname'];
         $mainSuperpower = $row['mainSuperpower'];
         $villainFought = $row['villainFought'];
 
         echo "<article>
-              <p> The superhero known as <strong>{$firstName} {$lastName}</strong> recently fought <strong>{$villainFought}</strong> using <strong>{$mainSuperpower}</strong></p>";
+              <p> The superhero known as <strong>{$firstname} {$lastname}</strong> recently fought <strong>{$villainFought}</strong> using <strong>{$mainSuperpower}</strong></p>";
 
     }
     ?>

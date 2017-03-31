@@ -16,17 +16,17 @@
         <select name="superhero">
             <?
             include ("connection.php");
-            mysqli_select_db($link,'superbattles');
+
             $sql_query = "SELECT * FROM superheros";
 
             $result = $link->query($sql_query);
 
             while ($row = $result->fetch_array())
             {
-                $firstName = $row['firstName'];
-                $lastName = $row['lastName'];
+                $firstname = $row['firstName'];
+                $lastname = $row['lastName'];
                 $superheroID = $row['superheroID'];
-                echo "<option value='{$superheroID}'>{$firstName} {$lastName}</option>";
+                echo "<option value='{$superheroID}'>{$firstname} {$lastname}</option>";
             }
             ?>
         </select>
