@@ -14,13 +14,14 @@
     </header>
     <p>What would you like to do?</p>
     <ul>
-        <li><a href="superheroform.html">Insert a superhero</a></li>
+        <li><a href="insertSuperhero.php">Insert a superhero</a></li>
         <li><a href="displaySuperheros.php">Display all superheroes</a></li>
         <li><a href="battle.php">Insert a battle</a></li>
         <li><a href="displayBattles.php">Display all battles</a></li>
     </ul>
         <?php
             include("connection.php");
+            mysqli_select_db($link,'superbattles');
             $sql_query = "SELECT * FROM superheros";
             $result = $link->query($sql_query);
             while($row=$result->fetch_array())
