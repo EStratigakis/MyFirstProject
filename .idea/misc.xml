@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/Old stuff/after2010.php" />
-    <file url="file://$PROJECT_DIR$/Old stuff/dbConnect.php" />
-    <file url="file://$PROJECT_DIR$/Old stuff/index.php" />
-    <file url="file://$PROJECT_DIR$/Old stuff/Marvelstudios.php" />
-    <file url="file://$PROJECT_DIR$/Old stuff/Movies.php" />
-    <file url="file://$PROJECT_DIR$/Old stuff/xmen.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Login System/home.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Login System/index.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Login System/login.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Movies/after2010.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Movies/dbConnect.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Movies/index.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Movies/Marvelstudios.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Movies/Movies.php" />
+    <file url="file://$PROJECT_DIR$/Old stuff/Movies/xmen.php" />
   </component>
 </project>
