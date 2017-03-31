@@ -14,7 +14,7 @@
     </header>
     <p>What would you like to do?</p>
     <ul>
-        <li><a href="insertSuperhero.php">Insert a superhero</a></li>
+        <li><a href="insertSuperhero.html">Insert a superhero</a></li>
         <li><a href="displaySuperheros.php">Display all superheroes</a></li>
         <li><a href="battle.php">Insert a battle</a></li>
         <li><a href="displayBattles.php">Display all battles</a></li>
