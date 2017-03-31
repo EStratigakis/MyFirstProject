@@ -23,10 +23,10 @@
 
             while ($row = $result->fetch_array())
             {
-                $firstname = $row['firstName'];
-                $lastname = $row['lastName'];
+                $firstName = $row['firstName'];
+                $lastName = $row['lastName'];
                 $superheroID = $row['superheroID'];
-                echo "<option value='{$superheroID}'>{$firstname} {$lastname}</option>";
+                echo "<option value='{$superheroID}'>{$firstName} {$lastName}</option>";
             }
             ?>
         </select>
