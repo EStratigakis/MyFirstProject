@@ -10,6 +10,4 @@ if (mysqli_query($link, $sql)) {}
 else {
     echo "Error: " . $sql . "<br>" . mysqli_error($link);
 }
-
-header("location:index.php");
 ?>
