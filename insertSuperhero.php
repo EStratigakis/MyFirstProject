@@ -1,7 +1,6 @@
 <?
 
 include ("connection.php");
-mysqli_select_db($link,'superBattles');
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
 $superpower = $_POST["superpower"];
@@ -14,3 +13,4 @@ else {
 }
 
 header("location:index.php");
+?>
