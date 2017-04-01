@@ -31,7 +31,7 @@
             }
             ?>
         </select><br>
-        <input type="text" name="villain" placeholder="Villain Fought"><br>
+        <input type="text" name="villan" placeholder="Villan Fought"><br>
         <input type="submit" text="Record Battle">
     </form>
 </main>
