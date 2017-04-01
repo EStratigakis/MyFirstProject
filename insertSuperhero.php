@@ -2,6 +2,8 @@
 
 include ("dbConnect.php");
 
+mysqli_select_db($db,'superbattles');
+
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
 $superpower = $_POST["superpower"];

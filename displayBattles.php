@@ -14,6 +14,8 @@
     <?
     include ("dbConnect.php");
 
+    mysqli_select_db($db,'superbattles');
+
     if(isset($_GET['id']))
     {
         $superheroID = $_GET['id'];

@@ -19,7 +19,7 @@
     <ul>
         <?
             include("dbConnect.php");
-
+            mysqli_select_db($db,'superbattles');
             $sql_query = "SELECT * FROM superheros";
 
             $result = $db->query($sql_query);
