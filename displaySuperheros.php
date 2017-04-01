@@ -13,10 +13,10 @@
 <main>
     <?
     include ("dbConnect.php");
-    mysqli_select_db($link,'superBattles');
+
     $sql_query = "SELECT * FROM superheros";
 
-    $result = $link->query($sql_query);
+    $result = $db->query($sql_query);
 
     while($row = $result->fetch_array())
     {

@@ -13,7 +13,7 @@
 <main>
     <?
     include ("dbConnect.php");
-    mysqli_select_db($link,'superBattles');
+
     if(isset($_GET['id']))
     {
         $superheroID = $_GET['id'];
@@ -24,7 +24,7 @@
         $sql_query = "SELECT * FROM superherobattles";
     }
 
-    $result = $link->query($sql_query);
+    $result = $db->query($sql_query);
 
     while($row = $result->fetch_array())
     {
@@ -32,10 +32,10 @@
         $firstname = $row['firstname'];
         $lastname = $row['lastname'];
         $mainSuperpower = $row['mainSuperpower'];
-        $villainFought = $row['villainFought'];
+        $villanFought = $row['villanFought'];
 
         echo "<article>
-              <p> The superhero known as <strong>{$firstname} {$lastname}</strong> recently fought <strong>{$villainFought}</strong> using <strong>{$mainSuperpower}</strong></p>";
+              <p> The superhero known as <strong>{$firstname} {$lastname}</strong> recently fought <strong>{$villanFought}</strong> using <strong>{$mainSuperpower}</strong> </p>";
 
     }
     ?>

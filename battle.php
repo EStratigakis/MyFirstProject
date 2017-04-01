@@ -12,15 +12,13 @@
 </header>
 <main>
     <form action="insertBattle.php" method="post">
-        <p>Select the superhero that fought in this battle</p>
-        <select name="superhero">
+        <p>Select the superhero that fought in this battle</p><select name="superhero">
             <?
             include ("dbConnect.php");
-            mysqli_select_db($link,'superBattles');
 
             $sql_query = "SELECT * FROM superheros";
 
-            $result = $link->query($sql_query);
+            $result = $db->query($sql_query);
 
             while ($row = $result->fetch_array())
             {
@@ -30,9 +28,9 @@
                 echo "<option value='{$superheroID}'>{$firstname} {$lastname}</option>";
             }
             ?>
-        </select>
-        <br><input type="text" name="villain" placeholder="Villain Fought">
-        <br><input type="submit" text="Record Battle">
+        </select><br>
+        <input type="text" name="villain" placeholder="Villain Fought"><br>
+        <input type="submit" text="Record Battle">
     </form>
 </main>
 </body>
