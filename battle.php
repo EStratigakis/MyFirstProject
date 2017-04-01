@@ -15,7 +15,7 @@
         <p>Select the superhero that fought in this battle</p>
         <select name="superhero">
             <?
-            include ("connection.php");
+            include ("dbConnect.php");
             mysqli_select_db($link,'superBattles');
 
             $sql_query = "SELECT * FROM superheros";

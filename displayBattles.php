@@ -12,7 +12,7 @@
 </header>
 <main>
     <?
-    include ("connection.php");
+    include ("dbConnect.php");
     mysqli_select_db($link,'superBattles');
     if(isset($_GET['id']))
     {

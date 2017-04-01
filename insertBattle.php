@@ -1,6 +1,6 @@
 <?php
 
-include ("connection.php");
+include ("dbConnect.php");
 mysqli_select_db($link,'superBattles');
 $superheroID = $_POST["superhero"];
 $villain = $_POST["villain"];

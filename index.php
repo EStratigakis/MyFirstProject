@@ -20,7 +20,7 @@
         <li><a href="displayBattles.php">Display all battles</a></li>
     </ul>
         <?php
-            include("connection.php");
+            include("dbConnect.php");
             mysqli_select_db($link,'superBattles');
             $sql_query = "SELECT * FROM superheros";
             $result = $link->query($sql_query);
