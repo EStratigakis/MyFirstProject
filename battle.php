@@ -16,7 +16,7 @@
         <select name="superhero">
             <?
             include ("connection.php");
-            mysqli_select_db($link,'superbattles');
+            mysqli_select_db($link,'superBattles');
 
             $sql_query = "SELECT * FROM superheros";
 

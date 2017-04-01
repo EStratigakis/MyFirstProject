@@ -13,7 +13,7 @@
 <main>
     <?
     include ("connection.php");
-    mysqli_select_db($link,'superbattles');
+    mysqli_select_db($link,'superBattles');
     if(isset($_GET['id']))
     {
         $superheroID = $_GET['id'];
