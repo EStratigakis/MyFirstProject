@@ -1,5 +1,4 @@
-<?
-
+<?php
 include ("dbConnect.php");
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
