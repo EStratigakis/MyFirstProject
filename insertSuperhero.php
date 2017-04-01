@@ -6,7 +6,7 @@ mysqli_select_db($db,'superbattles');
 
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
-$superpower = $_POST["superpower"];
+$superpower = $_POST["mainSuperpower"];
 
 $sql = "INSERT INTO superheros (firstName, lastName, mainSuperpower) VALUES ('$firstname','$lastname','$superpower')";
 
