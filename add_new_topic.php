@@ -1,7 +1,6 @@
 <?php
 include ("dbConnect.php");
 
-mysqli_select_db($db,"myforum")or die("cannot select DB");
 // get data that sent from form
 $topic=$_POST['topic'];
 $detail=$_POST['detail'];
