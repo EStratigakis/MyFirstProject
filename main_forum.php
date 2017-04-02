@@ -4,7 +4,7 @@ include ("dbConnect.php");
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-$result=mysqli_query($sql);
+$result=mysqli_query($db,$sql);
 ?>
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">

@@ -5,7 +5,7 @@ include ("dbConnect.php");
 // get value of id that sent from address bar
 $id=$_GET['id'];
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
-$result=mysqli_query($sql);
+$result=mysqli_query($db,$sql);
 $rows=mysqli_fetch_array($result);
 ?>
 
@@ -36,7 +36,7 @@ $rows=mysqli_fetch_array($result);
 
 $tbl_name2="fanswer"; // Switch to table "forum_answer"
 $sql2="SELECT * FROM $tbl_name2 WHERE question_id='$id'";
-$result2=mysqli_query($sql2);
+$result2=mysqli_query($db,$sql2);
 while($rows=mysqli_fetch_array($result2)){
     ?>
 
@@ -76,7 +76,7 @@ while($rows=mysqli_fetch_array($result2)){
 }
 
 $sql3="SELECT view FROM $tbl_name WHERE id='$id'";
-$result3=mysqli_query($sql3);
+$result3=mysqli_query($db,$sql3);
 $rows=mysqli_fetch_array($result3);
 $view=$rows['view'];
 
@@ -84,13 +84,13 @@ $view=$rows['view'];
 if(empty($view)){
     $view=1;
     $sql4="INSERT INTO $tbl_name(view) VALUES('$view') WHERE id='$id'";
-    $result4=mysqli_query($sql4);
+    $result4=mysqli_query($db,$sql4);
 }
 
 // count more value
 $addview=$view+1;
 $sql5="update $tbl_name set view='$addview' WHERE id='$id'";
-$result5=mysqli_query($sql5);
+$result5=mysqli_query($db,$sql5);
 mysqli_close();
 ?>
 
