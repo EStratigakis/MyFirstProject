@@ -1,10 +1,9 @@
 <?php
 
 include ("dbConnect.php");
-
+$tbl_name="fanswer";
 // Get value of id that sent from hidden field
 $id=$_POST['id'];
-$tbl_name="fanswer";
 
 // Find highest answer number.
 $sql="SELECT MAX(a_id) AS Maxa_id FROM $tbl_name WHERE question_id='$id'";
@@ -28,8 +27,9 @@ $datetime=date("d/m/y H:i:s"); // create date and time
 
 // Insert answer
 $sql2="INSERT INTO $tbl_name(question_id, a_id, a_name, a_email, a_answer, a_datetime)VALUES('$id', '$Max_id', '$a_name', '$a_email', '$a_answer', '$datetime')";
+$result2=mysqli_query($db,$sql2);
 
-if(mysqli_query($db,$sql2)){
+if($result2){
     echo "Successful<BR>";
     echo "<a href='view_topic.php?id=".$id."'>View your answer</a>";
 
