@@ -9,6 +9,8 @@
     <header>
         <h1>The Super-Superhero System</h1>
         <h2>Superhero Home Page</h2>
+        <link rel="stylesheet" href="style.css">
+        </head>
     </header>
     <p>What would you like to do?</p>
     <ul>
