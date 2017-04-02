@@ -1,6 +1,7 @@
 <?php
 
 include ("dbConnect.php");
+$tbl_name="fquestions";
 // get value of id that sent from address bar
 $id=$_GET['id'];
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";

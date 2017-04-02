@@ -4,6 +4,7 @@ include ("dbConnect.php");
 
 // Get value of id that sent from hidden field
 $id=$_POST['id'];
+$tbl_name="fanswer";
 
 // Find highest answer number.
 $sql="SELECT MAX(a_id) AS Maxa_id FROM $tbl_name WHERE question_id='$id'";

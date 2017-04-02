@@ -6,6 +6,7 @@ $topic=$_POST['topic'];
 $detail=$_POST['detail'];
 $name=$_POST['name'];
 $email=$_POST['email'];
+$tbl_name="fquestions";
 
 $datetime=date("d/m/y h:i:s"); //create date time
 
