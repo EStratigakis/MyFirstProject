@@ -13,6 +13,7 @@
     </header>
     <p>What would you like to do?</p>
     <ul>
+        <link rel="stylesheet" href="style.css">
         <li><a href="superheroform.html">Insert a superhero</a></li>
         <li><a href="displaySuperheros.php">Display all superheroes</a></li>
         <li><a href="battle.php">Insert a battle</a></li>
