@@ -1,13 +1,15 @@
 <?php
 include ("dbConnect.php");
 
-
+$tbl_name="fquestions";
+$db_name="myforum"; // Database name
+mysqli_select_db($db,"$db_name")or die("cannot select DB");
 // get data that sent from form
 $topic=$_POST['topic'];
 $detail=$_POST['detail'];
 $name=$_POST['name'];
 $email=$_POST['email'];
-$tbl_name="fquestions";
+
 $datetime=date("d/m/y h:i:s"); //create date time
 
 $sql="INSERT INTO $tbl_name(topic, detail, name, email, datetime)VALUES('$topic', '$detail', '$name', '$email', '$datetime')";

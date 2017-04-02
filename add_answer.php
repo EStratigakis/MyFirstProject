@@ -2,6 +2,8 @@
 
 include ("dbConnect.php");
 $tbl_name="fanswer";
+$db_name="myforum";
+mysqli_select_db($db,"$db_name")or die("cannot select DB");
 // Get value of id that sent from hidden field
 $id=$_POST['id'];
 

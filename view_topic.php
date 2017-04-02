@@ -1,7 +1,9 @@
 <?php
 
 include ("dbConnect.php");
+$db_name="myforum";
 $tbl_name="fquestions";
+mysqli_select_db($db,"$db_name")or die("cannot select DB");
 // get value of id that sent from address bar
 $id=$_GET['id'];
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
@@ -79,6 +81,7 @@ $sql3="SELECT view FROM $tbl_name WHERE id='$id'";
 $result3=mysqli_query($db,$sql3);
 $rows=mysqli_fetch_array($result3);
 $view=$rows['view'];
+
 
 // if have no counter value set counter = 1
 if(empty($view)){
