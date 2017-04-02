@@ -43,5 +43,4 @@ else {
 }
 
 // Close connection
-mysqli_close();
 ?>

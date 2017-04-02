@@ -18,5 +18,4 @@ if($result){
 else {
     echo "ERROR";
 }
-mysqli_close();
 ?>

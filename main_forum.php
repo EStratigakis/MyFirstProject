@@ -32,7 +32,6 @@ $result=mysqli_query($db,$sql);
         <?php
 // Exit looping and close connection
     }
-    mysqli_close();
     ?>
 
     <tr>
