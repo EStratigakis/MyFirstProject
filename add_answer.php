@@ -1,7 +1,7 @@
 <?php
 
 include ("dbConnect.php");
-
+mysqli_select_db($db,"myforum")or die("cannot select DB");
 // Get value of id that sent from hidden field
 $id=$_POST['id'];
 

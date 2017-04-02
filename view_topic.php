@@ -1,7 +1,7 @@
 <?php
 
 include ("dbConnect.php");
-
+mysqli_select_db($db,"myforum")or die("cannot select DB");
 // get value of id that sent from address bar
 $id=$_GET['id'];
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
