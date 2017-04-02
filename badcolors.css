@@ -1,20 +1,21 @@
 header{
-    background-color: red;
+    background-color: mediumvioletred;
 }
 main {
-    background-color: orange;
+    background-color: mediumvioletred;
 }
 nav{
-    background-color: yellow;
+    background-color: mediumvioletred;
 }
 main{
-    background-color: greenyellow;
+    background-color: whitesmoke;
 }
 article{
-    background-color: green;
+    background-color: white;
 }
 section{
-    background-color: blue;
+    background-color: mediumvioletred;
 }
-footer{
-    background-
+footer {
+    background-color: mediumvioletred;
+}
