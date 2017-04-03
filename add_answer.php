@@ -5,7 +5,7 @@ $tbl_name="fanswer";
 $db_name="myforum";
 
 // Get value of id that sent from hidden field
-$id=$_POST['id'];
+$id=$_GET['id'];
 
 // Find highest answer number.
 $sql="SELECT MAX(a_id) AS Max_id FROM $tbl_name WHERE question_id='$id'";
