@@ -28,7 +28,7 @@ $a_answer=$_POST['a_answer'];
 $datetime=date("d/m/y H:i:s"); // create date and time
 
 // Insert answer
-$sql2="INSERT INTO $tbl_name(question_id, a_id, a_name, a_email, a_answer, a_datetime)VALUES('$id', '$Max_id', '$a_name', '$a_email', '$a_answer', '$datetime')";
+$sql2="INSERT INTO myforum(question_id, a_id, a_name, a_email, a_answer, a_datetime)VALUES('$id', '$Max_id', '$a_name', '$a_email', '$a_answer', '$datetime')";
 $result2=mysqli_query($db,$sql2);
 
 if($result2){
