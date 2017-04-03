@@ -127,3 +127,5 @@ $result5=mysqli_query($db,$sql5);
         </form>
     </tr>
 </table>
+
+<li><a href="index.html">Back to Home Page</a></li>

@@ -41,3 +41,5 @@ $result=mysqli_query($db,$sql);
         <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="new_topic.php"><strong>Create New Topic</strong> </a></td>
     </tr>
 </table>
+
+<li><a href="index.html">Back to Home Page</a></li>
