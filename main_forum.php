@@ -2,6 +2,7 @@
 include ("dbConnect.php");
 $tbl_name="fquestions";
 $db_name="myforum";
+mysqli_select_db($db,"myforum")or die("cannot select DB");
 
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
