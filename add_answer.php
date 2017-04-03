@@ -46,3 +46,10 @@ else {
 
 // Close connection
 ?>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Answer Added!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
+</head>
