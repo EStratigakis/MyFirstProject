@@ -9,7 +9,12 @@ $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 
 $result=mysqli_query($db,$sql);
 ?>
-
+<head>
+    <meta charset="UTF-8">
+    <title>Main Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
+</head>
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>

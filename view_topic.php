@@ -10,7 +10,12 @@ $sql="SELECT * FROM $tbl_name WHERE id='$id'";
 $result=mysqli_query($db,$sql);
 $rows=mysqli_fetch_array($result);
 ?>
-
+<head>
+    <meta charset="UTF-8">
+    <title>View the Topics!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
+</head>
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
