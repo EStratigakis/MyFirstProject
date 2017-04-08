@@ -1,5 +1,6 @@
 <?php
-require('dbConnect.php');
+include('dbConnect.php');
+mysqli_select_db($db, 'test');
 // If the values are posted, insert them into the database.
 if (isset($_POST['username']) && isset($_POST['password'])){
     $username = $_POST['username'];
@@ -17,7 +18,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 ?>
 <html>
 <head>
-    <title>Use!r Registeration Using PHP & MySQL</title>
+    <title>User Registeration Using PHP & MySQL</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
