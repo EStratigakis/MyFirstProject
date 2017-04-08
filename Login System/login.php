@@ -100,7 +100,12 @@
 <div class="container form-signin">
     <h1>RGU Login</h1>
     <h3>Login
-
+        <div class="topnav">
+            <a class="active" href="/index.php">Home</a>
+            <a href="/Forum/new_topic.php">Create a New topic</a>
+            <a href="/Forum/main_forum.php">Go to Main Forum</a>
+            <a href="/Login%20System/login.php">Login</a>
+        </div>
         <br><br>
         <form class = "form-signin" role = "form" method="post" action="login1.php">
             <label>Username:</label><br>
@@ -111,12 +116,7 @@
         </form>
         <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 
-        <div class="topnav">
-            <a class="active" href="/index.php">Home</a>
-            <a href="/Forum/new_topic.php">Create a New topic</a>
-            <a href="/Forum/main_forum.php">Go to Main Forum</a>
-            <a href="/Login%20System/login.php">Login</a>
-        </div>
+
 </body>
 <footer>
     <A HREF="http://efstratios.azurewebsites.net">Home Page</A>
