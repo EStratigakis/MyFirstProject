@@ -21,7 +21,7 @@ $result=mysqli_query($db,$sql);
 
         .bg {
             /* The image used */
-            background-image: url("assets/Plaza_at_The_Robert_Gordon_University_2.jpg");
+            background-image: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");
 
             /* Full height */
             height: 100%;
