@@ -4,14 +4,42 @@
     <meta charset="utf-8">
     <title>Robert Gordon University</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+        <style>
+            body {margin:0;}
+
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
 </head>
 
 <body>
-     <ul>
-         <li><a href="Forum/new_topic.php">Create a new topic!!!</a></li>
-         <li><a href="Forum/main_forum.php">Go to the main forum</a></li>
-         <li><a href="Login%20System/login.php">Login</a></li>
-     </ul>
+<div class="topnav">
+    <a class="active" href="/index.php">Home</a>
+    <a href="Forum/new_topic.php">Create a New topic/a>
+    <a href="Forum/main_forum.php">Go to Main Forum</a>
+    <a href="Login%20System/login.php">Login</a>
 </div>
 </body>
 </html>
