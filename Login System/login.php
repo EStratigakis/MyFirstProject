@@ -94,6 +94,8 @@
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
 </div>
+<div class="bg"></div>
+
 <div class="container form-signin">
     <h1>RGU Login</h1>
     <h3>Login

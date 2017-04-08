@@ -27,7 +27,9 @@ else {
 <head>
     <meta charset="UTF-8">
     <title>New Topic Added</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
 </head>
-<body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg"></body>
+<body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
+<div class="bg"></div>
+</body>
