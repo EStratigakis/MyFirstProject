@@ -48,7 +48,7 @@
             }
 
             .topnav a.active {
-                background-color: #4CAF50;
+                background-color: rebeccapurple;
                 color: white;
             }
             .fa {
