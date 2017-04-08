@@ -45,7 +45,8 @@ if(!empty($_POST["register-user"])) {
 			$success_message = "You have registered successfully!";	
 			unset($_POST);
 		} else {
-			$error_message = "Problem in registration. Try Again!";	
+			$error_message = "Problem in registration. Try Again!";
+			echo "im here";
 		}
 	}
 }
