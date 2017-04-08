@@ -1,3 +1,45 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Answer Added!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
+    <style>
+        body, html {
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body {margin:0;}
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: rebeccapurple;
+            color: white;
+        }
+    </style>
+</head>
 <?php
 
 include ("dbConnect.php");
@@ -46,38 +88,3 @@ else {
 
 // Close connection
 ?>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Answer Added!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
-    <style>
-        body {margin:0;background: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");}
-
-        .topnav {
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .topnav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .topnav a.active {
-            background-color: rebeccapurple;
-            color: white;
-        }
-    </style>
-</head>
