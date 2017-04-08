@@ -66,8 +66,6 @@ $result=mysqli_query($db,$sql);
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
 </div>
-<div class="bg"></div>
-
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
@@ -100,6 +98,5 @@ $result=mysqli_query($db,$sql);
         <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="new_topic.php"><strong>Create New Topic</strong> </a></td>
     </tr>
 </table>
+<div class="bg"></div>
 </body>
-
-<li><a href="/index.php">Back to Home Page</a></li>
