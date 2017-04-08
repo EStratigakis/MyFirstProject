@@ -15,7 +15,7 @@ $result=mysqli_query($db,$sql);
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/assets/CSS/unsemantic-grid-responsive-tablet.css">
     <style>
-        body {margin:0;background: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");}
+        body {margin:0);}
 
         .topnav {
             overflow: hidden;
@@ -43,7 +43,7 @@ $result=mysqli_query($db,$sql);
         }
     </style>
 </head>
-<body>
+<body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 <div class="topnav">
     <a class="active" href="/index.php">Home</a>
     <a href="/Forum/new_topic.php">Create a New topic</a>
