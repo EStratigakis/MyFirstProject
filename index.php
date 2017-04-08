@@ -34,7 +34,7 @@ if(!empty($_POST["register-user"])) {
 	}
 
 	if(!isset($error_message)) {
-	    echo "ok";
+	    echo "ok!";
 		require_once("dbConnect.php");
 		mysqli_select_db($db,"losystem");
 		$query = "INSERT INTO registered_users (user_name, first_name, last_name, password, email, gender) VALUES
@@ -77,7 +77,7 @@ body{
 	width: 100%;
 	border-spacing: initial;
 	margin: 2px 0px;
-	word-break: break-word;
+	word-break: break-all;
 	table-layout: auto;
 	line-height: 1.8em;
 	color: #333;
