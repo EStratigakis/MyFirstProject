@@ -68,7 +68,7 @@
 
 <?php
 
-echo "Hello", $username;
+echo "Hello", $_SESSION['user_name'];
 ?>
 </body>
 <footer>
