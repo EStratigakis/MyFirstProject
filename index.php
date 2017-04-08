@@ -161,7 +161,7 @@
         </style>
 </head>
 
-<body style=background-image:("assets/Plaza_at_The_Robert_Gordon_University_2.jpg")>
+<body background="assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 
 <div class="topnav">
     <a class="active" href="/index.php">Home</a>
@@ -172,7 +172,7 @@
 </body>
 <footer>
 
-    <!-- Add font awesome ions -->
+    <!-- Add font awesome icons -->
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
     <a href="http://www.twitter.com" class="fa fa-twitter"></a>
     <a href="http://www.google.com" class="fa fa-google"></a>
