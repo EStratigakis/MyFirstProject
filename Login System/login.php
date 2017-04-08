@@ -66,7 +66,7 @@
             }
         </style>
         <br><br>
-        <form class = "form-signin" role = "form" method="post" action="login.php">
+        <form class = "form-signin" role = "form" method="post" action="home.php">
             <label>Username:</label><br>
             <input type="text" name="username" placeholder="username" /><br><br>
             <label>Password:</label><br>
