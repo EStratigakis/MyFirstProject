@@ -63,6 +63,7 @@
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
 </div>
+<div class="bg"></div>
 
 <h1>Hello</h1>
 
