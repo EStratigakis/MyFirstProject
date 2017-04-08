@@ -15,6 +15,13 @@ $result=mysqli_query($db,$sql);
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/assets/CSS/unsemantic-grid-responsive-tablet.css">
     <style>
+        body, html {
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         body {margin:0);}
 
         .topnav {
