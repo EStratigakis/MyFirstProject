@@ -47,4 +47,4 @@ $result=mysqli_query($db,$sql);
     </tr>
 </table>
 
-<li><a href="index.html">Back to Home Page</a></li>
+<li><a href="location: home.php">Back to Home Page</a></li>

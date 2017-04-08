@@ -68,7 +68,7 @@
             }
         </style>
     <br><br>
-    <form class = "form-signin" role = "form" method="post" action="login.php">
+    <form class = "form-signin" role = "form" method="post" action="Login%20System/login.php">
         <label>Username:</label><br>
         <input type="text" name="username" placeholder="username" /><br><br>
         <label>Password:</label><br>
@@ -77,6 +77,10 @@
     </form>
     <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 
+     <ul>
+         <li><a href="Forum/new_topic.php">Create a new topic</a></li>
+         <li><a href="Forum/main_forum.php">Go to the main forum</a></li>
+     </ul>
 </div>
 </body>
 </html>
