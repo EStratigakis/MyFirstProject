@@ -14,7 +14,7 @@
             body {
                 padding-top: 40px;
                 padding-bottom: 40px;
-                background-color: green;
+                background-color: white;
             }
 
             .form-signin {
@@ -61,7 +61,7 @@
                 border-color:#017572;
             }
 
-            h2{
+            title{
                 text-align: center;
                 color: #017572;
             }
