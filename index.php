@@ -36,6 +36,7 @@ if(!empty($_POST["register-user"])) {
 	if(!isset($error_message)) {
 		require_once("dbConnect.php");
 		$db_handle = new dbConnect();
+        mysqli_select_db($db_handle,"losystem");
 		$query = "INSERT INTO registered_users (user_name, first_name, last_name, password, email, gender) VALUES
 		('" . $_POST["userName"] . "', '" . $_POST["firstName"] . "', '" . $_POST["lastName"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["userEmail"] . "', '" . $_POST["gender"] . "')";
 		$result = $db_handle->insertQuery($query);
