@@ -7,6 +7,9 @@
 <body>
 
 <?php
+ob_start();
+session_start();
+
 include('dbConnect.php');
 
 if(empty($_POST["username"]) || empty($_POST["password"]))

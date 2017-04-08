@@ -9,4 +9,8 @@
 <body>
 <h1>Hello</h1>
 </body>
+<footer>
+    <A HREF="logout.php">Logout</A>
+
+</footer>
 </html>
