@@ -172,7 +172,7 @@
 </body>
 <footer>
 
-    <!-- Add font awesome icons -->
+    <!-- Add font awesome ions -->
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
     <a href="http://www.twitter.com" class="fa fa-twitter"></a>
     <a href="http://www.google.com" class="fa fa-google"></a>
