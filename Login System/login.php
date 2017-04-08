@@ -40,7 +40,7 @@
             color: white;
         }
         body {
-            padding-top: 40px;
+
             padding-bottom: 40px;
             background-color: white;
         }
