@@ -67,7 +67,7 @@
 <h1>Hello</h1>
 
 <?php
-
+session_start();
 echo "Hello" .$_SESSION['username']. "<br>";
 ?>
 </body>
