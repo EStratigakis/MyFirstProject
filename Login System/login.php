@@ -66,7 +66,7 @@
             }
         </style>
         <br><br>
-        <form class = "form-signin" role = "form" method="post" action="home.php">
+        <form class = "form-signin" role = "form" method="post" action="login1.php">
             <label>Username:</label><br>
             <input type="text" name="username" placeholder="username" /><br><br>
             <label>Password:</label><br>
@@ -74,36 +74,7 @@
             <input type="submit" name="submit" value = "login"/>
         </form>
         <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
-<?php
-session_start();
 
-include('dbConnect.php');
-
-if(empty($_POST["username"]) || empty($_POST["password"]))
-{
-    echo "Both fields are required.";
-}else
-{
-
-$username=$_POST['username'];
-$password=$_POST['password'];
-mysqli_select_db($db,'user');
-$sql="SELECT uid FROM users WHERE username='$username' and password='$password'";
-
-$result=mysqli_query($db,$sql);
-
-if(mysqli_num_rows($result) == 1)
-    {
-        header("location: home.php"); // Redirecting To another Page
-        $_SESSION['username']  = "username";
-    }
-else
-    {
-        echo "Incorrect username or password.";
-    }
-}
-
-?>
 
 </body>
 <footer>
