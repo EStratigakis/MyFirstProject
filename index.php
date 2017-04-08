@@ -37,8 +37,8 @@ if(!empty($_POST["register-user"])) {
 		require_once("dbConnect.php");
 		$query = "INSERT INTO registered_users (user_name, first_name, last_name, password, email, gender) VALUES
 		('" . $_POST["userName"] . "', '" . $_POST["firstName"] . "', '" . $_POST["lastName"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["userEmail"] . "', '" . $_POST["gender"] . "')";
-		$result = $db->query($query);
-		if(!empty($result)) {
+		$result = mysqli_select_db($db, $query);
+		if($result) {
 			$error_message = "";
 			$success_message = "You have registered successfully!";	
 			unset($_POST);
