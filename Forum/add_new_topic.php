@@ -1,5 +1,5 @@
 <?php
-include ("C:\Users\strpa\Documents\GitHub\MyFirstProject\dbConnect.php");
+include ("dbConnect.php");
 
 $tbl_name="fquestions";
 $db_name="myforum"; // Database name

@@ -78,7 +78,7 @@
 ob_start();
 session_start();
 
-include('C:\Users\strpa\Documents\GitHub\MyFirstProject\dbConnect.php');
+include('dbConnect.php');
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {

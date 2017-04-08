@@ -1,6 +1,6 @@
 <?php
 
-include ("C:\Users\strpa\Documents\GitHub\MyFirstProject\dbConnect.php");
+include ("dbConnect.php");
 $db_name="myforum";
 $tbl_name="fquestions";
 mysqli_select_db($db,$db_name)or die("cannot select DB");
