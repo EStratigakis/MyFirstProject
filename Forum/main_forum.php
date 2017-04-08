@@ -59,7 +59,7 @@ $result=mysqli_query($db,$sql);
         }
     </style>
 </head>
-<body background="assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
+<body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 <div class="topnav">
     <a class="active" href="/index.php">Home</a>
     <a href="/Forum/new_topic.php">Create a New topic</a>
