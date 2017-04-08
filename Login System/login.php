@@ -66,7 +66,7 @@
             }
         </style>
         <br><br>
-        <form class = "form-signin" role = "form" method="post" action="Login%20System/login.php">
+        <form class = "form-signin" role = "form" method="post" action="login.php">
             <label>Username:</label><br>
             <input type="text" name="username" placeholder="username" /><br><br>
             <label>Password:</label><br>
@@ -78,7 +78,7 @@
 ob_start();
 session_start();
 
-include('dbConnect.php');
+include('C:\Users\strpa\Documents\GitHub\MyFirstProject\dbConnect.php');
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {

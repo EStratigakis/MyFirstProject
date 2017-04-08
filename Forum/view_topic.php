@@ -1,9 +1,9 @@
 <?php
 
-include ("dbConnect.php");
+include ("C:\Users\strpa\Documents\GitHub\MyFirstProject\dbConnect.php");
 $db_name="myforum";
 $tbl_name="fquestions";
-mysqli_select_db($db,"myforum")or die("cannot select DB");
+mysqli_select_db($db,$db_name)or die("cannot select DB");
 // get value of id that sent from address bar
 $id=$_GET['id'];
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
