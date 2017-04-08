@@ -8,7 +8,7 @@
 
 <body>
      <ul>
-         <li><a href="Forum/new_topic.php">Create a new topic!!</a></li>
+         <li><a href="Forum/new_topic.php">Create a new topic!!!</a></li>
          <li><a href="Forum/main_forum.php">Go to the main forum</a></li>
          <li><a href="Login%20System/login.php">Login</a></li>
      </ul>
