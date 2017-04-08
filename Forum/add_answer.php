@@ -53,23 +53,7 @@ else {
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
     <style>
-        body, html {
-            height: 100%;
-        }
-
-        .bg {
-            /* The image used */
-            background-image: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");
-
-            /* Full height */
-            height: 100%;
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        body {margin:0;}
+        body {margin:0;background: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");}
 
         .topnav {
             overflow: hidden;
@@ -97,6 +81,3 @@ else {
         }
     </style>
 </head>
-<body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
-<div class="bg"></div>
-</body>

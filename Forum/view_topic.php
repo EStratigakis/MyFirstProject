@@ -16,23 +16,7 @@ $rows=mysqli_fetch_array($result);
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
     <style>
-        body, html {
-            height: 100%;
-        }
-
-        .bg {
-            /* The image used */
-            background-image: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");
-
-            /* Full height */
-            height: 100%;
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    body {margin:0;}
+    body {margin:0;background: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");}
 
     .topnav {
     overflow: hidden;
@@ -60,14 +44,13 @@ $rows=mysqli_fetch_array($result);
     }
     </style>
 </head>
-<body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
+<body>
 <div class="topnav">
     <a class="active" href="/index.php">Home</a>
     <a href="/Forum/new_topic.php">Create a New topic</a>
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
 </div>
-<div class="bg"></div>
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
