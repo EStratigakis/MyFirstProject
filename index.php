@@ -34,25 +34,24 @@ if(!empty($_POST["register-user"])) {
 	}
 
 	if(!isset($error_message)) {
-		include("dbConnect.php");
-		mysqli_select_db($db,"losystem");
+		require_once("dbConnect.php");
+		$db_handle = new dbConnect();
 		$query = "INSERT INTO registered_users (user_name, first_name, last_name, password, email, gender) VALUES
 		('" . $_POST["userName"] . "', '" . $_POST["firstName"] . "', '" . $_POST["lastName"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["userEmail"] . "', '" . $_POST["gender"] . "')";
-		$result = mysqli_query($query);
-		if($result) {
+		$result = $db_handle->insertQuery($query);
+		if(!empty($result)) {
 			$error_message = "";
 			$success_message = "You have registered successfully!";	
 			unset($_POST);
 		} else {
 			$error_message = "Problem in registration. Try Again!";
-			echo "im here!";
 		}
 	}
 }
 ?>
 <html>
 <head>
-<title>PHP!! User Registration Form</title>
+<title>PHP User Registration Form</title>
 <style>
 body{
 	width:610px;
