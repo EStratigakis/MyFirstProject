@@ -14,14 +14,14 @@
             body {
                 padding-top: 40px;
                 padding-bottom: 40px;
-                background-color: #ADABAB;
+                background-color: green;
             }
 
             .form-signin {
                 max-width: 330px;
                 padding: 15px;
                 margin: 0 auto;
-                color: #017572;
+                color: red;
             }
 
             .form-signin .form-signin-heading,
