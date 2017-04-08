@@ -72,6 +72,18 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
 
     if(mysqli_num_rows($result) == 1)
     {
+        if($_POST["remember_me"]=='1' || $_POST["remember_me"]=='on')
+        {
+            $hour = time() + 3600 * 24 * 30;
+            setcookie('username', $username, $hour);
+            setcookie('password', $password, $hour);
+        }
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $result1 = mysqli_query($db,"SELECT * from admin WHERE working_id = '$username' and password = '$password'");
+        while($row = mysqli_fetch_array($result1)){
+            $_SESSION['gp'] = $row['gpType'];
+        }
         header("location: home.php"); // Redirecting To another Page
     }
     else
