@@ -13,7 +13,7 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        body {margin:0;background: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");}
+        body {margin:0;}
 
         .topnav {
             overflow: hidden;
