@@ -17,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 ?>
 <html>
 <head>
-    <title>User Registeration Using PHP & MySQL</title>
+    <title>Use!r Registeration Using PHP & MySQL</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
