@@ -65,6 +65,11 @@
 </div>
 
 <h1>Hello</h1>
+
+<?php
+
+echo "Hello", $username;
+?>
 </body>
 <footer>
     <A HREF="logout.php">Logout</A>
