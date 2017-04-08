@@ -52,7 +52,7 @@ if(!empty($_POST["register-user"])) {
 ?>
 <html>
 <head>
-<title>PHP! User Registration Form</title>
+<title>PHP!! User Registration Form</title>
 <style>
 body{
 	width:610px;
