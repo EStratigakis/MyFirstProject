@@ -96,7 +96,6 @@ $result=mysqli_query($db,$sql);
 if(mysqli_num_rows($result) == 1)
     {
         header("location: home.php"); // Redirecting To another Page
-        $_SESSION['username']  = $row['user_name'];
     }
 else
     {
