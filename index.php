@@ -2,16 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <div class="container form-signin">
     <title>Robert Gordon University</title>
-    </div>
-
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
-<h1>RGU Login</h1>
+
 <div class="container form-signin">
-    <h3>Login
+    <h1>RGU Login</h1>
+        <h3>Login
         <style>
             body {
                 padding-top: 40px;
