@@ -83,73 +83,6 @@
                 background: #125688;
                 color: white;
             }
-
-            .fa-pinterest {
-                background: #cb2027;
-                color: white;
-            }
-
-            .fa-snapchat-ghost {
-                background: #fffc00;
-                color: white;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-            }
-
-            .fa-skype {
-                background: #00aff0;
-                color: white;
-            }
-
-            .fa-android {
-                background: #a4c639;
-                color: white;
-            }
-
-            .fa-dribbble {
-                background: #ea4c89;
-                color: white;
-            }
-
-            .fa-vimeo {
-                background: #45bbff;
-                color: white;
-            }
-
-            .fa-tumblr {
-                background: #2c4762;
-                color: white;
-            }
-
-            .fa-vine {
-                background: #00b489;
-                color: white;
-            }
-
-            .fa-foursquare {
-                background: #45bbff;
-                color: white;
-            }
-
-            .fa-stumbleupon {
-                background: #eb4924;
-                color: white;
-            }
-
-            .fa-flickr {
-                background: #f40083;
-                color: white;
-            }
-
-            .fa-yahoo {
-                background: #430297;
-                color: white;
-            }
-
-            .fa-soundcloud {
-                background: #ff5500;
-                color: white;
-            }
-
             .fa-reddit {
                 background: #ff5700;
                 color: white;
@@ -171,6 +104,13 @@
     <a href="Login%20System/login.php">Login</a>
 </div>
 </body>
+<main>
+    <a href="https://www.accuweather.com/en/gr/athens/182536/current-weather/182536" class="aw-widget-legal">
+        <!--
+        By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+        -->
+    </a><div id="awtd1491687881145" class="aw-widget-36hour"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awtd1491687881145" data-editlocation="true"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
+</main>
 <footer>
 
     <!-- Add font awesome icons -->
