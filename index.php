@@ -44,14 +44,14 @@ if(!empty($_POST["register-user"])) {
 			unset($_POST);
 		} else {
 			$error_message = "Problem in registration. Try Again!";
-			echo "im here";
+			echo "im here!";
 		}
 	}
 }
 ?>
 <html>
 <head>
-<title>PHP User Registration Form</title>
+<title>PHP! User Registration Form</title>
 <style>
 body{
 	width:610px;
