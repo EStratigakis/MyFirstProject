@@ -108,7 +108,6 @@ else
 </body>
 <footer>
     <A HREF="http://efstratios.azurewebsites.net">Home Page</A>
-
 </footer>
 </html>
 
