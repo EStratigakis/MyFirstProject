@@ -16,6 +16,7 @@ $rows=mysqli_fetch_array($result);
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
 </head>
+<body background="assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
@@ -132,5 +133,5 @@ $result5=mysqli_query($db,$sql5);
         </form>
     </tr>
 </table>
-
+</body>
 <li><a href="/index.php">Back to Home Page</a></li>
