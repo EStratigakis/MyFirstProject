@@ -3,9 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Robert Gordon University</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
         <style>
@@ -17,7 +14,7 @@
                 background-size: cover;
             }
 
-            body {margin:0;background: url("/assets/Plaza_at_The_Robert_Gordon_University_2.jpg");}
+            body {margin:0;}
 
             .topnav {
                 overflow: hidden;
@@ -164,7 +161,7 @@
         </style>
 </head>
 
-<body>
+<body background="assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 
 <div class="topnav">
     <a class="active" href="/index.php">Home</a>
@@ -172,7 +169,7 @@
     <a href="Forum/main_forum.php">Go to Main Forum</a>
     <a href="Login%20System/login.php">Login</a>
 </div>
-
+</body>
 <footer>
 
     <!-- Add font awesome icons -->
@@ -185,5 +182,5 @@
     <a href="http://www.reddit.com" class="fa fa-reddit"></a>
 
 </footer>
-</body>
+
 </html>
