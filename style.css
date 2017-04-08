@@ -20,6 +20,10 @@ header h1{
 header h2{
     margin-top: 0;
 }
+title{
+    text-align: center;
+    color: #017572;
+}
 /*End of Header*/
 /*Start of Footer
 footer{
