@@ -12,9 +12,17 @@ $result=mysqli_query($db,$sql);
 <head>
     <meta charset="UTF-8">
     <title>Main Forum</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/assets/CSS/unsemantic-grid-responsive-tablet.css">
 </head>
+<body>
+<div class="topnav">
+    <a class="active" href="/index.php">Home</a>
+    <a href="/Forum/new_topic.php">Create a New topic</a>
+    <a href="/Forum/main_forum.php">Go to Main Forum</a>
+    <a href="/Login%20System/login.php">Login</a>
+</div>
+</body>
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
