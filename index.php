@@ -8,7 +8,7 @@
 
 <body>
 <h1>RGU Login</h1>
-<div class="loginBox">
+<div class="container form-signin">
     <h3>Login
         <style>
             body {
