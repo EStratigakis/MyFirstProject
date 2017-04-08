@@ -75,7 +75,6 @@
         </form>
         <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 <?php
-ob_start();
 session_start();
 
 include('dbConnect.php');
@@ -96,6 +95,7 @@ $result=mysqli_query($db,$sql);
 if(mysqli_num_rows($result) == 1)
     {
         header("location: home.php"); // Redirecting To another Page
+        $_SESSION['username']  = "username";
     }
 else
     {

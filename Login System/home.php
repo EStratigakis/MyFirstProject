@@ -66,6 +66,10 @@
 
 <h1>Hello</h1>
 
+<?php
+
+echo "Hello" .$_SESSION['username']. "<br>";
+?>
 </body>
 <footer>
     <A HREF="logout.php">Logout</A>
