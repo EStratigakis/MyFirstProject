@@ -15,8 +15,42 @@ $rows=mysqli_fetch_array($result);
     <title>View the Topics!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
+    <style>
+    body {margin:0;}
+
+    .topnav {
+    overflow: hidden;
+    background-color: #333;
+    }
+
+    .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .topnav a.active {
+    background-color: rebeccapurple;
+    color: white;
+    }
+    </style>
 </head>
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
+<div class="topnav">
+    <a class="active" href="/index.php">Home</a>
+    <a href="/Forum/new_topic.php">Create a New topic</a>
+    <a href="/Forum/main_forum.php">Go to Main Forum</a>
+    <a href="/Login%20System/login.php">Login</a>
+</div>
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
