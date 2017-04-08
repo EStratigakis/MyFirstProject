@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Robert Gordon University</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
-        <style>        body, html {
+        <style>
+            body, html {
                 height: 100%;
                 /* Center and scale the image nicely */
                 background-position: center;
@@ -172,8 +173,8 @@
     <a href="Login%20System/login.php">Login</a>
 </div>
 
-</body>
 <footer>
+
     <!-- Add font awesome icons -->
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
     <a href="http://www.twitter.com" class="fa fa-twitter"></a>
@@ -181,20 +182,8 @@
     <a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
     <a href="http://www.youtube.com" class="fa fa-youtube"></a>
     <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-    <a href="http://www.facebook.com" class="fa fa-pinterest"></a>
-    <a href="http://www.facebook.com" class="fa fa-snapchat-ghost"></a>
-    <a href="http://www.skype.com" class="fa fa-skype"></a>
-    <a href="http://www.facebook.com" class="fa fa-android"></a>
-    <a href="http://www.facebook.com" class="fa fa-dribbble"></a>
-    <a href="http://www.facebook.com" class="fa fa-vimeo"></a>
-    <a href="http://www.facebook.com" class="fa fa-tumblr"></a>
-    <a href="http://www.facebook.com" class="fa fa-vine"></a>
-    <a href="http://www.facebook.com" class="fa fa-foursquare"></a>
-    <a href="http://www.facebook.com" class="fa fa-stumbleupon"></a>
-    <a href="http://www.facebook.com" class="fa fa-flickr"></a>
-    <a href="http://www.facebook.com" class="fa fa-yahoo"></a>
     <a href="http://www.reddit.com" class="fa fa-reddit"></a>
-    <a href="http://www.facebook.com" class="fa fa-rss"></a>
 
 </footer>
+</body>
 </html>
