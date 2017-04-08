@@ -47,5 +47,6 @@
         </form>
     </tr>
 </table>
+<A HREF="http://efstratios.azurewebsites.net">Home Page</A>
 </body>
 </html>
