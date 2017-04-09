@@ -15,7 +15,7 @@
 		$errors[]='File size must be excately 2 MB';
 		}				
 		if(empty($errors)==true){
-			move_uploaded_file($file_tmp,"images/".$file_name);
+			move_uploaded_file($file_tmp,"uploads/".$file_name);
 			echo "Success";
 		}else{
 			print_r($errors);
