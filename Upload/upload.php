@@ -41,4 +41,5 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+header('Refresh: 2; URL = http://efstratios.azurewebsites.net/Upload/upload.html');
 ?>
