@@ -11,6 +11,7 @@ $result=mysqli_query($db,$sql);
 ?>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Main Forum</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/assets/CSS/unsemantic-grid-responsive-tablet.css">

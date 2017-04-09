@@ -12,6 +12,7 @@ $rows=mysqli_fetch_array($result);
 ?>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>View the Topics!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
