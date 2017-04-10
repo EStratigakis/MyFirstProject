@@ -7,7 +7,7 @@ mysqli_select_db($db,"$db_name")or die("cannot select DB");
 // get data that sent from form
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
-$numb=$_POST['num'];
+$numb=$_POST['matric'];
 $mail=$_POST['mail'];
 $deg=$_POST['dg'];
 $year=$_POST['yr'];
@@ -19,7 +19,6 @@ $result=mysqli_query($db,$sql);
 
 if($result){
     echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
-    echo "Successful<BR>";
     header('Refresh: 1; URL = http://efstratios.azurewebsites.net');
 }
 else {
