@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        form {
+            margin-left: 170px;
+            padding: 1em;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<form action="/input.php" role = "form" method="post" >
+    <tr>
+        <label>First Name:</label><br>
+        <input type="text" name="username" /><br><br>
+        <label>Last name:</label><br>
+        <input type="text" name="lastname"><br><br>
+        <label>Matric #:</label> <br>
+        <input type="number" name="matric"><br><br>
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
+        <label>Degree:</label><br>
+        <select required>
+            <option value="">None</option>
+            <option value="Masters">Masters</option>
+            <option value="Postgraduate">Postgraduate</option>
+            <option value="Undergraduate">Undergraduate</option>
+        </select><br><br>
+        <label>Year:</label><br>
+        <select required>
+            <option value="">None</option>
+            <option value="first">1st</option>
+            <option value="second">2nd</option>
+            <option value="third">3rd</option>
+            <option value="fourth">4th</option>
+        </select><br>
+        <br><input type="submit">
+</form>
+
+
+</body>
+</html>
