@@ -43,7 +43,7 @@
 </head>
 <?php
 
-include_once("dbConnect.php");
+include_once("../dbConnect.php");
 $tbl_name="fanswer";
 $db_name="myforum";
 

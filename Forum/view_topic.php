@@ -1,6 +1,6 @@
 <?php
 
-include_once("dbConnect.php");
+include_once("../dbConnect.php");
 $db_name="myforum";
 $tbl_name="fquestions";
 mysqli_select_db($db,$db_name)or die("cannot select DB");

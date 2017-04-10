@@ -1,5 +1,5 @@
 <?php
-include_once("dbConnect.php");
+include_once("../dbConnect.php");
 
 $tbl_name="student";
 $db_name="stu"; // Database name

@@ -53,7 +53,7 @@
 </body>
 
 <?php
-include_once("dbConnect.php");
+include_once("../dbConnect.php");
 
 $tbl_name="fquestions";
 $db_name="myforum"; // Database name
