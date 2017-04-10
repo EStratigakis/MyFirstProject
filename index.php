@@ -102,7 +102,7 @@
     <a href="Forum/new_topic.php">Create a New topic</a>
     <a href="Forum/main_forum.php">Go to Main Forum</a>
     <a href="Login%20System/login.php">Login</a>
-    <a href="Registration/regi.html">Add a student</a>
+    <a href="Registration/regi.html">Add a student!</a>
 </div>
 </body>
 <main>
