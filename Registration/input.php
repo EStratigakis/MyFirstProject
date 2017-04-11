@@ -10,15 +10,13 @@ $lname=$_POST['lname'];
 $numb=$_POST['matric'];
 $mail=$_POST['mail'];
 $deg=$_POST['dg'];
-$yr=$_POST['yr'];
+$yer=$_POST['yr'];
 
-$datetime=date("d/m/y h:i:s"); //create date time
-
-$sql="INSERT INTO $tbl_name(fname, lname, num, mail, dg, yr, datetime)VALUES('$fname', '$lname', '$numb', '$mail', '$deg', '$yr', '$datetime')";
+$sql="INSERT INTO student(fname, lname, num, mail, dg, yr) VALUES ('$fname', '$lname', '$numb', '$mail', '$deg', '$yer')";
 $result=mysqli_query($db,$sql);
 
 if($result){
-    echo "<script type='text/javascript'>alert('submitted successfully!')</script>";
+    echo "<script type='text/javascript'>alert('Student Added!')</script>";
     header('Refresh: 1; URL = http://efstratios.azurewebsites.net');
 }
 else {
