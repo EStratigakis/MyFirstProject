@@ -38,6 +38,13 @@
         .topnav a.active {
             background-color: rebeccapurple;
             color: white;}
+        .re {
+            border-radius: 5px;
+            background-color: white;
+            padding: 20px;
+            width: 250px;
+            height: 350px;
+        }
     </style>
 </head>
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
@@ -49,33 +56,34 @@
     <a href="/Login%20System/login.php">Login</a>
     <a href="/Registration/regi.html">Add a student</a>
 </div>
+<div class="re">
 <form action="input.php" role = "form" method="post" >
-    <tr>
         <label>First Name:</label><br>
-        <input type="text" name="fname"><br><br>
+        <input type="text" name="fname" id="fname"><br><br>
         <label>Last name:</label><br>
-        <input type="text" name="lname"><br><br>
+        <input type="text" name="lname" id="lname"><br><br>
         <label>Matric #:</label> <br>
-        <input type="number" name="matric"><br><br>
+        <input type="number" name="matric" id="matric"><br><br>
         <label>Email:</label><br>
-        <input type="email" name="mail"><br><br>
+        <input type="email" name="mail" id="mail"><br><br>
         <label>Degree:</label><br>
-        <select required name="dg">
+        <select required name="dg" id="dg">
             <option value="">None</option>
             <option value="Masters">Masters</option>
             <option value="Postgraduate">Postgraduate</option>
             <option value="Undergraduate">Undergraduate</option>
         </select><br><br>
         <label>Year:</label><br>
-        <select required name="year">
+        <select required name="yr" id="yr">
             <option value="">None</option>
-            <option value="first">1st</option>
-            <option value="second">2nd</option>
-            <option value="third">3rd</option>
-            <option value="fourth">4th</option>
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+            <option value="fourth">Fourth</option>
         </select><br>
         <br><input type="submit" value="submit">
 </form>
+</div>
 
 
 </body>

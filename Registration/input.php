@@ -10,11 +10,11 @@ $lname=$_POST['lname'];
 $numb=$_POST['matric'];
 $mail=$_POST['mail'];
 $deg=$_POST['dg'];
-$year=$_POST['yr'];
+$yr=$_POST['yr'];
 
 $datetime=date("d/m/y h:i:s"); //create date time
 
-$sql="INSERT INTO $tbl_name(fname, lname, num, mail, dg, yr, datetime)VALUES('$fname', '$lname', '$numb', '$mail', '$deg', '$year', '$datetime')";
+$sql="INSERT INTO $tbl_name(fname, lname, num, mail, dg, yr, datetime)VALUES('$fname', '$lname', '$numb', '$mail', '$deg', '$yr', '$datetime')";
 $result=mysqli_query($db,$sql);
 
 if($result){
