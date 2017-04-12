@@ -45,7 +45,7 @@
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 <link rel="stylesheet" href="/style.css">
 <div class="topnav">
-    <a class="active" href="/index.php">Home</a>
+    <a class="active" href="/index.html">Home</a>
     <a href="/Forum/new_topic.php">Create a New topic</a>
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
