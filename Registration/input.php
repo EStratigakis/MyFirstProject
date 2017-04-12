@@ -17,7 +17,7 @@ $result=mysqli_query($db,$sql);
 
 if($result){
     echo "<script type='text/javascript'>alert('Student Added!')</script>";
-    header('Refresh: 1; URL = http://efstratios.azurewebsites.net');
+    header('Refresh: 1; URL = http://strato1.azurewebsites.net');
 }
 else {
     echo "ERROR";
