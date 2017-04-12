@@ -46,15 +46,15 @@
     <a href="/Forum/new_topic.php">Create a New topic</a>
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
+    <a href="/Registration/regi.html">Add a student!</a>
 </div>
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
-        <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-        <td width="53%" align="center" bgcolor="#E6E6E6"><strong>First Name</strong></td>
+        <td width="54%" align="center" bgcolor="#E6E6E6"><strong>First Name</strong></td>
         <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>E-mail</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Matric #</strong></td>
+        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>E-mail</strong></td>
+        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
     </tr>
 
     <?php
@@ -63,11 +63,10 @@
     while($rows = mysqli_fetch_array($result)){
         ?>
     <tr>
-        <td bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
-        <td bgcolor="#FFFFFF"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
-        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['view']; ?></td>
-        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['reply']; ?></td>
-        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+        <td bgcolor="#FFFFFF"><a href="/Registration/input.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['fname']; ?></a><BR></td>
+        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
+        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['mail']; ?></td>
+        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
     </tr>
 
     <?php
@@ -76,7 +75,7 @@
     ?>
 
     <tr>
-        <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="new_topic.php"><strong>Create New Topic</strong> </a></td>
+        <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="/Registration/regi.html"><strong>Add a new student</strong> </a></td>
     </tr>
 </table>
 </body>

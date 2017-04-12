@@ -58,6 +58,7 @@ $rows=mysqli_fetch_array($result);
     <a href="/Forum/new_topic.php">Create a New topic</a>
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
+    <a href="/Registration/regi.html">Add a student!</a>
 </div>
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>

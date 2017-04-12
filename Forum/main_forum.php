@@ -57,6 +57,7 @@ $result=mysqli_query($db,$sql);
     <a href="/Forum/new_topic.php">Create a New topic</a>
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
+    <a href="/Registration/regi.html">Add a student!</a>
 </div>
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
