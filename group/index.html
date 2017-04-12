@@ -51,10 +51,10 @@
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
-        <td width="54%" align="center" bgcolor="#E6E6E6"><strong>First Name</strong></td>
-        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
-        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>E-mail</strong></td>
-        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
+        <td width="25%" align="center" bgcolor="#E6E6E6"><strong>First Name</strong></td>
+        <td width="25%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
+        <td width="25%" align="center" bgcolor="#E6E6E6"><strong>E-mail</strong></td>
+        <td width="25%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
     </tr>
 
     <?php
@@ -63,7 +63,7 @@
     while($rows = mysqli_fetch_array($result)){
         ?>
     <tr>
-        <td bgcolor="#FFFFFF"><a href="/Registration/input.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['fname']; ?></a><BR></td>
+        <td bgcolor="#FFFFFF"><a href="/Registration/input.php?id=<?php echo $rows['student_id']; ?>"><?php echo $rows['fname']; ?></a><BR></td>
         <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
         <td align="center" bgcolor="#FFFFFF"><?php echo $rows['mail']; ?></td>
         <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
