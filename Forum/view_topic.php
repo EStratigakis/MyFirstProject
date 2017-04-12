@@ -54,7 +54,7 @@ $rows=mysqli_fetch_array($result);
 </head>
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 <div class="topnav">
-    <a class="active" href="/index.php">Home</a>
+    <a class="active" href="/index.html">Home</a>
     <a href="/Forum/new_topic.php">Create a New topic</a>
     <a href="/Forum/main_forum.php">Go to Main Forum</a>
     <a href="/Login%20System/login.php">Login</a>
@@ -176,4 +176,4 @@ $result5=mysqli_query($db,$sql5);
     </tr>
 </table>
 </body>
-<li><a href="/index.php">Back to Home Page</a></li>
+<li><a href="/index.html">Back to Home Page</a></li>

@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/Forum/add_answer.php" />
-    <file url="file://$PROJECT_DIR$/Forum/add_new_topic.php" />
-    <file url="file://$PROJECT_DIR$/Forum/main_forum.php" />
-    <file url="file://$PROJECT_DIR$/Forum/new_topic.php" />
-    <file url="file://$PROJECT_DIR$/Forum/view_topic.php" />
     <file url="file://$PROJECT_DIR$/Old stuff/Bootstrap Styling/badcolors.css" />
     <file url="file://$PROJECT_DIR$/Old stuff/Bootstrap Styling/fonts.css" />
     <file url="file://$PROJECT_DIR$/Old stuff/Bootstrap Styling/index.html" />
