@@ -1,3 +1,15 @@
+<?php
+include_once ("../dbConnect.php");
+$tbl_name="student";
+$db_name="stu";
+mysqli_select_db($db,"stu")or die("cannot select DB");
+
+$sql="SELECT * FROM $tbl_name ORDER BY id DESC";
+// OREDER BY id DESC is order result by descending
+
+$result=mysqli_query($db,$sql);
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
