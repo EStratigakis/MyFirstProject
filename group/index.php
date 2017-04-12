@@ -4,7 +4,7 @@ $tbl_name="student";
 $db_name="stu";
 mysqli_select_db($db,"stu")or die("cannot select DB");
 
-$sql="SELECT * FROM $tbl_name ORDER BY id DESC";
+$sql="SELECT * FROM $tbl_name ORDER BY student_id ASC";
 // OREDER BY id DESC is order result by descending
 
 $result=mysqli_query($db,$sql);
