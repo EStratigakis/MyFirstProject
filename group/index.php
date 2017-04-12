@@ -75,7 +75,7 @@ $result=mysqli_query($db,$sql);
     while($rows = mysqli_fetch_array($result)){
         ?>
         <tr>
-            <td bgcolor="#FFFFFF"><a href="/Registration/input.php?id=<?php echo $rows['student_id']; ?>"><?php echo $rows['fname']; ?></a><BR></td>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['fname']; ?></td>
             <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
             <td align="center" bgcolor="#FFFFFF"><?php echo $rows['mail']; ?></td>
             <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
