@@ -111,7 +111,7 @@ $result1=mysqli_query($db,$sql1);
             <a href="/loggedin/student/index.php">Home</a>
             <a href="/Forum/main_forum.php">Forum</a>
             <a href="#">Upload</a>
-            <a href="../loggedout.php">Log Out</a>
+            <a href="/Login%20System/logout.php">Log Out</a>
         </div>
         <div style="background-color:white; height:auto;width:auto;float:left;">
             <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
