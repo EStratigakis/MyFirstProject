@@ -87,7 +87,18 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         while($row = mysqli_fetch_array($result1)){
             $_SESSION['gp'] = $row['gpType'];
         }
-        header("location: home.php"); // Redirecting To another Page
+        if(($_SESSION['role'] == 'admin')){
+            header("loggedin/admin/index.php"); // Redirecting To the admin page
+        }
+        elseif(($_SESSION['role']=='student')){
+            header("loggedin/student/index.php"); // Redirecting To student page
+        }
+        elseif (($_SESSION['role']== 'lecturer')){
+            header("loggedin/lecturer/index.php"); // Redirecting To lecturer page
+        }
+        else{
+            echo "Cannot access this page!Contact the administrator!";
+        }
     }
     else
     {
