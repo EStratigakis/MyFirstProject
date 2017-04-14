@@ -85,7 +85,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
-        if ($rows['role'] == 'admin'){
+        if ('admin' == $rows['role']){
             header("Location: ../loggedin/admin/index.php"); // Redirecting To the admin page
         }
         elseif($role == 'student'){
