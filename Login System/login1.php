@@ -88,16 +88,16 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         while($row = mysqli_fetch_array($result1)){
             $_SESSION['gp'] = $row['gpType'];
         }
-        if ($row['role'] == 1){
+        if ($row['role'] == '1'){
             $_SESSION['login_admin'] = 'admin';
             header("loggedin/admin/index.php"); // Redirecting To the admin page
         }
-        elseif($row['role'] == 2){
+        elseif($row['role'] == '2'){
             $_SESSION['login_student'] = 'student';
             header("loggedin/student/index.php"); // Redirecting To student page
         }
-        elseif ($row['role'] == 3){
-            $_SESSION['login_lecturer'] = 'lecuter';
+        elseif ($row['role'] == '3'){
+            $_SESSION['login_lecturer'] = 'lecturer';
             header("loggedin/lecturer/index.php"); // Redirecting To lecturer page
         }
         else{
