@@ -12,7 +12,7 @@ $result=mysqli_query($db,$sql);
 
 $tbl_name1="student";
 $db_name1="stu";
-mysqli_select_db($db,"myforum")or die("cannot select DB");
+mysqli_select_db($db,"stu")or die("cannot select DB");
 
 $sql1="SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
 // OREDER BY id DESC is order result by descending
@@ -165,11 +165,11 @@ $result1=mysqli_query($db,$sql1);
         <?php
 
         // Start looping table row
-        while($rows1 = mysqli_fetch_array($result1)){
+        while($rows = mysqli_fetch_array($result1)){
             ?>
             <tr>
-                <td align="center" bgcolor="#FFFFFF"><?php echo $rows1['lname']; ?></td>
-                <td align="center" bgcolor="#FFFFFF"><?php echo $rows1['num']; ?></td>
+                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
+                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
             </tr>
 
             <?php
