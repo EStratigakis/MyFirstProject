@@ -88,7 +88,6 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
                 echo "Cannot access this page!Contact the administrator!";
             }
         }
-    }
     else
     {
         echo "Incorrect username or password.";
