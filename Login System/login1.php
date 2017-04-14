@@ -79,14 +79,10 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $_SESSION['role'] = $role;
         $result = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
         if (mysqli_num_rows($result) == 1)
             {
-            if ($role == '1')
-                {
-                header("location: home.php");// Redirecting To another Page
-                }
+            header("location: home.php");// Redirecting To another Page
             }
         else
             {
