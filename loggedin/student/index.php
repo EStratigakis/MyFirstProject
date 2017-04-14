@@ -10,7 +10,7 @@ $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 
 $result=mysqli_query($db,$sql);
 
-$tbl_name="student";
+$tbl_name1="student";
 $db_name1="stu";
 mysqli_select_db($db,"myforum")or die("cannot select DB");
 
