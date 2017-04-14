@@ -90,7 +90,10 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
             header("location: ../loggedin/admin/index.php");// Redirecting To another Page
             }
         }
-
+        else{
+            echo "Cannot access this page!Contact the administrator!";
+            echo $rows['role'];
+        }
     }
     else
     {
