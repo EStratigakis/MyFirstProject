@@ -117,7 +117,7 @@ $result1=mysqli_query($db,$sql1);
         </div>
     </div>
 
-    <div style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
+    <div style="background-color:#eee; height:auto;width:auto;float:left;border: 1px solid black;">
         <div><b>Forum</b></div>
         <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
             <tr>
@@ -154,7 +154,7 @@ $result1=mysqli_query($db,$sql1);
 
 
 </div>
-<div style="background-color:#fff; height:auto;width:38%;float:right;border: 1px solid black;">
+<div style="background-color:#fff; height:auto;width:auto;float:right;border: 1px solid black;">
     <div><b>Group</b></div>
     <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
         <tr>
