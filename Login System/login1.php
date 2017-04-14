@@ -87,16 +87,13 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $result1 = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
         $r = mysqli_fetch_array($result1);
         $_SESSION['role'] = $r['role'];
-        if ($r['role'] == '1'){
-            $_SESSION['role'] = 'admin';
+        if ($r['role'] == 1){
             header("loggedin/admin/index.php"); // Redirecting To the admin page
         }
-        elseif($r['role'] == '2'){
-            $_SESSION['login_student'] = 'student';
+        elseif($r['role'] == 2){
             header("loggedin/student/index.php"); // Redirecting To student page
         }
-        elseif ($r['role'] == '3'){
-            $_SESSION['login_lecturer'] = 'lecturer';
+        elseif ($r['role'] == 3){
             header("loggedin/lecturer/index.php"); // Redirecting To lecturer page
         }
         else{
