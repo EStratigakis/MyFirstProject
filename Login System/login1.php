@@ -85,12 +85,14 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
-        if(mysqli_num_rows($result) == 1)
-        {
-            if ($_SESSION['role']=='admin')
-            {
-                header("location: ../loggedin/admin/index.php");// Redirecting To anot  her Page
+        if(mysqli_num_rows($result) == 1) {
+            if ($_SESSION['role']=='admin'){
+            header("location: home.php");// Redirecting To another Page
             }
+        }
+        else{
+            echo "Cannot access this page!Contact the administrator!";
+            echo $rows['role'];
         }
     }
     else
