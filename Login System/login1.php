@@ -87,9 +87,6 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $result1 = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
         $r = mysqli_fetch_array($result1);
         $_SESSION['role'] = $r['role'];
-        while($row = mysqli_fetch_array($result1)){
-            $_SESSION['gp'] = $row['gpType'];
-        }
         if ($r['role'] == '1'){
             $_SESSION['role'] = 'admin';
             header("loggedin/admin/index.php"); // Redirecting To the admin page
