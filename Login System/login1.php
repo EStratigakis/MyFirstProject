@@ -87,13 +87,13 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         while($row = mysqli_fetch_array($result1)){
             $_SESSION['gp'] = $row['gpType'];
         }
-        if(($_SESSION['role'] == 'admin')){
+        if(($_SESSION['role'] == '1')){
             header("loggedin/admin/index.php"); // Redirecting To the admin page
         }
-        elseif(($_SESSION['role']=='student')){
+        elseif(($_SESSION['role']=='2')){
             header("loggedin/student/index.php"); // Redirecting To student page
         }
-        elseif (($_SESSION['role']== 'lecturer')){
+        elseif (($_SESSION['role']== '3')){
             header("loggedin/lecturer/index.php"); // Redirecting To lecturer page
         }
         else{
