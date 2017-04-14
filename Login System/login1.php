@@ -84,15 +84,19 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $result1 = mysqli_query($db,"SELECT * from users WHERE working_id = '$username' and password = '$password'");
-        $role = $result['role'];
-        if ($role == 'admin'){
+        $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
+        $result=mysqli_query($sql);
+
+        $r = mysqli_fetch_array($result);
+        $_SESSION['role'] = $r['role'];  //set role to session - This will be needed to restricted pages pertaining to role.
+
+        if ($r['role'] == 'admin'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To the admin page
         }
-        elseif($role == 'student'){
+        elseif($r['role'] == 'student'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To student page
         }
-        elseif ($role == 'lecturer'){
+        elseif ($r['role'] == 'lecturer'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To lecturer page
         }
         else{
