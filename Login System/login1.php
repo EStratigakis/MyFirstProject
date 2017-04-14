@@ -85,11 +85,11 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
-        $result=mysqli_query($sql);
+        $result=mysqli_query($db,$sql);
 
         $r = mysqli_fetch_array($result);
         $_SESSION['role'] = $r['role'];  //set role to session - This will be needed to restricted pages pertaining to role.
-
+        echo $_SESSION['role'];
         if ($r['role'] == 'admin'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To the admin page
         }
