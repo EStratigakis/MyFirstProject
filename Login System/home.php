@@ -57,7 +57,7 @@
 
 <?php
 session_start();
-echo "Hello " .$_SESSION['username']."<br>".$_SESSION['role']. "<br>";
+echo "Hello " .$_SESSION['username']. "<br>" .$_SESSION['role']. "<br>";
 ?>
 </body>
 <footer>
