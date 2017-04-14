@@ -69,7 +69,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
     $username=$_POST['username'];
     $password=$_POST['password'];
     mysqli_select_db($db,'user');
-    $sql="SELECT uid,role FROM users WHERE username='$username' and password='$password'";
+    $sql="SELECT uid FROM users WHERE username='$username' and password='$password'";
 
     $result=mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,$db);
@@ -85,15 +85,14 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $result1 = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
-        $r = mysqli_fetch_array($result1);
-        $_SESSION['role'] = $r['role'];
-        if ($r['role'] == 1){
+        $row = mysqli_fetch_array($result1);
+        if ($row['role'] == '1'){
             header('/loggedin/admin/index.php'); // Redirecting To the admin page
         }
-        elseif($r['role'] == 2){
+        elseif($row['role'] == '2'){
             header('/loggedin/student/index.php'); // Redirecting To student page
         }
-        elseif ($r['role'] == 3){
+        elseif ($row['role'] == '3'){
             header('/loggedin/lecturer/index.php'); // Redirecting To lecturer page
         }
         else{
