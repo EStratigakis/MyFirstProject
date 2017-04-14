@@ -11,10 +11,10 @@ $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 $result=mysqli_query($db,$sql);
 
 $tbl_name="student";
-$db_name="stu";
+$db_name1="stu";
 mysqli_select_db($db,"myforum")or die("cannot select DB");
 
-$sql1="SELECT * FROM $tbl_name ORDER BY student_id ASC";
+$sql1="SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
 // OREDER BY id DESC is order result by descending
 
 $result1=mysqli_query($db,$sql1);
