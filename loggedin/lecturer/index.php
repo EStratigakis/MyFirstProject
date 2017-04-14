@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once("../../dbConnect.php");
 $tbl_name="fquestions";
 $db_name="myforum";

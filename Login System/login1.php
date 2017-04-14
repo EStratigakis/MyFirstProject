@@ -54,7 +54,7 @@
 </body>
 </html>
 <?php
-
+session_start();
 include_once('../dbConnect.php');
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
