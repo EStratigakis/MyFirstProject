@@ -86,13 +86,13 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['password'] = $password;
         $result1 = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
         $role = $result1['role'];
-        if ($role == '1'){
+        if ($role == 'admin'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To the admin page
         }
-        elseif($role == '2'){
+        elseif($role == 'student'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To student page
         }
-        elseif ($role == '3'){
+        elseif ($role == 'lecturer'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To lecturer page
         }
         else{
