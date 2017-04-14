@@ -89,14 +89,14 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
 
         $r = mysqli_fetch_array($result);
         $_SESSION['role'] = $r['role'];  //set role to session - This will be needed to restricted pages pertaining to role.
-        echo $_SESSION['role'];
-        if ($r['role'] == 'admin'){
+
+        if ($r['role'] == "admin"){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To the admin page
         }
-        elseif($r['role'] == 'student'){
+        elseif($r['role'] == "student"){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To student page
         }
-        elseif ($r['role'] == 'lecturer'){
+        elseif ($r['role'] == "lecturer"){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To lecturer page
         }
         else{
