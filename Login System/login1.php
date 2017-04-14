@@ -86,7 +86,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['password'] = $password;
         $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
         if ('admin' == $rows['role']){
-            header("Location: ../loggedin/admin/index.php"); // Redirecting To the admin page
+            header("url = http://strato1.azurewebsites.net/loggedin/admin/index.php"); // Redirecting To the admin page
         }
         elseif($role == 'student'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To student page
