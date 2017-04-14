@@ -85,7 +85,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $result1 = mysqli_query($db,"SELECT * from admin WHERE working_id = '$username' and password = '$password'");
-        $role = $result1['role'];
+        $role = $result['role'];
         if ($role == 'admin'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To the admin page
         }
