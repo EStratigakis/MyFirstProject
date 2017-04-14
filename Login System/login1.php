@@ -88,13 +88,13 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $r = mysqli_fetch_array($result1);
         $_SESSION['role'] = $r['role'];
         if ($r['role'] == 1){
-            header("loggedin/admin/index.php"); // Redirecting To the admin page
+            header('/loggedin/admin/index.php'); // Redirecting To the admin page
         }
         elseif($r['role'] == 2){
-            header("loggedin/student/index.php"); // Redirecting To student page
+            header('/loggedin/student/index.php'); // Redirecting To student page
         }
         elseif ($r['role'] == 3){
-            header("loggedin/lecturer/index.php"); // Redirecting To lecturer page
+            header('/loggedin/lecturer/index.php'); // Redirecting To lecturer page
         }
         else{
             echo "Cannot access this page!Contact the administrator!";
