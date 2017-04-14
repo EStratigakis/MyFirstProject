@@ -89,7 +89,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         {
             if ($_SESSION['role']=='admin')
             {
-                header("location: ../loggedin/admin/index.php");// Redirecting To another Page
+                header("location: ../loggedin/admin/index.php");// Redirecting To anot  her Page
             }
         }
     }
