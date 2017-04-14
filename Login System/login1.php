@@ -69,7 +69,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
     $username=$_POST['username'];
     $password=$_POST['password'];
     mysqli_select_db($db,'user');
-    $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
+    $sql="SELECT uid FROM users WHERE username='$username' and password='$password'";
 
     $result=mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,$db);
@@ -84,7 +84,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $result1 = mysqli_query($db,"SELECT * from admin WHERE working_id = '$username' and password = '$password'");
+        $result1 = mysqli_query($db,"SELECT * from users WHERE working_id = '$username' and password = '$password'");
         $role = $result['role'];
         if ($role == 'admin'){
             header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To the admin page
