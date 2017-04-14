@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html>
@@ -54,7 +57,6 @@
 </body>
 </html>
 <?php
-session_start();
 
 include_once('../dbConnect.php');
 
