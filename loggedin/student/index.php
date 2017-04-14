@@ -165,11 +165,11 @@ $result1=mysqli_query($db,$sql1);
         <?php
 
         // Start looping table row
-        while($rows = mysqli_fetch_array($result1)){
+        while($rows1 = mysqli_fetch_array($result1)){
             ?>
             <tr>
-                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
-                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
+                <td align="center" bgcolor="#FFFFFF"><?php echo $rows1['lname']; ?></td>
+                <td align="center" bgcolor="#FFFFFF"><?php echo $rows1['num']; ?></td>
             </tr>
 
             <?php
