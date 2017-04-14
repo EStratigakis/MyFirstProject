@@ -71,23 +71,24 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
     $result=mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,$db);
 
-    if(mysqli_num_rows($result) == 1) {
-        if ($_POST["remember_me"] == '1' || $_POST["remember_me"] == 'on') {
+    if(mysqli_num_rows($result) == 1)
+    {
+        if($_POST["remember_me"]=='1' || $_POST["remember_me"]=='on')
+        {
             $hour = time() + 3600 * 24 * 30;
             setcookie('username', $username, $hour);
             setcookie('password', $password, $hour);
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $result = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
-        if (mysqli_num_rows($result) == 1)
-            {
-            header("location: home.php");// Redirecting To another Page
+        $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
+        if(mysqli_num_rows($result) == 1) {
+            if ($_SESSION['rid'] == '1') {
+                header("location: home.php");// Redirecting To another Page
+            } else {
+                echo "Cannot access this page!Contact the administrator!";
             }
-        else
-            {
-            echo "Cannot access this page!Contact the administrator!";
-            }
+        }
     }
     else
     {
