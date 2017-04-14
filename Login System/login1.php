@@ -84,19 +84,21 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $result1 = mysqli_query($db,"SELECT * from admin WHERE working_id = '$username' and password = '$password'");
+        $result1 = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
+        $r = mysqli_fetch_array($result1);
+        $_SESSION['role'] = $r['role'];
         while($row = mysqli_fetch_array($result1)){
             $_SESSION['gp'] = $row['gpType'];
         }
-        if ($row['role'] == '1'){
-            $_SESSION['login_admin'] = 'admin';
+        if ($r['role'] == '1'){
+            $_SESSION['role'] = 'admin';
             header("loggedin/admin/index.php"); // Redirecting To the admin page
         }
-        elseif($row['role'] == '2'){
+        elseif($r['role'] == '2'){
             $_SESSION['login_student'] = 'student';
             header("loggedin/student/index.php"); // Redirecting To student page
         }
-        elseif ($row['role'] == '3'){
+        elseif ($r['role'] == '3'){
             $_SESSION['login_lecturer'] = 'lecturer';
             header("loggedin/lecturer/index.php"); // Redirecting To lecturer page
         }
