@@ -92,7 +92,6 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         }
         else{
             echo "Cannot access this page!Contact the administrator!";
-            echo $rows['role'];
         }
     }
     else
