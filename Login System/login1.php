@@ -85,15 +85,15 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $result1 = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
-        $row = mysqli_fetch_array($result1);
-        if ($row['role'] == '1'){
-            header('/loggedin/admin/index.php'); // Redirecting To the admin page
+        $role = $result1['role'];
+        if ($role == '1'){
+            header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To the admin page
         }
-        elseif($row['role'] == '2'){
-            header('/loggedin/student/index.php'); // Redirecting To student page
+        elseif($role == '2'){
+            header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To student page
         }
-        elseif ($row['role'] == '3'){
-            header('/loggedin/lecturer/index.php'); // Redirecting To lecturer page
+        elseif ($role == '3'){
+            header('URL = http://strato1.azurewebsites.net/loggedin/admin/index.php'); // Redirecting To lecturer page
         }
         else{
             echo "Cannot access this page!Contact the administrator!";
