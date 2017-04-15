@@ -13,7 +13,7 @@ $rle=$_POST['rle'];
 $sql="INSERT INTO users(username, password, role, permissions_id) VALUES ('$usr', '$pass','', '$rle')";
 $result=mysqli_query($db,$sql);
 $rows = mysqli_num_rows($result);
-if($rows != 1){
+if($result){
     echo "<script type='text/javascript'>alert('User Added!')</script>";
     header('Refresh: 1; URL = http://strato1.azurewebsites.net/NewAccount/account.html');
 }
