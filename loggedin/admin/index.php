@@ -23,7 +23,8 @@ else {
 // OREDER BY id DESC is order result by descending
 
     $result1 = mysqli_query($db, $sql1);
-
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -211,5 +212,3 @@ else {
     <a href="http://www.reddit.com" class="fa fa-reddit"></a>
 </footer>
 </html>
-}
-?>
