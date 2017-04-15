@@ -10,10 +10,12 @@ $pass=$_POST['pswd'];
 $rle=$_POST['rle'];
 
 
-$sql="INSERT INTO users(username, password, role, permissions_id) VALUES ('$usr', '$pass','', '$rle')";
-$result=mysqli_query($db,$sql);
+$sql1 = "SELECT * FROM users WHERE username='$usr'";
+$result=mysqli_query($db,$sql1);
 $rows = mysqli_num_rows($result);
 if($rows != 1){
+    $sql="INSERT INTO users(username, password, role, permissions_id) VALUES ('$usr', '$pass','', '$rle')";
+    $result=mysqli_query($db,$sql);
     echo "<script type='text/javascript'>alert('User Added!')</script>";
     header('Refresh: 1; URL = http://strato1.azurewebsites.net/NewAccount/account.html');
 }
