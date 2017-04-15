@@ -86,6 +86,12 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
             if ($_SESSION['permissions_id'] = 1) {
                 header("location: /loggedin/admin/index.php");// Redirecting To another Page
             }
+            elseif ($_SESSION['permissions_id'] = 2){
+                header("location: /loggedin/student/index.php");// Redirecting To another Page
+            }
+            elseif ($_SESSION['permissions_id'] = 3){
+                header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
+            }
             } else {
                 echo "Cannot access this page!Contact the administrator!";
             }
