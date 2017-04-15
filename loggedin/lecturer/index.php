@@ -1,8 +1,9 @@
 <?php
 session_start();
-if($_SESSION['authenticated'] != 3)
+if($_SESSION['permissions_id'] != 3)
 {
     echo("Your permissions are not high enough");
+    session_destroy();
 }
 else {
     include_once("../../dbConnect.php");
