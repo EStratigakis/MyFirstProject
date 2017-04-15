@@ -14,15 +14,15 @@
     <a href="/Registration/regi.html">Add a student</a>
 </div>
 <div class="re">
-<form action="/NewAccount/account.php">
+<form action="/NewAccount/account.php" role = "form" method="post">
     Username:<br>
-    <input type="text" name="usr">
+    <input type="text" name="usr" id="usr">
     <br><br>
     Password:<br>
-    <input type="text" name="pswd">
+    <input type="text" name="pswd" id="pswd">
     <br><br>
     Role :<br>
-    <select required name="role">
+    <select required name="role" id="role">
             <option value="">None</option>
             <option value="1">Administrator</option>
             <option value="2">Student</option>
