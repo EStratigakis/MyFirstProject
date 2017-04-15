@@ -4,6 +4,8 @@ if($_SESSION['authenticated'] != 2)
 {
     echo("Your permissions are not high enough");
 }
+?>
+<?php
 include_once("../../dbConnect.php");
 $tbl_name="fquestions";
 $db_name="myforum";

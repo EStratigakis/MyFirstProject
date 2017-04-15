@@ -1,9 +1,11 @@
 <?php
 session_start();
-   if($_SESSION['authenticated'] != 1)
-   {
-       echo("Your permissions are not high enough");
-   }
+if($_SESSION['authenticated'] != 1)
+{
+    echo("Your permissions are not high enough");
+}
+?>
+<?php
 include_once("../../dbConnect.php");
 $tbl_name="fquestions";
 $db_name="myforum";
