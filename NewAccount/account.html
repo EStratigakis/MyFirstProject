@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
+
+<div class="topnav">
+    <a class="active" href="/index.html">Home</a>
+    <a href="/Forum/new_topic.php">Create a New topic</a>
+    <a href="/Forum/main_forum.php">Go to Main Forum</a>
+    <a href="/Login%20System/login.php">Login</a>
+    <a href="/Registration/regi.html">Add a student</a>
+</div>
+<div class="re">
+<form action="/NewAccount/account.php">
+    Username:<br>
+    <input type="text" name="usr">
+    <br><br>
+    Password:<br>
+    <input type="text" name="pswd">
+    <br><br>
+    Role :<br>
+    <select required name="role">
+            <option value="">None</option>
+            <option value="1">Administrator</option>
+            <option value="2">Student</option>
+            <option value="3">Lecturer</option>
+    </select>
+    <br><br><input type="submit" value="Submit">
+</form>
+</div>
+
+</body>
+</html>
