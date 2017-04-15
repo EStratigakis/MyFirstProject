@@ -10,7 +10,7 @@ $pass=$_POST['pswd'];
 $rle=$_POST['rle'];
 
 
-$sql="INSERT INTO users(username, password, permissions_id) VALUES ('$usr', '$pass', '$rle')";
+$sql="INSERT INTO users(username, password, role, permissions_id) VALUES ('$usr', '$pass','', '$rle')";
 $result=mysqli_query($db,$sql);
 
 if($result){
