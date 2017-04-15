@@ -89,13 +89,13 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         if(mysqli_num_rows($result) == 1)
         {
          switch ($permissions){
-             case "1":
+             case 1:
                  header("location: /loggedin/admin/index.php");
                  break;
-             case "2":
+             case 2:
                  header("location: /loggedin/student/index.php");
                  break;
-             case "3":
+             case 3:
                  header("location: /loggedin/lecturer/index.php");
                  break;
              default:
