@@ -7,7 +7,7 @@ mysqli_select_db($db,"$db_name")or die("cannot select DB");
 // get data that sent from form
 $usr=$_POST['usr'];
 $pass=$_POST['pswd'];
-$rle=$_POST['role'];
+$rle=$_POST['rle'];
 
 
 $sql="INSERT INTO users(username, password, permission_id) VALUES ('$usr', '$pass', '$rle')";
