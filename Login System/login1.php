@@ -87,11 +87,11 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
                 $_SESSION['authenticated'] = 1;
                 header("location: /loggedin/admin/index.php");// Redirecting To another Page
             }
-            elseif ($_SESSION['permissions_id'] = 2){
+            if ($_SESSION['permissions_id'] = 2){
                 $_SESSION['authenticated'] = 2;
                 header("location: /loggedin/student/index.php");// Redirecting To another Page
             }
-            elseif ($_SESSION['permissions_id'] = 3){
+            if ($_SESSION['permissions_id'] = 3){
                 $_SESSION['authenticated'] = 3;
                 header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
             }
