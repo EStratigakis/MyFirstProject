@@ -12,12 +12,13 @@ $rle=$_POST['rle'];
 
 $sql="INSERT INTO users(username, password, role, permissions_id) VALUES ('$usr', '$pass','', '$rle')";
 $result=mysqli_query($db,$sql);
-
-if($result){
+$rows = mysqli_num_rows($result);
+if($rows != 1){
     echo "<script type='text/javascript'>alert('User Added!')</script>";
     header('Refresh: 1; URL = http://strato1.azurewebsites.net/NewAccount/account.html');
 }
 else {
-    echo "ERROR";
+    echo "<script type='text/javascript'>alert('User Already Exists')</script>";
+    header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
 }
 ?>

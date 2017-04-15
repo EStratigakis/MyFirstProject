@@ -4,26 +4,26 @@ if($_SESSION['authenticated'] != 3)
 {
     echo("Your permissions are not high enough");
 }
-?>
-<?php
-include_once("../../dbConnect.php");
-$tbl_name="fquestions";
-$db_name="myforum";
-mysqli_select_db($db,"myforum")or die("cannot select DB");
+else {
+    include_once("../../dbConnect.php");
+    $tbl_name = "fquestions";
+    $db_name = "myforum";
+    mysqli_select_db($db, "myforum") or die("cannot select DB");
 
-$sql="SELECT * FROM $tbl_name ORDER BY id DESC";
+    $sql = "SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-$result=mysqli_query($db,$sql);
+    $result = mysqli_query($db, $sql);
 
-$tbl_name1="student";
-$db_name1="stu";
-mysqli_select_db($db,"stu")or die("cannot select DB");
+    $tbl_name1 = "student";
+    $db_name1 = "stu";
+    mysqli_select_db($db, "stu") or die("cannot select DB");
 
-$sql1="SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
+    $sql1 = "SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
 // OREDER BY id DESC is order result by descending
 
-$result1=mysqli_query($db,$sql1);
+    $result1 = mysqli_query($db, $sql1);
+}
 ?>
 
 <!DOCTYPE html>
