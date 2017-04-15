@@ -71,6 +71,13 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
     $result=mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,$db);
 
+    while($row = mysqli_fetch_array($result))
+    {
+        $permissions = $row['permissions_id']; //Gets the permissions of the user
+    }
+
+    $_SESSION['permissions_id'] = $permissions;
+
     if(mysqli_num_rows($result) == 1)
     {
         if($_POST["remember_me"]=='1' || $_POST["remember_me"]=='on')
