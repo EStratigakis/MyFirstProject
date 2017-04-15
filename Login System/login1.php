@@ -82,23 +82,26 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
-        if(mysqli_num_rows($result) == 1) {
+        if(mysqli_num_rows($result) == 1)
+        {
             if ($_SESSION['permissions_id'] = 1) {
                 $_SESSION['authenticated'] = 1;
                 header("location: /loggedin/admin/index.php");// Redirecting To another Page
-            }
+            }else{}
             if ($_SESSION['permissions_id'] = 2){
                 $_SESSION['authenticated'] = 2;
                 header("location: /loggedin/student/index.php");// Redirecting To another Page
-            }
+            }else{}
             if ($_SESSION['permissions_id'] = 3){
                 $_SESSION['authenticated'] = 3;
                 header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
-            }
-            } else {
-                echo "Cannot access this page!Contact the administrator!";
-            }
+            }else{}
         }
+        else
+        {
+                echo "Cannot access this page!Contact the administrator!";
+        }
+    }
     else
     {
         echo "Incorrect username or password.";
