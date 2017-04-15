@@ -60,49 +60,45 @@ include_once('../dbConnect.php');
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {
     echo "Both fields are required.";
-}else {
+}else
+{
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    mysqli_select_db($db, 'user');
-    $sql = "SELECT uid FROM users WHERE username='$username' and password='$password'";
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+    mysqli_select_db($db,'user');
+    $sql="SELECT uid FROM users WHERE username='$username' and password='$password'";
 
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_array($result, $db);
+    $result=mysqli_query($db,$sql);
+    $row = mysqli_fetch_array($result,$db);
 
-    $permissions = $row['permissions_id'];
-
-    $_SESSION['permissions_id'] = $permissions;
-
-    if (mysqli_num_rows($result) == 1)
+    if(mysqli_num_rows($result) == 1)
     {
-        if ($_POST["remember_me"] == '1' || $_POST["remember_me"] == 'on') {
+        if($_POST["remember_me"]=='1' || $_POST["remember_me"]=='on')
+        {
             $hour = time() + 3600 * 24 * 30;
             setcookie('username', $username, $hour);
             setcookie('password', $password, $hour);
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $result = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
-        if (mysqli_num_rows($result) == 1) {
-            switch ($_SESSION['permissions_id']) {
-                case '1':
-                    header("location: /loggedin/admin/index.php");
-                    break;
-                case 2:
-                    header("location: /loggedin/admin/index.php");
-                    break;
-                case 3:
-                    header("location: /loggedin/admin/index.php");
-                    break;
-                default:
-                    header("location: /index.html");
-                    break;
-            }
-
+        $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
+        if(mysqli_num_rows($result) == 1)
+        {
+            if ($_SESSION['permissions_id'] = 1) {
+                header("location: /loggedin/admin/index.php");// Redirecting To another Page
+            }else{}
+            if ($_SESSION['permissions_id'] = 2){
+                header("location: /loggedin/student/index.php");// Redirecting To another Page
+            }else{}
+            if ($_SESSION['permissions_id'] = 3){
+                header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
+            }else{}
+        }
+        else
+        {
+                echo "Cannot access this page!Contact the administrator!";
         }
     }
-
     else
     {
         echo "Incorrect username or password.";
