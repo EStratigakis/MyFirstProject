@@ -60,55 +60,46 @@ include_once('../dbConnect.php');
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {
     echo "Both fields are required.";
-}else
-{
+}else {
 
-    $username=$_POST['username'];
-    $password=$_POST['password'];
-    mysqli_select_db($db,'user');
-    $sql="SELECT uid FROM users WHERE username='$username' and password='$password'";
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    mysqli_select_db($db, 'user');
+    $sql = "SELECT uid FROM users WHERE username='$username' and password='$password'";
 
-    $result=mysqli_query($db,$sql);
+    $result = mysqli_query($db, $sql);
 
-    while($row = mysqli_fetch_array($result))
-    {
+    while ($row = mysqli_fetch_array($result)) {
         $permissions = $row['permissions_id']; //Gets the permissions of the user
     }
 
     $_SESSION['permissions_id'] = $permissions;
 
-    if(mysqli_num_rows($result) == 1)
-    {
-        if($_POST["remember_me"]=='1' || $_POST["remember_me"]=='on')
-        {
+    if (mysqli_num_rows($result) == 1) {
+        if ($_POST["remember_me"] == '1' || $_POST["remember_me"] == 'on') {
             $hour = time() + 3600 * 24 * 30;
             setcookie('username', $username, $hour);
             setcookie('password', $password, $hour);
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
-        if(mysqli_num_rows($result) == 1)
-        {
+        $result = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
+        if (mysqli_num_rows($result) == 1) {
             if ($permissions < 2) {
                 header("location: /loggedin/admin/index.php");// Redirecting To another Page
             }
-            if ($permissions <3){
+            if ($permissions < 3) {
                 header("location: /loggedin/student/index.php");// Redirecting To another Page
             }
-            if ($permissions <4){
+            if ($permissions < 4) {
                 header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
             }
+        } else {
+            echo "Cannot access this page! Contact the administrator!";
         }
-        else
-        {
-                echo "Cannot access this page!Contact the administrator!";
-        }
-    }
-    else
-    {
+    } else {
         echo "Incorrect username or password.";
     }
-}
 
+}
 ?>
