@@ -11,9 +11,8 @@ $rle=$_POST['rle'];
 
 $sql1 = "SELECT * FROM users(username) WHERE username ='$usr'"; //SQL Query to check if username exists
 $result = mysqli_query($db,$sql1); //Executes Query
-$data = mysqli_fetch_array($result, MYSQLI_NUM);
 
-if($data != 0){
+if(mysqli_num_rows($result) != 0){
     echo "<script type='text/javascript'>alert('User Already Exists')</script>";
     header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
 }
