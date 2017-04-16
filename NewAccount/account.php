@@ -17,7 +17,7 @@ if($rows = 1){    echo "<script type='text/javascript'>alert('User Already Exist
     header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
 }
 else {
-        $sql="INSERT INTO users(username, password, role, permissions_id) VALUES ('$usr', '$pass','', '$rle')";
+        $sql="INSERT INTO users(username, password, permissions_id) VALUES ('$usr', '$pass', '$rle')";
         $result1 = mysqli_query($db,$sql);
         echo "<script type='text/javascript'>alert('User Added!')</script>";
         header('Refresh: 1; URL = http://strato1.azurewebsites.net/NewAccount/account.html');
