@@ -13,7 +13,7 @@ $sql1 = "SELECT * FROM users WHERE username ='$usr'"; //SQL Query to check if us
 $result = mysqli_query($db,$sql1); //Executes Query
 
 
-if(mysqli_num_rows($result ) == 1)
+if(mysqli_num_rows($result) == 1)
     {
     echo "<script type='text/javascript'>alert('User Already Exists')</script>";
     header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
