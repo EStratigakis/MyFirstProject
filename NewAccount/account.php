@@ -9,7 +9,7 @@ $usr=$_POST['usr'];
 $pass=$_POST['pswd'];
 $rle=$_POST['rle'];
 
-$sql1 = "SELECT * FROM users(username) WHERE username ='$usr'"; //SQL Query to check if username exists
+$sql1 = "SELECT * FROM users WHERE username ='$usr'"; //SQL Query to check if username exists
 if ($result = mysqli_query($db,$sql1)) //Executes Query
 {
     $rows = mysqli_num_rows($result);
