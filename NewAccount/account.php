@@ -21,7 +21,7 @@ else {
         $sql="INSERT INTO users(username, password, permissions_id) VALUES ('$usr', '$pass', '$rle')";
         $result1 = mysqli_query($db,$sql);
         echo "<script type='text/javascript'>alert('User Added!')</script>";
-        echo ".$rowcount.";
+        echo "$rowcount";
         header('Refresh: 1; URL = http://strato1.azurewebsites.net/NewAccount/account.html');
     }
 ?>
