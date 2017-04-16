@@ -15,5 +15,5 @@ if ($result = mysqli_query($db,$sql1)) //Executes Query
     $rows = mysqli_num_rows($result);
     echo $rows;
 }
-else{ echo 'FUCK'};
+else{ echo 'FUCK';}
 ?>
