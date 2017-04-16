@@ -90,15 +90,15 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $result = mysqli_query($db,"SELECT * from users WHERE username = '$username' and password = '$password'");
         if(mysqli_num_rows($result) == 1)
         {
-            if ($_SESSION['permissions_id'] === 1) {
+            if ($_SESSION['permissions_id'] == 1) {
                 header("location: /loggedin/admin/index.php");// Redirecting To another Page
-            }else{}
-            if ($_SESSION['permissions_id'] === 2){
+            }
+            if ($_SESSION['permissions_id'] == 2){
                 header("location: /loggedin/student/index.php");// Redirecting To another Page
-            }else{}
-            if ($_SESSION['permissions_id'] === 3){
+            }
+            if ($_SESSION['permissions_id'] == 3){
                 header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
-            }else{}
+            }
         }
         else
         {
