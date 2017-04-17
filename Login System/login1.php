@@ -66,7 +66,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
     $username = $_POST['username'];
     $password = $_POST['password'];
     mysqli_select_db($db, 'user');
-    $sql = "SELECT uid FROM users WHERE username='$username' and password=md5('$password')";
+    $sql = "SELECT uid FROM users WHERE username='$username' and password='$password'";
 
     $result = mysqli_query($db, $sql);
 
@@ -90,7 +90,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         }
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        $result1 = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = md5('$password')");
+        $result1 = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
         if (mysqli_num_rows($result1) == 1) {
             switch ($_SESSION['permissions_id']) {
                 default:
