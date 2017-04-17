@@ -9,9 +9,9 @@ $usr=$_POST['usr'];
 $pass=$_POST['pswd'];
 $rle=$_POST['rle'];
 
-$result = mysqli_query($db,"SELECT * FROM users WHERE username = '$usr'"); //Executes Query
+$result = mysqli_query($db,"SELECT username FROM users WHERE username = '$usr' LIMIT 0,1'"); //Executes Query
 
-if ($result && mysqli_num_rows($result) == 1)
+if ($result && mysqli_num_rows($result) >= 1)
     {
     echo "<script type='text/javascript'>alert('User Already Exists')</script>";
     header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
