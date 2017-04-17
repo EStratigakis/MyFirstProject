@@ -89,7 +89,7 @@ $result=mysqli_query($db,$sql);
     while($rows = mysqli_fetch_array($result)){
         ?>
         <tr>
-            <td align="center" bgcolor="#FFFFFF"><input type="checkbox" name="name1" /><?php echo $rows['fname']; ?></td>
+            <td align="center" bgcolor="#FFFFFF"><input type="checkbox" name="name" /><?php echo $rows['fname']; ?></td>
             <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
             <td align="center" bgcolor="#FFFFFF"><?php echo $rows['mail']; ?></td>
             <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
