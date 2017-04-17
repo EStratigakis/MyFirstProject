@@ -26,9 +26,10 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Student Login!</title>
     <link rel="stylesheet" href="/style.css" type="text/css" />
+    <title>Student Login!</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -90,14 +91,8 @@ session_start();
 
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 
-<div class="topnav">
-    <a class="active" href="/index.html">Home</a>
-    <a href="/Forum/new_topic.php">Create a New topic</a>
-    <a href="/Forum/main_forum.php">Go to Main Forum</a>
-    <a href="/Login%20System/login.php">Login</a>
-</div>
 <div style="width:100%">
-    <div style="background-color:#b5dcb3; width:100%">
+    <div style="background-color:mediumspringgreen; width:100%">
         <h1><?php echo "<h1> Hello " .$_SESSION['username']. "</h1><br>";?></h1>
     </div>
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">

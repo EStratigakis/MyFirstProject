@@ -106,7 +106,7 @@ session_start();
     <div style="background-color:mediumpurple; height:600px;width:100px;float:left;">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/loggedin/student/index.php">Home</a>
+            <a href="/loggedin/lecturer/index.php">Home</a>
             <a href="/Forum/main_forum.php">Forum</a>
             <a href="#">Upload</a>
             <a href="/Registration/regi.html">Add Student</a>
@@ -197,11 +197,6 @@ session_start();
 </body>
 <footer>
 
-    <div class="alert alert-info alert-dismissable">
-        <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Info!</strong> We use cookies to improve your experience. By your continued use of this site you accept such use. To change your settings please see our policy.
-    </div>
-
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
     <a href="http://www.twitter.com" class="fa fa-twitter"></a>
     <a href="http://www.google.com" class="fa fa-google"></a>
@@ -209,5 +204,6 @@ session_start();
     <a href="http://www.youtube.com" class="fa fa-youtube"></a>
     <a href="http://www.instagram.com" class="fa fa-instagram"></a>
     <a href="http://www.reddit.com" class="fa fa-reddit"></a>
+
 </footer>
 </html>
