@@ -69,11 +69,17 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
 
     $result = mysqli_query($db, $sql);
 
-    while ($row = mysqli_fetch_array($result)) {
-        $permissions = $row['permissions_id']; //Gets the permissions of the user
-    }
+    $q = mysqli_query($db,"SELECT uid, permissions_id FROM users WHERE username = '$username' AND password = '$password' LIMIT 0,1");
 
-    $_SESSION['permissions_id'] = $permissions;
+    if($q && mysqli_num_rows($q) > 0){
+
+        // get associative array
+        $array = mysqli_fetch_assoc($q);
+
+        // set session vars
+        $_SESSION['permissions_id'] = $array['permissions_id'];
+
+    }
 
     if (mysqli_num_rows($result) == 1) {
         if ($_POST["remember_me"] == '1' || $_POST["remember_me"] == 'on') {
@@ -85,6 +91,20 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['password'] = $password;
         $result1 = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
         if (mysqli_num_rows($result1) == 1) {
+            switch($_SESSION['permissions_id']){
+                default:
+                    echo 'you have no privileges';
+                    break;
+                case "1":
+                    echo 'you have some privileges';
+                    break;
+                case "2":
+                    echo 'you have lots of privileges';
+                    break;
+                case "3";
+                    echo 'yay';
+                    break;
+            }
             if ($permissions == 1) {
                 header("location: /loggedin/admin/index.php");// Redirecting To another Page
             }
