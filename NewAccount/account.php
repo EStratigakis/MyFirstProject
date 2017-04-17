@@ -11,7 +11,7 @@ $rle=$_POST['rle'];
 
 $result = mysqli_query($db,"SELECT uid, permissions_id FROM users WHERE username = '$usr' LIMIT 0,1'"); //Executes Query
 
-if ($result && mysqli_num_rows($result) >= 1)
+if ($result && mysqli_num_rows($result) == 1)
     {
     echo "<script type='text/javascript'>alert('User Already Exists')</script>";
     header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
