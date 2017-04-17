@@ -14,7 +14,7 @@ else {
     $gname = $_POST['gname'];
     $snum = $_POST['snum'];
     mysqli_select_db($db, 'stu');
-    $sql = "CREATE TABLE $gname(student_id int(4) NOT NULL AUTO_INCREMENT, fname varchar(65) NOT NULL, lname varchar(65)) NOT NULL, num int(7) NOT NULL DEFAULT '', mail varchar(65) NOT NULL, dg varchar(25) NOT NULL, yr VARCHAR (25) NOT NULL
+    $sql = "CREATE TABLE '$gname'(student_id int(4) NOT NULL AUTO_INCREMENT, fname varchar(65) NOT NULL, lname varchar(65)) NOT NULL, num int(7) NOT NULL DEFAULT '', mail varchar(65) NOT NULL, dg varchar(25) NOT NULL, yr VARCHAR (25) NOT NULL
             PRIMARY KEY (`student_id` ))";
 
     $result = mysqli_query($db, $sql);
