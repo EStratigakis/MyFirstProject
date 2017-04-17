@@ -120,7 +120,7 @@ session_start();
 
     <div class="table-responsive" style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
         <div><b>Forum</b></div>
-        <p><table class="table" width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
             <tr>
                 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
                 <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
@@ -155,9 +155,9 @@ session_start();
 
 
 </div>
-<div style="background-color:#fff; height:auto;width:38%;float:right;border: 1px solid black;">
+<div class="table-responsive" style="background-color:#fff; height:auto;width:38%;float:right;border: 1px solid black;">
     <div><b>Group</b></div>
-    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+    <table class="table" width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
         <tr>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
