@@ -77,7 +77,7 @@ $result=mysqli_query($db,$sql);
 
 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
-        <td width="25%" align="center" bgcolor="#E6E6E6"><strong>CheckBox</strong></td>
+        <td width=auto align="center" bgcolor="#E6E6E6"><strong>CheckBox</strong></td>
         <td width="25%" align="center" bgcolor="#E6E6E6"><strong>First Name</strong></td>
         <td width="25%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
         <td width="25%" align="center" bgcolor="#E6E6E6"><strong>E-mail</strong></td>
