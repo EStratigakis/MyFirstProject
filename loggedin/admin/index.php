@@ -1,25 +1,32 @@
 <?php
 session_start();
+if ($_SESSION['permissions_id'] != 1)
+{
+    header("Refresh: 3; location: /index.html");
+    echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
+    echo 'You will be redirected in 3 seconds';
+    session_destroy();
+}
+else {
+    include_once("../../dbConnect.php");
+    $tbl_name = "fquestions";
+    $db_name = "myforum";
+    mysqli_select_db($db, "myforum") or die("cannot select DB");
 
-include_once("../../dbConnect.php");
-$tbl_name = "fquestions";
-$db_name = "myforum";
-mysqli_select_db($db, "myforum") or die("cannot select DB");
-
-$sql = "SELECT * FROM $tbl_name ORDER BY id DESC";
+    $sql = "SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-$result = mysqli_query($db, $sql);
+    $result = mysqli_query($db, $sql);
 
-$tbl_name1 = "student";
-$db_name1 = "stu";
-mysqli_select_db($db, "stu") or die("cannot select DB");
+    $tbl_name1 = "student";
+    $db_name1 = "stu";
+    mysqli_select_db($db, "stu") or die("cannot select DB");
 
-$sql1 = "SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
+    $sql1 = "SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
 // OREDER BY id DESC is order result by descending
 
-$result1 = mysqli_query($db, $sql1);
-
+    $result1 = mysqli_query($db, $sql1);
+}
 ?>
 
 <!DOCTYPE html>
