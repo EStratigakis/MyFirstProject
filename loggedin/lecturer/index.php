@@ -95,7 +95,7 @@ session_start();
 
 <div style="width:100%">
     <div style="background-color:mediumpurple; width:100%">
-        <h1 align="center"><?php echo "<h1 align='center'> Hello " .$_SESSION['username']. "</h1><br>";?></h1>
+        <h1 align="center"><?php echo "<p id='demo'>" .$_SESSION['username']. "!</p>";?></h1>
     </div>
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
         <!--
@@ -193,6 +193,20 @@ session_start();
     }
 </script>
 
+<script>
+    function myFunction() {
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+            greeting = "Good morning";
+        } else if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.getElementById("demo").innerHTML = greeting;
+    }
+</script>
 </body>
 <footer>
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
