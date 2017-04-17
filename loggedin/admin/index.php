@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['permissions_id'] != 1)
 {
-    header("Refresh: 3; url= strato1.azurewebsites.net");
+    header("Refresh: 3; url= /index.html");
     echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
     echo 'You will be redirected in 3 seconds';
     session_destroy();
