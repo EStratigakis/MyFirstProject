@@ -9,7 +9,7 @@
     $data=mysqli_fetch_assoc($result);
     echo $data['total'];
 
-    for ($x = 0; $x <= $data['total']; $x++){
+    for ($x = 1; $x <= $data['total']; $x++){
         echo " $x";
 }
 ?>
