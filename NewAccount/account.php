@@ -1,20 +1,29 @@
 <?php
-include_once("../dbConnect.php");
-
-$tbl_name="users";
-$db_name="user"; // Database name
-mysqli_select_db($db,"$db_name")or die("cannot select DB");
-// get data that sent from form
-
-
-if(isset($_POST['usr']) && isset($_POST['pswd']) && isset($_POST['rle']))
+session_start();
+if ($_SESSION['permissions_id'] != 1)
 {
-    $usr=$_POST['usr'];
-    $pass=$_POST['pswd'];
-    $rle=$_POST['rle'];
+    header("Refresh: 3; url= /index.html");
+    echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
+    echo 'You will be redirected in 3 seconds';
+    session_destroy();
+    exit();
+}
+else {
+    include_once("../dbConnect.php");
 
-    $result = mysqli_query($db, "SELECT * FROM users WHERE username = '$usr'"); //Executes Query
-    if (mysqli_num_rows($result) > 0) {
+    $tbl_name = "users";
+    $db_name = "user"; // Database name
+    mysqli_select_db($db, "$db_name") or die("cannot select DB");
+// get data that sent from form
+    $usr = $_POST['usr'];
+    $pass = $_POST['pswd'];
+    $rle = $_POST['rle'];
+
+    $sql1 = "SELECT * FROM users WHERE username ='$usr'"; //SQL Query to check if username exists
+    $result = mysqli_query($db, $sql1); //Executes Query
+    $int = mysqli_num_rows($result);
+
+    if ($int == '1') {
         echo "<script type='text/javascript'>alert('User Already Exists')</script>";
         header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
     } else {
