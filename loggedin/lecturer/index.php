@@ -95,7 +95,7 @@ session_start();
 
 <div style="width:100%">
     <div style="background-color:mediumpurple; width:100%">
-        <h1 align="center"><?php echo "<p id='demo'>Hello " .$_SESSION['username']. "!</p>";?></h1>
+        <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
     </div>
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
         <!--
@@ -193,20 +193,11 @@ session_start();
     }
 </script>
 
-<script>
-    function myFunction() {
-        var greeting;
-        var time = new Date().getHours();
-        if (time < 10) {
-            greeting = "Good morning";
-        } else if (time < 20) {
-            greeting = "Good day";
-        } else {
-            greeting = "Good evening";
-        }
-        document.getElementById("demo").innerHTML = greeting;
-    }
-</script>
+<div class="alert alert-info alert-dismissable fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Info!</strong> We use cookies to improve your experience. By your continued use of this site you accept such use. To change your settings please see our policy.
+</div>
+
 </body>
 <footer>
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
