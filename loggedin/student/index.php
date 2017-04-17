@@ -1,23 +1,24 @@
 <?php
 session_start();
-    include_once("../../dbConnect.php");
-    $tbl_name = "fquestions";
-    $db_name = "myforum";
-    mysqli_select_db($db, "myforum") or die("cannot select DB");
 
-    $sql = "SELECT * FROM $tbl_name ORDER BY id DESC";
+include_once("../../dbConnect.php");
+$tbl_name = "fquestions";
+$db_name = "myforum";
+mysqli_select_db($db, "myforum") or die("cannot select DB");
+
+$sql = "SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-    $result = mysqli_query($db, $sql);
+$result = mysqli_query($db, $sql);
 
-    $tbl_name1 = "student";
-    $db_name1 = "stu";
-    mysqli_select_db($db, "stu") or die("cannot select DB");
+$tbl_name1 = "student";
+$db_name1 = "stu";
+mysqli_select_db($db, "stu") or die("cannot select DB");
 
-    $sql1 = "SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
+$sql1 = "SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
 // OREDER BY id DESC is order result by descending
 
-    $result1 = mysqli_query($db, $sql1);
+$result1 = mysqli_query($db, $sql1);
 
 ?>
 
@@ -28,8 +29,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Lecturer Login!</title>
     <link rel="stylesheet" href="/style.css" type="text/css" />
-    <title>Student Login!</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -91,9 +92,10 @@ session_start();
 
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 
+
 <div style="width:100%">
     <div style="background-color:mediumspringgreen; width:100%">
-        <h1><?php echo "<h1> Hello " .$_SESSION['username']. "</h1><br>";?></h1>
+        <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
     </div>
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
         <!--
@@ -101,22 +103,22 @@ session_start();
         -->
     </a><div id="awcc1492186492542" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1492186492542"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
 
-    <div style="background-color:white; height:600px;width:100px;float:left;">
+    <div style="background-color:mediumspringgreen; height:600px;width:100px;float:left;">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/loggedin/student/index.php">Home</a>
+            <a href="/loggedin/lecturer/index.php">Home</a>
             <a href="/Forum/main_forum.php">Forum</a>
             <a href="#">Upload</a>
             <a href="/Login%20System/logout.php">Log Out</a>
         </div>
-        <div style="background-color:white; height:auto;width:auto;float:left;">
+        <div style="background-color:mediumpurple; height:auto;width:auto;float:left;">
             <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         </div>
     </div>
 
-    <div style="background-color:#eee; height:auto;width:auto;float:left;border: 1px solid black;">
+    <div class="table-responsive" style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
         <div><b>Forum</b></div>
-        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
             <tr>
                 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
                 <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
@@ -151,9 +153,9 @@ session_start();
 
 
 </div>
-<div style="background-color:#fff; height:auto;width:auto;float:right;border: 1px solid black;">
+<div class="table-responsive" style="background-color:#fff; height:auto;width:38%;float:right;border: 1px solid black;">
     <div><b>Group</b></div>
-    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
         <tr>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
@@ -189,8 +191,10 @@ session_start();
     }
 </script>
 
+
 </body>
 <footer>
+
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
     <a href="http://www.twitter.com" class="fa fa-twitter"></a>
     <a href="http://www.google.com" class="fa fa-google"></a>
@@ -198,5 +202,6 @@ session_start();
     <a href="http://www.youtube.com" class="fa fa-youtube"></a>
     <a href="http://www.instagram.com" class="fa fa-instagram"></a>
     <a href="http://www.reddit.com" class="fa fa-reddit"></a>
+
 </footer>
 </html>
