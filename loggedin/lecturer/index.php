@@ -1,11 +1,6 @@
 <?php
 session_start();
-if($_SESSION['permissions_id'] != 3)
-{
-    echo("Your permissions are not high enough");
-    session_destroy();
-}
-else {
+
     include_once("../../dbConnect.php");
     $tbl_name = "fquestions";
     $db_name = "myforum";
@@ -24,7 +19,7 @@ else {
 // OREDER BY id DESC is order result by descending
 
     $result1 = mysqli_query($db, $sql1);
-}
+
 ?>
 
 <!DOCTYPE html>
