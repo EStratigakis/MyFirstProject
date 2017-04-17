@@ -19,7 +19,7 @@ else {
     $pass = $_POST['pswd'];
     $rle = $_POST['rle'];
 
-    $sql1 = "SELECT * FROM users WHERE username ='$usr'"; //SQL Query to check if username exists
+    $sql1 = "SELECT * FROM users WHERE username ='$usr';"; //SQL Query to check if username exists
     $result = mysqli_query($db, $sql1); //Executes Query
     $int = mysqli_num_rows($result);
 
@@ -27,7 +27,7 @@ else {
         echo "<script type='text/javascript'>alert('User Already Exists')</script>";
         header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
     } else {
-        $sql = "INSERT INTO users(username, password, permissions_id) VALUES ('$usr', '$pass', '$rle')";
+        $sql = "INSERT INTO users(username, password, permissions_id) VALUES ('$usr', '$pass', '$rle');";
         $result1 = mysqli_query($db, $sql);
         echo "<script type='text/javascript'>alert('User Added!')</script>";
         header('Refresh: 1; URL = http://strato1.azurewebsites.net/NewAccount/account.html');
