@@ -9,8 +9,7 @@ $usr=$_POST['usr'];
 $pass=$_POST['pswd'];
 $rle=$_POST['rle'];
 
-$sql1 = "SELECT uid, permissions_id FROM users WHERE username = '$usr' LIMIT 0,1'"; //SQL Query to check if username exists
-$result = mysqli_query($db,$sql1); //Executes Query
+$result = mysqli_query($db,"SELECT uid, permissions_id FROM users WHERE username = '$usr' LIMIT 0,1'"); //Executes Query
 
 if ($result && mysqli_num_rows($result) >= 1)
     {
