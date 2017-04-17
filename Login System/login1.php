@@ -59,7 +59,8 @@ include_once('../dbConnect.php');
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {
-    echo "Both fields are required.";
+    echo "<script type='text/javascript'>alert('Both fields are required!')</script>";
+    header('Refresh: 1; URL = http://strato1.azurewebsites.net');
 }else {
 
     $username = $_POST['username'];

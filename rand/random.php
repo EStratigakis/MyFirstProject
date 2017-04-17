@@ -8,6 +8,7 @@ mysqli_select_db($db, "$db_name") or die("cannot select DB");
 if(empty($_POST["gname"]) || empty($_POST["snum"]))
     {
         echo "<script type='text/javascript'>alert('Both fields are required!')</script>";
+        header('Refresh: 1; URL = http://strato1.azurewebsites.net');
     }
 else {
 
