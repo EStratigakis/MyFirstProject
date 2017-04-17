@@ -94,7 +94,7 @@ session_start();
 
 
 <div style="width:100%">
-    <div style="background-color:rebeccapurple; width:100%">
+    <div style="background-color:mediumpurple; width:100%">
         <h1><?php echo "<h1> Hello " .$_SESSION['username']. "</h1><br>";?></h1>
     </div>
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
@@ -103,7 +103,7 @@ session_start();
         -->
     </a><div id="awcc1492186492542" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1492186492542"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
 
-    <div style="background-color:rebeccapurple; height:600px;width:100px;float:left;">
+    <div style="background-color:mediumpurple; height:600px;width:100px;float:left;">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/loggedin/student/index.php">Home</a>
@@ -114,13 +114,13 @@ session_start();
             <a href="/Login%20System/logout.php">Log Out</a>
         </div>
         <div style="background-color:white; height:auto;width:auto;float:left;">
-            <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9370db; Menu</span>
         </div>
     </div>
 
     <div style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
         <div><b>Forum</b></div>
-        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#663399">
+        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
             <tr>
                 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
                 <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
@@ -157,7 +157,7 @@ session_start();
 </div>
 <div style="background-color:#fff; height:auto;width:38%;float:right;border: 1px solid black;">
     <div><b>Group</b></div>
-    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#663399">
+    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
         <tr>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
