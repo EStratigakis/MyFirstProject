@@ -65,6 +65,9 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
     $username = $_POST['username'];
     $password = $_POST['password'];
     mysqli_select_db($db, 'user');
+    $sql = "SELECT uid FROM users WHERE username='$username' and password='$password'";
+
+    $result = mysqli_query($db, $sql);
 
     $q = mysqli_query($db, "SELECT uid, permissions_id FROM users WHERE username = '$username' AND password = '$password' LIMIT 0,1");
 
