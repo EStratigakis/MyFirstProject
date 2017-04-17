@@ -9,7 +9,6 @@
     $data=mysqli_fetch_assoc($result);
 
     for ($x = 1; $x <= $data['total']; $x++){
-        $sql = mysqli_query($db,)
         echo " $x";
 }
 ?>
