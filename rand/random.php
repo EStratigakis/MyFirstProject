@@ -15,7 +15,7 @@ else {
     $db_name = "stu"; // Database name
     mysqli_select_db($db, "$db_name") or die("cannot select DB");
 
-    $result=mysqli_query("SELECT count(*) as total from students");
+    $result=mysqli_query("SELECT count(*) as total from student");
     $data=mysqli_fetch_assoc($result);
     echo $data['total'];
 }
