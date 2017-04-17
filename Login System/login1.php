@@ -65,13 +65,10 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
     $username = $_POST['username'];
     $password = $_POST['password'];
     mysqli_select_db($db, 'user');
-    $sql = "SELECT uid FROM users WHERE username='$username' and password='$password'";
 
-    $result = mysqli_query($db, $sql);
+    $q = mysqli_query($db, "SELECT uid, permissions_id FROM users WHERE username = '$username' AND password = '$password' LIMIT 0,1");
 
-    $q = mysqli_query($db,"SELECT uid, permissions_id FROM users WHERE username = '$username' AND password = '$password' LIMIT 0,1");
-
-    if($q && mysqli_num_rows($q) > 0){
+    if ($q && mysqli_num_rows($q) > 0) {
 
         // get associative array
         $array = mysqli_fetch_assoc($q);
@@ -91,8 +88,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['password'] = $password;
         $result1 = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
         if (mysqli_num_rows($result1) == 1) {
-            switch($_SESSION['permissions_id'])
-            {
+            switch ($_SESSION['permissions_id']) {
                 default:
                     echo 'You do not have enough privileges';
                     break;
@@ -106,9 +102,10 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
                     header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
                     break;
             }
-    } else {
-        echo "Incorrect username or password.";
-    }
+        } else {
+            echo "Incorrect username or password.";
+        }
 
+    }
 }
 ?>
