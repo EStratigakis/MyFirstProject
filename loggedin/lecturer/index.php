@@ -113,8 +113,8 @@ session_start();
             <a href="/NewAccount/account.html">Add User Account</a>
             <a href="/Login%20System/logout.php">Log Out</a>
         </div>
-        <div style="background-color:white; height:auto;width:auto;float:left;">
-            <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9370db; Menu</span>
+        <div style="background-color:mediumpurple; height:auto;width:auto;float:left;">
+            <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         </div>
     </div>
 
