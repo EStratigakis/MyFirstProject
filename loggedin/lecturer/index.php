@@ -95,7 +95,7 @@ session_start();
 
 <div style="width:100%">
     <div style="background-color:mediumpurple; width:100%">
-        <h1 align="center"><?php echo "<p id='hello'>" .$_SESSION['username']. "!</p>";?></h1>
+        <h1 align="center"><?php echo "<h1 id='hello'>," .$_SESSION['username']. "!</h1>";?></h1>
     </div>
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
         <!--
