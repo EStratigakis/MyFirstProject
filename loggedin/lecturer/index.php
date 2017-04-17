@@ -193,13 +193,15 @@ session_start();
     }
 </script>
 
-<div class="alert alert-info alert-dismissable fade in">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Info!</strong> We use cookies to improve your experience. By your continued use of this site you accept such use. To change your settings please see our policy.
-</div>
 
 </body>
 <footer>
+
+    <div class="alert alert-info alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Info!</strong> We use cookies to improve your experience. By your continued use of this site you accept such use. To change your settings please see our policy.
+    </div>
+
     <a href="http://www.facebook.com" class="fa fa-facebook"></a>
     <a href="http://www.twitter.com" class="fa fa-twitter"></a>
     <a href="http://www.google.com" class="fa fa-google"></a>
