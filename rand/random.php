@@ -22,7 +22,7 @@ else
 
     if ($result) {
 
-        $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr) SELECT DISTINCT * FROM student ORDER BY rand() LIMIT `$snum`;";
+        $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr) SELECT DISTINCT * FROM student ORDER BY rand() LIMIT $snum;";
         mysqli_select_db($db, "$db_name") or die("cannot select DB");
         $s = mysqli_query($db,$r);
 
