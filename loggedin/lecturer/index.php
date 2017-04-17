@@ -1,6 +1,14 @@
 <?php
 session_start();
-
+if ($_SESSION['permissions_id'] != 3)
+{
+    header("Refresh: 3; url= /index.html");
+    echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
+    echo 'You will be redirected in 3 seconds';
+    session_destroy();
+    exit();
+}
+else {
     include_once("../../dbConnect.php");
     $tbl_name = "fquestions";
     $db_name = "myforum";
@@ -19,7 +27,7 @@ session_start();
 // OREDER BY id DESC is order result by descending
 
     $result1 = mysqli_query($db, $sql1);
-
+}
 ?>
 
 <!DOCTYPE html>
