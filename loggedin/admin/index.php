@@ -2,10 +2,11 @@
 session_start();
 if ($_SESSION['permissions_id'] != 1)
 {
-    header("Refresh: 3; location: /index.html");
+    header("Refresh: 3; url= strato1.azurewebsites.net");
     echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
     echo 'You will be redirected in 3 seconds';
     session_destroy();
+    exit();
 }
 else {
     include_once("../../dbConnect.php");
@@ -113,7 +114,7 @@ else {
     <div style="background-color:mediumaquamarine; height:600px;width:100px;float:left;">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/loggedin/lecturer/index.php">Home</a>
+            <a href="/loggedin/admin/index.php">Home</a>
             <a href="/Forum/main_forum.php">Forum</a>
             <a href="#">Upload</a>
             <a href="/Registration/regi.html">Add Student</a>

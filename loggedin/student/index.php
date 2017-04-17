@@ -106,7 +106,7 @@ $result1 = mysqli_query($db, $sql1);
     <div style="background-color:mediumspringgreen; height:600px;width:100px;float:left;">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/loggedin/lecturer/index.php">Home</a>
+            <a href="/loggedin/student/index.php">Home</a>
             <a href="/Forum/main_forum.php">Forum</a>
             <a href="#">Upload</a>
             <a href="/Login%20System/logout.php">Log Out</a>
