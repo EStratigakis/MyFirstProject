@@ -7,7 +7,7 @@ mysqli_select_db($db, "$db_name") or die("cannot select DB");
 
 if(empty($_POST["gname"]) || empty($_POST["snum"]))
     {
-    echo "Both fields are required.";
+        echo "<script type='text/javascript'>alert('Both fields are required!')</script>";
     }
 else {
 
