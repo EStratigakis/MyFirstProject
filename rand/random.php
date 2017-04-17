@@ -7,9 +7,9 @@
 
     $result=mysqli_query($db,"SELECT count(*) as total from student");
     $data=mysqli_fetch_assoc($result);
-    echo $data['total'];
 
     for ($x = 1; $x <= $data['total']; $x++){
+        $sql = mysqli_query($db,)
         echo " $x";
 }
 ?>
