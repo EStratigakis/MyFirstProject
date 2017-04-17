@@ -197,8 +197,8 @@ session_start();
 </body>
 <footer>
 
-    <div class="alert alert-info alert-dismissable fade in">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+    <div class="alert alert-info alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         <strong>Info!</strong> We use cookies to improve your experience. By your continued use of this site you accept such use. To change your settings please see our policy.
     </div>
 
