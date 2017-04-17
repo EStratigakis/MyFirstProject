@@ -2,8 +2,12 @@
 
 <html>
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login!</title>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
     <style>
         <style>
         body, html {
@@ -97,16 +101,29 @@
     </style>
 </head>
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
-<div class="topnav">
-    <a class="active" href="/index.html">Home</a>
-    <a href="/Forum/new_topic.php">Create a New topic</a>
-    <a href="/Forum/main_forum.php">Go to Main Forum</a>
-    <a href="/Login%20System/login.php">Login</a>
-</div>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index.html">RGU portal</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/index.html">Home</a></li>
+            <li><a href="/Forum/new_topic.php">Create a New topic</a></li>
+            <li><a href="/Forum/main_forum.php">Go to Main Forum</a></li>
+            <li><a href="/Registration/regi.html">Add a student!</a></li>
+            <li><a href="/group/index.php">Student! Selection</a></li>
+            <li><a href="/NewAccount/account.html">Add User Account</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/Login%20System/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
 
 <div class="container form-signin">
     <h1>RGU Login</h1>
-    <h3>Login
+    <h3>Login</h3>
 
         <br><br>
         <form class = "form-signin" role = "form" method="post" action="login1.php">
@@ -122,7 +139,7 @@
 
 </body>
 <footer>
-    <A HREF="http://efstratios.azurewebsites.net">Home Page</A>
+    <A HREF="http://strato1.azurewebsites.net">Home Page</A>
 </footer>
 </html>
 
