@@ -91,32 +91,21 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         $_SESSION['password'] = $password;
         $result1 = mysqli_query($db, "SELECT * from users WHERE username = '$username' and password = '$password'");
         if (mysqli_num_rows($result1) == 1) {
-            switch($_SESSION['permissions_id']){
+            switch($_SESSION['permissions_id'])
+            {
                 default:
-                    echo 'you have no privileges';
+                    echo 'You do not have enough privileges';
                     break;
                 case "1":
-                    echo 'you have some privileges';
+                    header("location: /loggedin/admin/index.php");// Redirecting To another Page
                     break;
                 case "2":
-                    echo 'you have lots of privileges';
+                    header("location: /loggedin/student/index.php");// Redirecting To another Page
                     break;
                 case "3";
-                    echo 'yay';
+                    header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
                     break;
             }
-            if ($permissions == 1) {
-                header("location: /loggedin/admin/index.php");// Redirecting To another Page
-            }
-            if ($permissions == 2) {
-                header("location: /loggedin/student/index.php");// Redirecting To another Page
-            }
-            if ($permissions == 3) {
-                header("location: /loggedin/lecturer/index.php");// Redirecting To another Page
-            }
-        } else {
-            echo "Cannot access this page! Contact the administrator!";
-        }
     } else {
         echo "Incorrect username or password.";
     }
