@@ -10,12 +10,12 @@ if(empty($_POST["gname"]) || empty($_POST["snum"]))
         echo "<script type='text/javascript'>alert('Both fields are required!')</script>";
         header('Refresh: 1; URL = http://strato1.azurewebsites.net');
     }
-else {
-
+else
+    {
     $gname = $_POST['gname'];
     $snum = $_POST['snum'];
     mysqli_select_db($db, 'stu');
-    $sql  = "CREATE TABLE '".$gname."'(student_id int(4) NOT NULL, fname varchar(65) NOT NULL, lname varchar(65) NOT NULL, num int(7) NOT NULL DEFAULT '0', mail varchar(65) NOT NULL, dg varchar(25) NOT NULL, yr VARCHAR (25) NOT NULL)";
+    $sql  = "CREATE TABLE `$gname`(student_id int(4) NOT NULL, fname varchar(65) NOT NULL, lname varchar(65) NOT NULL, num int(7) NOT NULL DEFAULT '0', mail varchar(65) NOT NULL, dg varchar(25) NOT NULL, yr VARCHAR (25) NOT NULL)";
 
     $result = mysqli_query($db, $sql);
 
