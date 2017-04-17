@@ -23,8 +23,8 @@ else
     if ($result) {
 
         $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr) SELECT DISTINCT * FROM student ORDER BY rand() LIMIT `$snum`;";
-
-        $s = mysqli_query($db, $r);
+        mysqli_select_db($db, "$db_name") or die("cannot select DB");
+        $s = mysqli_query($db,$r);
 
         if ($r) {
             echo "<script type='text/javascript'>alert('Table has been created and populated')</script>";
