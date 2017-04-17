@@ -9,7 +9,7 @@ $usr=$_POST['usr'];
 $pass=$_POST['pswd'];
 $rle=$_POST['rle'];
 
-$result = mysqli_query($db,"SELECT uid, permissions_id FROM users WHERE username = '$usr' LIMIT 0,1'"); //Executes Query
+$result = mysqli_query($db,"SELECT * FROM users WHERE username = '$usr'"); //Executes Query
 
 if ($result && mysqli_num_rows($result) == 1)
     {
