@@ -6,7 +6,6 @@ include_once ("../dbConnect.php"); //Includes the php file dbConnect
 $tbl_name="upload"; //Sets the $tbl_name variable to be equal to uploads
 
 $usname=$_SESSION['username']; //Gets the username
-$artist=$_SESSION['artist'];
 
 $finame=$_POST['finame']; //Gets the file name from the form
 $comments=$_POST['comments']; //Get any comments made in the form
