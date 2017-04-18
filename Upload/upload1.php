@@ -30,7 +30,7 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
-                echo $fileNameNew;
+                echo $fileName;
                 echo $fileType;
                 echo $fileSize;
                 echo $username;
