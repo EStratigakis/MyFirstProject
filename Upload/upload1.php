@@ -31,15 +31,9 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
-                echo $fileName;
-                echo $fileType;
-                echo $fileSize;
-                echo $username;
-                echo $datetime;
-
                 mysqli_select_db($db,'uploads');
 
-                $sql="INSERT INTO uload(filename,filetype,filesize,username,datetime) VALUES ('$fileNameNew','$fileType', '$fileSize', '$username', '$datetime')";
+                $sql="INSERT INTO uload(filename,filetype,filesize,username,datetime,destination) VALUES ('$fileName','$fileType', '$fileSize', '$username', '$datetime', '$fileDestination')";
                 $result = mysqli_query($db, $sql);
 
                 if ($result)
