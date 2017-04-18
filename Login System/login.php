@@ -56,6 +56,7 @@
                 <button type="submit" name="submit" value = "login" class="btn btn-default">Login</button>
         </form>
         <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
+</div>
 
 
 </body>
