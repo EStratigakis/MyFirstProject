@@ -30,21 +30,17 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
+                echo $fileNameNew.$fileType.$fileSize.$username.$datetime ;
+
                 mysqli_select_db($db,'uploads');
 
-                $sql="INSERT INTO upload(filename,filetype,filesize,username,datetime) VALUES ('$fileNameNew','$fileType', '$fileSize', '$username', '$datetime')";
+                $sql="INSERT INTO uload(filename,filetype,filesize,username,datetime) VALUES ('$fileNameNew','$fileType', '$fileSize', '$username', '$datetime')";
                 $result = mysqli_query($db, $sql);
 
                 if ($result)
                 {
                     header("Location: /index.html?success"); //Changes the header
                 }
-                else
-                {
-                    echo "<script type='text/javascript'>alert('Upload Unsuccessful!')</script>";
-                    header("Location: /index.html?not-success"); //Changes the header
-                }
-
             }
             else
             {
