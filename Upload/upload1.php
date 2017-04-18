@@ -3,8 +3,6 @@ session_start();
 
 include_once ("../dbConnect.php"); //Includes the php file dbConnect
 
-$tbl_name="upload"; //Sets the $tbl_name variable to be equal to uploads
-
 $usname=$_SESSION['username']; //Gets the username
 
 $finame=$_POST['finame']; //Gets the file name from the form
@@ -39,11 +37,6 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
-                mysqli_select_db($db,"uploads")or die("cannot select DB"); //Select the database uploads
-
-
-                $sql1="INSERT INTO upload(filename, filesize, filetype, username, comments, datetime)VALUES('$fileName', '$fileSize', '$fileType', '$usname', '$comments', '$datetime')";
-                $result1=mysqli_query($db,$sql1);
 
                 echo "<script type='text/javascript'>alert('Upload Successful')</script>";
 
