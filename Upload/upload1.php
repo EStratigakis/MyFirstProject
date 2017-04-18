@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once ("../dbConnect.php");
 $username = $_SESSION['username'];
 
 $datetime = date('Y-m-d H:i:s');
