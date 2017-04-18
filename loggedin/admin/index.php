@@ -143,7 +143,7 @@ else {
 // Exit looping and close connection
         }
         ?>
-    </table>
+    </table><br><br>
 </div>
 
 
