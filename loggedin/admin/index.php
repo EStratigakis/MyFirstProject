@@ -111,7 +111,7 @@ else {
         -->
     </a><div id="awcc1492186492542" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1492186492542"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
 
-    <div style="background-color:mediumaquamarine; height:600px;width:100px;float:left;">
+    <div style="height:600px;width:100px;float:left;">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/loggedin/admin/index.php">Home</a>
@@ -121,7 +121,7 @@ else {
             <a href="/NewAccount/account.html">Add User Account</a>
             <a href="/Login%20System/logout.php">Log Out</a>
         </div>
-        <div style="background-color:mediumpurple; height:auto;width:auto;float:left;">
+        <div style="height:auto;width:auto;float:left;">
             <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         </div>
     </div>
@@ -165,7 +165,7 @@ else {
 </div>
 <div class="table-responsive" style="background-color:#fff; height:auto;width:38%;float:right;border: 1px solid black;">
     <div><b>Group</b></div>
-    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+    <table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
         <tr>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
