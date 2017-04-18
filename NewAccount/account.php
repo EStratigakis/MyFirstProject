@@ -29,7 +29,7 @@ else {
 
     if ($count > 0) {
         echo "<script type='text/javascript'>alert('User Already Exists')</script>";
-        header('Location: /account.html?useradded');
+        header('Location: /NewAccount/account.html?usernotadded');
     } else {
         $sql = "INSERT INTO users(username, password, permissions_id) VALUES ('$usr', '$pass', '$rle');";
         $result1 = mysqli_query($db, $sql);
