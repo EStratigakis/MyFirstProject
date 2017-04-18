@@ -42,21 +42,6 @@ else {
     <title>Lecturer Login!</title>
     <link rel="stylesheet" href="/style.css" type="text/css" />
     <style>
-        body {
-            font-family: "Lato", sans-serif;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
         footer {
             position: absolute;
             left: 0;
