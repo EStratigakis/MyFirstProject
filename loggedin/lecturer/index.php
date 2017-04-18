@@ -37,56 +37,11 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Lecturer Login!</title>
     <link rel="stylesheet" href="/style.css" type="text/css" />
     <style>
-        body {
-            font-family: "Lato", sans-serif;
-        }
-
-        .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidenav a:hover, .offcanvas a:focus{
-            color: #f1f1f1;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        #main {
-            transition: margin-left .5s;
-            padding: 16px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-        }
         footer {
             position: absolute;
             left: 0;
@@ -101,31 +56,29 @@ else {
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
 
 
-<div style="width:100%">
-    <div style="background-color:mediumpurple; width:100%">
-        <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
-    </div>
-    <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
-        <!--
-        By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
-        -->
-    </a><div id="awcc1492186492542" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1492186492542"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
-
-    <div style="background-color:mediumpurple; height:600px;width:100px;float:left;">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/loggedin/lecturer/index.php">Home</a>
-            <a href="/Forum/main_forum.php">Forum</a>
-            <a href="/Upload/upload.html">Upload</a>
-            <a href="/Registration/regi.html">Add Student</a>
-            <a href="/NewAccount/account.html">Add User Account</a>
-            <a href="/Login%20System/logout.php">Log Out</a>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index.html">RGU portal</a>
         </div>
-        <div style="background-color:mediumpurple; height:auto;width:auto;float:left;">
-            <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/loggedin/admin/index.php">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Forum/main_forum.php">Forum</a></li>
+                    <li><a href="/Upload/upload.html">Upload</a></li>
+                    <li><a href="/Registration/regi.html">Add Student</a></li>
+                    <li><a href="/NewAccount/account.html">Add User Account</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/Login%20System/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
     </div>
-
+</nav>
     <div class="table-responsive" style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
         <div><b>Forum</b></div>
         <p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">

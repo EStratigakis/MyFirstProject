@@ -54,6 +54,7 @@ else {
 </head>
 
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
