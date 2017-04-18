@@ -106,9 +106,19 @@ else {
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="/loggedin/admin/index.php">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="/loggedin/admin/index.php">Home</a>
+                    <a href="/Forum/main_forum.php">Forum</a>
+                    <a href="/Upload/upload.html">Upload</a>
+                    <a href="/Registration/regi.html">Add Student</a>
+                    <a href="/NewAccount/account.html">Add User Account</a>
+                    <a href="/Login%20System/logout.php">Log Out</a>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/Login%20System/logout.php"><span class="glyphicon glyphicon-log-out"></span> Loout</a></li>
+            <li><a href="/Login%20System/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
         </ul>
     </div>
 </nav>
@@ -116,21 +126,6 @@ else {
 <div style="width:100%">
     <div style="width:100%">
         <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
-    </div>
-
-    <div style="height:600px;width:100px;float:right;">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/loggedin/admin/index.php">Home</a>
-            <a href="/Forum/main_forum.php">Forum</a>
-            <a href="/Upload/upload.html">Upload</a>
-            <a href="/Registration/regi.html">Add Student</a>
-            <a href="/NewAccount/account.html">Add User Account</a>
-            <a href="/Login%20System/logout.php">Log Out</a>
-        </div>
-        <div style="height:auto;width:auto;float:left;">
-            <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-        </div>
     </div>
 
     <div class="table-responsive" style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
