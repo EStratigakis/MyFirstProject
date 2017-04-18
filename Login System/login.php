@@ -19,7 +19,7 @@
             <a class="navbar-brand" href="/index.html">RGU portal</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/loggedin/admin/index.php">Home</a></li>
+            <li class="active"><a href="../index.html">Home</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
                     <span class="caret"></span></a>

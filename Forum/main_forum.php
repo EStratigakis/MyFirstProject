@@ -62,17 +62,23 @@ $result=mysqli_query($db,$sql);
             <a class="navbar-brand" href="/index.html">RGU portal</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/index.html">Home</a></li>
-            <li><a href="/Forum/new_topic.php">Create a New topic</a></li>
-            <li><a href="/Forum/main_forum.php">Go to Main Forum</a></li>
-            <li><a href="/group/index.php">Student! Selection</a></li>
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Forum/main_forum.php">Forum</a></li>
+                    <li><a href="/Upload/upload.html">Upload</a></li>
+                    <li><a href="/Registration/regi.html">Add Student</a></li>
+                    <li><a href="/NewAccount/account.html">Add User Account</a></li>
+                </ul>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/Login%20System/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="/Login%20System/login.php"><span class="glyphicon glyphicon-log-out"></span> Login</a></li>
         </ul>
     </div>
 </nav>
-
 <table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
