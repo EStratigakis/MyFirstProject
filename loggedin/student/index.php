@@ -83,28 +83,100 @@ else {
     <div style="width:100%">
         <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
     </div>
-    <div class="table-responsive" style="background-color:#eee; height:auto;width:60%;float:left;border: 1px solid black;">
-        <div><b>Forum</b></div>
-        <p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+    <div class="container">
+        <div class="table-responsive">
+            <div><b>Forum</b></div>
+            <p></p><table class="table table-bordered">
+                <tr>
+                    <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+                    <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
+                    <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
+                    <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
+                    <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+                </tr>
+
+                <?php
+
+                // Start looping table row
+                while($rows = mysqli_fetch_array($result)){
+                    ?>
+                    <tr>
+                        <td bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
+                        <td bgcolor="#FFFFFF"><a href="/Forum/view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
+                        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['view']; ?></td>
+                        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['reply']; ?></td>
+                        <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+                    </tr>
+
+                    <?php
+// Exit looping and close connection
+                }
+                ?>
+
+                <tr>
+                    <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="/Forum/new_topic.php"><strong>Create New Topic</strong> </a></td>
+                </tr>
+            </table><br><br>
+        </div>
+    </div>
+
+
+</div>
+<div class="container">
+    <div class="table-responsive">
+        <div><b>Students</b></div>
+        <p></p><table class="table table-bordered">
             <tr>
-                <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-                <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
-                <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Views</strong></td>
-                <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Replies</strong></td>
-                <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+                <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
+                <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
             </tr>
 
             <?php
 
             // Start looping table row
-            while($rows = mysqli_fetch_array($result)){
+            while($rows = mysqli_fetch_array($result1)){
                 ?>
                 <tr>
-                    <td bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
-                    <td bgcolor="#FFFFFF"><a href="/Forum/view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
-                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['view']; ?></td>
-                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['reply']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
+                </tr>
+
+                <?php
+// Exit looping and close connection
+            }
+            ?>
+        </table><br><br>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="table-responsive">
+        <div><b>Uploads</b></div>
+        <p></p><table class="table table-bordered">
+            <tr>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+                <td width="40%" align="center" bgcolor="#E6E6E6"><strong>File Name</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Type</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Size</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Upload User</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Date & Time</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Destination</strong></td>
+            </tr>
+
+            <?php
+
+            // Start looping table row
+            while($rows = mysqli_fetch_array($result2)){
+                ?>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filename']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filetype']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filesize']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['username']; ?></td>
                     <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['destination']; ?></td>
                 </tr>
 
                 <?php
@@ -113,52 +185,11 @@ else {
             ?>
 
             <tr>
-                <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="/Forum/new_topic.php"><strong>Create New Topic</strong> </a></td>
+                <td colspan="7" align="right" bgcolor="#E6E6E6"><a href="/Upload/upload.html"><strong>Upload a New File</strong> </a></td>
             </tr>
-        </table><br><br>
+        </table><br>
     </div>
 </div>
-
-
-<div class="table-responsive" style="background-color:#fff; height:auto;width:40%;float:right;border: 1px solid black;">
-    <div><b>Group</b></div>
-    <p></p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
-        <tr>
-            <td width="33%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
-            <td width="33%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
-            <td width="33%" align="center" bgcolor="#E6E6E6"><strong>E-mail</strong></td>
-        </tr>
-
-        <?php
-
-        // Start looping table row
-        while($rows = mysqli_fetch_array($result1)){
-            ?>
-            <tr>
-                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
-                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
-                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['mail']; ?></td>
-            </tr>
-
-            <?php
-// Exit looping and close connection
-        }
-        ?>
-    </table><br><br>
-</div>
-
-
-<script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-    }
-</script>
 
 
 </body>
