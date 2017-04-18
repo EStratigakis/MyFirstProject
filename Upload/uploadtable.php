@@ -73,7 +73,7 @@ $result=mysqli_query($db,$sql);
     </div>
 </nav>
 
-<table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+<table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <td width="10%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
         <td width="40%" align="center" bgcolor="#E6E6E6"><strong>File Name</strong></td>
