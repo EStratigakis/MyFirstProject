@@ -35,7 +35,7 @@
     </div>
 </nav>
 
-<div class="container form-signin">
+<div class="container">
     <h1>RGU Login</h1>
     <h3>Login</h3>
 
