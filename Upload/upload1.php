@@ -30,6 +30,8 @@ if(isset($_POST['submit'])) {
 
                 header("Location: /index.html?success"); //Changes the header
 
+                echo "<script type='text/javascript'>alert('Nice')</script>";
+
             }
             else
             {
