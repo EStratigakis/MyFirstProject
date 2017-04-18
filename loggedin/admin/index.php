@@ -102,7 +102,7 @@ else {
 
 
 <div style="width:100%">
-    <div style="background-color:mediumaquamarine; width:100%">
+    <div style="width:100%">
         <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
     </div>
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
