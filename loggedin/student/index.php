@@ -79,6 +79,11 @@ else {
     </div>
 </nav>
 
+
+<div style="width:100%">
+    <div style="width:100%">
+        <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
+    </div>
     <div class="table-responsive" style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
         <div><b>Forum</b></div>
         <p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
@@ -113,6 +118,7 @@ else {
             </tr>
         </table><br><br>
     </div>
+</div>
 
 
 <div class="table-responsive" style="background-color:#fff; height:auto;width:38%;float:right;border: 1px solid black;">
