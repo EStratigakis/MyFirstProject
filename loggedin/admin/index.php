@@ -172,7 +172,7 @@ else {
     <?php
 
     // Start looping table row
-    while($rows = mysqli_fetch_array($result)){
+    while($rows = mysqli_fetch_array($result2)){
         ?>
         <tr>
             <td align="center" bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
