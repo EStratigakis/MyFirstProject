@@ -123,6 +123,7 @@ else {
                     <li><a href="/NewAccount/account.html">Add User Account</a></li>
                 </ul>
             </li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/Login%20System/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
         </ul>
