@@ -111,7 +111,7 @@ else {
         -->
     </a><div  style="width:100%" id="awcc1492186492542" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1492186492542"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
 
-    <div style="height:600px;width:100px;float:left;">
+    <div style="height:600px;width:100px;float:right;">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/loggedin/admin/index.php">Home</a>
