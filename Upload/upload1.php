@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 
 if(isset($_POST['submit'])) {
@@ -28,11 +30,9 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
-                echo "<script type='text/javascript'>alert('Nice')</script>";
+                $sql="INSERT INTO topic(description,uid,dateposted,title,file_type,path,file_name) VALUES ('$description','$userID','$date','$upload','$fileActualExt','$fileDestination','$fileNameNew')";
 
                 header("Location: /index.html?success"); //Changes the header
-
-
 
             }
             else
@@ -50,4 +50,6 @@ if(isset($_POST['submit'])) {
         echo"<script type='text/javascript'>alert('You cannot upload this type of file!')</script>"; //Echos an error if the type is not correct
     }
 }
+
+
 ?>

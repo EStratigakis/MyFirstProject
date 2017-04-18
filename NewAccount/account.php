@@ -19,11 +19,15 @@ else {
     $pass = $_POST['pswd'];
     $rle = $_POST['rle'];
 
+    $count = 0;
+
     $sql1 = "SELECT * FROM users WHERE username ='$usr';"; //SQL Query to check if username exists
     $result = mysqli_query($db, $sql1); //Executes Query
-    $int = mysqli_num_rows($result);
+    while ($row = $result->fetch_array()){
+        $count++;
+    }
 
-    if ($int == '1') {
+    if ($count > 0) {
         echo "<script type='text/javascript'>alert('User Already Exists')</script>";
         header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
     } else {
