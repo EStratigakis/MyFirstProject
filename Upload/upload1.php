@@ -28,9 +28,11 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
+                echo "<script type='text/javascript'>alert('Nice')</script>";
+
                 header("Location: /index.html?success"); //Changes the header
 
-                echo "<script type='text/javascript'>alert('Nice')</script>";
+
 
             }
             else
