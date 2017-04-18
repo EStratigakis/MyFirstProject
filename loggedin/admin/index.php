@@ -93,9 +93,10 @@ else {
         <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
     </div>
 
-<div class="table-responsive" style="background-color:#eee; height:auto;width:60%;float:left;border: 1px solid black;">
-        <div><b>Forum</b></div>
-        <p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+    <div class="container">
+        <div class="table-responsive">
+            <div><b>Forum</b></div>
+            <p></p><table class="table table-bordered">
             <tr>
                 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
                 <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
@@ -127,12 +128,14 @@ else {
             </tr>
         </table><br><br>
 </div>
+    </div>
 
 
 </div>
-<div class="table-responsive" style="background-color:#eee; height:auto;width:40%;float:right;border: 1px solid black;">
-    <div><b>Students</b></div>
-    <p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+<div class="container">
+    <div class="table-responsive">
+        <div><b>Students</b></div>
+        <p></p><table class="table table-bordered">
         <tr>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
@@ -154,46 +157,49 @@ else {
         ?>
     </table><br><br>
 </div>
+</div>
 
 
-<div class="table-responsive" style="background-color:#eee; height:auto;width:60%;float:left;border: 1px solid black;">
-    <div><b>Uploads</b></div>
-    <p></p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
-    <tr>
-        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-        <td width="40%" align="center" bgcolor="#E6E6E6"><strong>File Name</strong></td>
-        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Type</strong></td>
-        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Size</strong></td>
-        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Upload User</strong></td>
-        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Date & Time</strong></td>
-        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Destination</strong></td>
-    </tr>
+<div class="container">
+    <div class="table-responsive">
+        <div><b>Uploads</b></div>
+        <p></p><table class="table table-bordered">
+            <tr>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+                <td width="40%" align="center" bgcolor="#E6E6E6"><strong>File Name</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Type</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Size</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Upload User</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Date & Time</strong></td>
+                <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Destination</strong></td>
+            </tr>
 
-    <?php
+            <?php
 
-    // Start looping table row
-    while($rows = mysqli_fetch_array($result2)){
-        ?>
-        <tr>
-            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
-            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filename']; ?></td>
-            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filetype']; ?></td>
-            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filesize']; ?></td>
-            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['username']; ?></td>
-            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
-            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['destination']; ?></td>
-        </tr>
+            // Start looping table row
+            while($rows = mysqli_fetch_array($result2)){
+                ?>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filename']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filetype']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filesize']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['username']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['destination']; ?></td>
+                </tr>
 
-        <?php
+                <?php
 // Exit looping and close connection
-    }
-    ?>
+            }
+            ?>
 
-    <tr>
-        <td colspan="7" align="right" bgcolor="#E6E6E6"><a href="/Upload/upload.html"><strong>Upload a New File</strong> </a></td>
-    </tr>
-</table><br>
-
+            <tr>
+                <td colspan="7" align="right" bgcolor="#E6E6E6"><a href="/Upload/upload.html"><strong>Upload a New File</strong> </a></td>
+            </tr>
+        </table><br>
+    </div>
+</div>
 
 <script>
     function openNav() {
