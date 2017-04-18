@@ -50,7 +50,6 @@ if(isset($_POST['submit'])) {
 
                 header("Location: /index.html"); //Changes the header
 
-                header("Location:home.php");
             }
             else
             {
