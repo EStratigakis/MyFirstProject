@@ -126,7 +126,7 @@ else {
 
     <div class="table-responsive" style="background-color:#eee; height:auto;width:50%;float:left;border: 1px solid black;">
         <div><b>Forum</b></div>
-        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+        <p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
             <tr>
                 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
                 <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Topic</strong></td>
