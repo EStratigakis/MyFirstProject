@@ -16,7 +16,9 @@ $rows=mysqli_fetch_array($result);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css" type="text/css" />
-    <title>View the Topics!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>View the Topic!</title>
     <style>
         body, html {
             height: 100%;
@@ -64,9 +66,7 @@ $rows=mysqli_fetch_array($result);
             <li class="active"><a href="/index.html">Home</a></li>
             <li><a href="/Forum/new_topic.php">Create a New topic</a></li>
             <li><a href="/Forum/main_forum.php">Go to Main Forum</a></li>
-            <li><a href="/Registration/regi.html">Add a student!</a></li>
             <li><a href="/group/index.php">Student! Selection</a></li>
-            <li><a href="/NewAccount/account.html">Add User Account</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/Login%20System/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>

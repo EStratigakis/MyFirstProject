@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Login!</title>
 </head>
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
@@ -38,16 +40,15 @@
 <div class="container">
     <h1>RGU Login</h1>
     <h3>Login</h3>
-
         <br><br>
         <form role = "form" method="post" action="login1.php">
             <div class="form-group">
                 <label for="username">Username:</label><br>
-                <input class="form-control" type="text" name="username" placeholder="Enter Username" /><br><br>
+                <input class="form-control" type="text" name="username" placeholder="Enter Username" /><br>
             </div>
             <div class="form-group">
                 <label>Password:</label><br>
-                <input class="form-control" type="password" name="password" placeholder="Enter Password" /><br><br>
+                <input class="form-control" type="password" name="password" placeholder="Enter Password" /><br>
             </div>
             <div class="checkbox">
                 <label><input type="checkbox" name="remember" value="1">Remember Me</label><br><br>
