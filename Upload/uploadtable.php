@@ -75,13 +75,13 @@ $result=mysqli_query($db,$sql);
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
-        <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-        <td width="53%" align="center" bgcolor="#E6E6E6"><strong>File Name</strong></td>
-        <td width="15%" align="center" bgcolor="#E6E6E6"><strong>File Type</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>File Size</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Upload User</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date $ Time</strong></td>
-        <td width="13%" align="center" bgcolor="#E6E6E6"><strong>Destination</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+        <td width="40%" align="center" bgcolor="#E6E6E6"><strong>File Name</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Type</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Size</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Upload User</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Date & Time</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Destination</strong></td>
     </tr>
 
     <?php
@@ -105,7 +105,7 @@ $result=mysqli_query($db,$sql);
     ?>
 
     <tr>
-        <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="upload.html"><strong>Upload a New File</strong> </a></td>
+        <td colspan="7" align="right" bgcolor="#E6E6E6"><a href="upload.html"><strong>Upload a New File</strong> </a></td>
     </tr>
 </table>
 </body>
