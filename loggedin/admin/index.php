@@ -116,7 +116,7 @@ else {
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/loggedin/admin/index.php">Home</a>
             <a href="/Forum/main_forum.php">Forum</a>
-            <a href="#">Upload</a>
+            <a href="/Upload/upload.html">Upload</a>
             <a href="/Registration/regi.html">Add Student</a>
             <a href="/NewAccount/account.html">Add User Account</a>
             <a href="/Login%20System/logout.php">Log Out</a>
