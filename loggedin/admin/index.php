@@ -122,6 +122,7 @@ else {
                     <a href="/Registration/regi.html">Add Student</a>
                     <a href="/NewAccount/account.html">Add User Account</a>
                     <a href="/Login%20System/logout.php">Log Out</a>
+                </div>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
