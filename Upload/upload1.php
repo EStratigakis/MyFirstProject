@@ -1,14 +1,5 @@
 <?php
-session_start();
 
-include_once ("../dbConnect.php"); //Includes the php file dbConnect
-
-$usname=$_SESSION['username']; //Gets the username
-
-$finame=$_POST['finame']; //Gets the file name from the form
-$comments=$_POST['comments']; //Get any comments made in the form
-
-$datetime=date("d/m/y h:i:s"); //Stores the date and time when the form was accessed
 
 if(isset($_POST['submit'])) {
     $file = $_FILES['file'];
