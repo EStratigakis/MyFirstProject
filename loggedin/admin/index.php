@@ -35,7 +35,7 @@ else {
     $sql2="SELECT * FROM $tbl_name2 ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-    $result=mysqli_query($db,$sql2);
+    $result2=mysqli_query($db,$sql2);
 }
 ?>
 
@@ -156,7 +156,7 @@ else {
 </div>
 
 
-<div class="table-responsive" style="background-color:#eee; height:auto;width:40%;float:right;border: 1px solid black;">
+<div class="table-responsive" style="background-color:#eee; height:auto;width:60%;float:left;border: 1px solid black;">
     <div><b>Uploads</b></div>
     <p></p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
     <tr>
