@@ -99,19 +99,27 @@ else {
 </head>
 
 <body background="/assets/Plaza_at_The_Robert_Gordon_University_2.jpg">
-
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/index.html">RGU portal</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/loggedin/admin/index.php">Home</a></li>
+        </ul>
+    </div>
+</nav>
 
 <div style="width:100%">
     <div style="width:100%">
         <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
     </div>
-    <div style="width:100%">
+
     <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
         <!--
         By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
         -->
-    </a><div id="awcc1492186492542" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1492186492542"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
-    </div>
+    </a><div  style="width:100%" id="awcc1492186492542" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1492186492542"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
 
     <div style="height:600px;width:100px;float:right;">
         <div id="mySidenav" class="sidenav">
