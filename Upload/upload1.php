@@ -30,7 +30,11 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
-                echo $fileNameNew.$fileType.$fileSize.$username.$datetime ;
+                echo $fileNameNew;
+                echo $fileType;
+                echo $fileSize;
+                echo $username;
+                echo $datetime;
 
                 mysqli_select_db($db,'uploads');
 
