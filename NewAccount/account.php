@@ -29,7 +29,7 @@ else {
 
     if ($count > 0) {
         echo "<script type='text/javascript'>alert('User Already Exists')</script>";
-        header('URL = http://strato1.azurewebsites.net/NewAccount/account.html');
+        header('Location: /account.html?useradded');
     } else {
         $sql = "INSERT INTO users(username, password, permissions_id) VALUES ('$usr', '$pass', '$rle');";
         $result1 = mysqli_query($db, $sql);
