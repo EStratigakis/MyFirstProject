@@ -107,6 +107,9 @@ else {
         <ul class="nav navbar-nav">
             <li class="active"><a href="/loggedin/admin/index.php">Home</a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/Login%20System/logout.php"><span class="glyphicon glyphicon-log-out"></span> Loout</a></li>
+        </ul>
     </div>
 </nav>
 
@@ -114,7 +117,6 @@ else {
     <div style="width:100%">
         <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
     </div>
-
 
     <div style="height:600px;width:100px;float:right;">
         <div id="mySidenav" class="sidenav">
