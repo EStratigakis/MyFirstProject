@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
             {
                 $fileNameNew = uniqid('', true) . "." . $fileActualExt; //Creates a unique id for the file and adds the extension
 
-                $fileDestination = 'Upload/uploads/' . $fileNameNew;
+                $fileDestination = 'uploads/' . $fileNameNew;
 
                 move_uploaded_file($fileTmpName, $fileDestination);
 
