@@ -1,8 +1,8 @@
 <?php
 session_start();
+$username = $_SESSION['username'];
 
-
-
+$datetime = date('Y-m-d H:i:s');
 if(isset($_POST['submit'])) {
     $file = $_FILES['file'];
 
@@ -30,9 +30,20 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
-                $sql="INSERT INTO topic(description,uid,dateposted,title,file_type,path,file_name) VALUES ('$description','$userID','$date','$upload','$fileActualExt','$fileDestination','$fileNameNew')";
+                mysqli_select_db($db,'uploads');
 
-                header("Location: /index.html?success"); //Changes the header
+                $sql="INSERT INTO upload(filename,filetype,filesize,username,datetime) VALUES ('$fileNameNew','$fileType', '$fileSize', '$username', '$datetime')";
+                $result = mysqli_query($db, $sql);
+
+                if ($result)
+                {
+                    header("Location: /index.html?success"); //Changes the header
+                }
+                else
+                {
+                    echo "<script type='text/javascript'>alert('Upload Unsuccessful!')</script>";
+                    header("Location: /index.html?not-success"); //Changes the header
+                }
 
             }
             else
