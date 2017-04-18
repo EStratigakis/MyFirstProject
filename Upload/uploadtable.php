@@ -1,7 +1,7 @@
 <?php
 include_once ("../dbConnect.php");
-$tbl_name="uloads";
-$db_name="upload";
+$tbl_name="uload";
+$db_name="uploads";
 mysqli_select_db($db,"uploads")or die("cannot select DB");
 
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
