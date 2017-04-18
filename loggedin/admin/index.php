@@ -122,7 +122,7 @@ else {
 
 </div>
 <div class="table-responsive" style="background-color:#eee; height:auto;width:40%;float:right;border: 1px solid black;">
-    <div><b>Group</b></div>
+    <div><b>Students</b></div>
     <p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
         <tr>
             <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>

@@ -124,8 +124,9 @@ else {
     <div><b>Group</b></div>
     <p></p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
         <tr>
-            <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
-            <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
+            <td width="33%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
+            <td width="33%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
+            <td width="33%" align="center" bgcolor="#E6E6E6"><strong>E-mail</strong></td>
         </tr>
 
         <?php
@@ -136,6 +137,7 @@ else {
             <tr>
                 <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
                 <td align="center" bgcolor="#FFFFFF"><?php echo $rows['num']; ?></td>
+                <td align="center" bgcolor="#FFFFFF"><?php echo $rows['mail']; ?></td>
             </tr>
 
             <?php
