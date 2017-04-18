@@ -37,7 +37,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container" align="center">
     <h1>RGU Login</h1>
     <h3>Login</h3>
         <br><br>
