@@ -114,14 +114,13 @@ else {
         <ul class="nav navbar-nav">
             <li class="active"><a href="/loggedin/admin/index.php">Home</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-                <div class="dropdown-content">
-                    <a href="/loggedin/admin/index.php">Home</a>
-                    <a href="/Forum/main_forum.php">Forum</a>
-                    <a href="/Upload/upload.html">Upload</a>
-                    <a href="/Registration/regi.html">Add Student</a>
-                    <a href="/NewAccount/account.html">Add User Account</a>
-                    <a href="/Login%20System/logout.php">Log Out</a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Forum/main_forum.php">Forum</a></li>
+                    <li><a href="/Upload/upload.html">Upload</a></li>
+                    <li><a href="/Registration/regi.html">Add Student</a></li>
+                    <li><a href="/NewAccount/account.html">Add User Account</a></li>
                 </div>
             </li>
         </ul>
