@@ -37,6 +37,10 @@ if(isset($_POST['submit'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination); //Moves the file to the destination
 
+                mysqli_select_db($db,"uploads")or die("cannot select DB"); //Select the database uploads
+
+                $sql1="INSERT INTO upload(filename, filesize, filetype, username, comments, datetime)VALUES('$fileName', '$fileSize', '$fileType', '$usname', '$comments', '$datetime')";
+                $result1=mysqli_query($db,$sql1);
 
                 echo "<script type='text/javascript'>alert('Upload Successful')</script>";
 
