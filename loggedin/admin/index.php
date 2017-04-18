@@ -27,6 +27,15 @@ else {
 // OREDER BY id DESC is order result by descending
 
     $result1 = mysqli_query($db, $sql1);
+
+    $tbl_name2="uload";
+    $db_name2="uploads";
+    mysqli_select_db($db,"uploads")or die("cannot select DB");
+
+    $sql2="SELECT * FROM $tbl_name2 ORDER BY id DESC";
+// OREDER BY id DESC is order result by descending
+
+    $result=mysqli_query($db,$sql2);
 }
 ?>
 
@@ -145,6 +154,45 @@ else {
         ?>
     </table><br><br>
 </div>
+
+
+<div class="table-responsive" style="background-color:#eee; height:auto;width:40%;float:right;border: 1px solid black;">
+    <div><b>Uploads</b></div>
+    <p></p><table width="90%" border="1" align="center" cellpadding="3" cellspacing="1" bgcolor="#9370db">
+    <tr>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
+        <td width="40%" align="center" bgcolor="#E6E6E6"><strong>File Name</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Type</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>File Size</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Upload User</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Date & Time</strong></td>
+        <td width="10%" align="center" bgcolor="#E6E6E6"><strong>Destination</strong></td>
+    </tr>
+
+    <?php
+
+    // Start looping table row
+    while($rows = mysqli_fetch_array($result)){
+        ?>
+        <tr>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filename']; ?></td>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filetype']; ?></td>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['filesize']; ?></td>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['username']; ?></td>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+            <td align="center" bgcolor="#FFFFFF"><?php echo $rows['destination']; ?></td>
+        </tr>
+
+        <?php
+// Exit looping and close connection
+    }
+    ?>
+
+    <tr>
+        <td colspan="7" align="right" bgcolor="#E6E6E6"><a href="/Upload/upload.html"><strong>Upload a New File</strong> </a></td>
+    </tr>
+</table><br>
 
 
 <script>
