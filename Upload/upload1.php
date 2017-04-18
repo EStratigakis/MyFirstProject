@@ -42,33 +42,13 @@ if(isset($_POST['submit'])) {
 
                 mysqli_select_db($db,"uploads")or die("cannot select DB"); //Select the database uploads
 
-                $sql_query = "SELECT uid from users Where username='$usname'";
-                $result = $db -> query($sql_query);
-                while($row = $result -> fetch_array()){
-                    $userID= $row['uid'];
-                }
 
                 $sql1="INSERT INTO upload(filename, filesize, filetype, username, comments, datetime)VALUES('$fileName', '$fileSize', '$fileType', '$usname', '$comments', '$datetime')";
                 $result1=mysqli_query($db,$sql1);
 
-                if (mysqli_query($db,$sql1)){}
-                else{echo "error";}
                 echo "<script type='text/javascript'>alert('Upload Successful')</script>";
 
                 header("Location: /index.html"); //Changes the header
-
-
-
-                $upload="upload";
-                $date = date('Y-m-d H:i:s');
-                //insert into topic
-                $sql="INSERT INTO topic(description,uid,dateposted,title,file_type,path,file_name) VALUES ('$description','$userID','$date','$upload','$fileActualExt','$fileDestination','$fileNameNew')";
-                if(mysqli_query($db,$sql)){
-
-                }
-                else{
-                    echo"Error:".$sql."<br>" . mysqli_error($db);
-                }
 
                 header("Location:home.php");
             }
