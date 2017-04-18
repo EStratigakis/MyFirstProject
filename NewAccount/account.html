@@ -36,22 +36,30 @@
     </div>
 </nav>
 
-<div class="re">
-<form action="/NewAccount/account.php" role = "form" method="post">
-    <label>Username:</label><br>
-    <input type="text" name="usr" id="usr">
+<div class="container" align="center">
+    <h1>Add a New User</h1>
     <br><br>
-    <label>Password:</label><br>
-    <input type="password" name="pswd" id="pswd">
-    <br><br>
-    <label>Role :</label><br>
-    <select required name="rle" id="rle">
+        <form action="account.php" role = "form" method="post" style="height: auto;width: auto">
+          <div class="form-group">
+            <label>Username:</label><br>
+            <input class="form-control" type="text" name="usr" id="usr" placeholder="Username">
+            <br><br>
+          </div>
+          <div class="form-group">
+            <label>Password:</label><br>
+            <input class="form-control" type="password" name="pswd" id="pswd" placeholder="Password">
+          </div>
+              <br><br>
+          <div class="form-group">
+            <label>Role :</label><br>
+            <select required name="rle" id="rle">
             <option value="">None</option>
             <option value="1">Administrator</option>
             <option value="2">Student</option>
             <option value="3">Lecturer</option>
-    </select>
-    <br><br><input type="submit" value="Submit">
+            </select><br><br>
+          </div>
+            <button type="submit" value="Submit" name="submit" class="btn btn-default">Submit</button>
 </form>
 </div>
 
