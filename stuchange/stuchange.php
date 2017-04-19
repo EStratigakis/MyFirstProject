@@ -22,11 +22,11 @@ else
 
         if (mysqli_num_rows($result) == 1)
         {
-            $result1 = mysqli_query($db, "INSERT INTO `student`(`password`) VALUES ('$npass')");
+            $result1 = mysqli_query($db, "UPDATE `student` SET `password`='$npass' WHERE `num`= '$uname'");
             if ($result1)
             {
                 echo "<script type='text/javascript'>alert('Your password was changed!')</script>";
-                header('Location: /loggedin/index.php');
+                header('Location: /loggedin/student/index.php');
             }
             else {
                 echo "There is a problem! Try again later or contact an administrator!";
@@ -35,11 +35,13 @@ else
         else
         {
             echo "Wrong Password";
+            header('Location: /stuchange/stuchange.html');
         }
     }
     else
     {
         echo "New passwords are not the same!";
+        header('Location: /stuchange/stuchange.html');
     }
 }
 ?>
