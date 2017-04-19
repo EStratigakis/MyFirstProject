@@ -11,11 +11,11 @@ if(empty($_POST["nou"]) || empty($_POST["pass"]))
     $nou = $_POST['nou'];
     $pss = $_POST['pass'];
     mysqli_select_db($db, 'stu');
-    $sql = "SELECT student_id FROM students WHERE num='$nou' and password='$pss'";
+    $sql = "SELECT student_id FROM student WHERE num='$nou' and password='$pss'";
 
     $result = mysqli_query($db, $sql);
 
-    $q = mysqli_query($db, "SELECT student_id, perm_id FROM students WHERE num = '$nou' AND password = '$pss' LIMIT 0,1");
+    $q = mysqli_query($db, "SELECT student_id, perm_id FROM student WHERE num = '$nou' AND password = '$pss' LIMIT 0,1");
 
     if ($q && mysqli_num_rows($q) > 0) {
 
@@ -35,7 +35,7 @@ if(empty($_POST["nou"]) || empty($_POST["pass"]))
         }
         $_SESSION['nou'] = $nou;
         $_SESSION['pass'] = $pss;
-        $result1 = mysqli_query($db, "SELECT * from students WHERE num = '$nou' and password = '$pss'");
+        $result1 = mysqli_query($db, "SELECT * from student WHERE num = '$nou' and password = '$pss'");
         if (mysqli_num_rows($result1) == 1) {
             switch ($_SESSION['perm_id']) {
                 default:
