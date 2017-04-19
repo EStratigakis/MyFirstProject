@@ -2,7 +2,7 @@
 session_start();
 include_once('../dbConnect.php');
 
-if(empty($_POST["nou"]) || empty($_POST["password"]))
+if(empty($_POST["nou"]) || empty($_POST["pass"]))
 {
     echo "<script type='text/javascript'>alert('Both fields are required!')</script>";
     header('Refresh: 1; URL = http://strato1.azurewebsites.net');
