@@ -22,7 +22,7 @@ else {
     $deg = $_POST['dg'];
     $yer = $_POST['yr'];
 
-    $sql = "INSERT INTO student(fname, lname, num, mail, dg, yr) VALUES ('$fname', '$lname', '$numb', '$mail', '$deg', '$yer')";
+    $sql = "INSERT INTO student(fname, lname, num, mail, dg, yr, password, perm_id) VALUES ('$fname', '$lname', '$numb', '$mail', '$deg', '$yer', '$pass', 2)";
     $result = mysqli_query($db, $sql);
 
     if ($result) {
