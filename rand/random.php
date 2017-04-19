@@ -36,8 +36,8 @@ session_start();
             else
             {
                 $gcount = 1;
-                $t = "INSERT INTO assign_group(student_id,group_id) VALUES ($row,$gcount);";
-                $res2 = mysqli_query($db,$t);
+                $i = "INSERT INTO assign_group(student_id,group_id) VALUES ($row,$gcount);";
+                $res2 = mysqli_query($db,$i);
 
                 if ($res2) {?><script type="text/javascript">window.history.go(-2);</script><?php}
                 else{echo "<script type='text/javascript'>alert('Error Importing Values!')</script>";}
