@@ -41,7 +41,7 @@ else {
 
             if ($result) {
                     if ($x >= 2) {
-                        $t = "SELECT uid FROM student;";
+                        $t = "SELECT student_id FROM student WHERE NOT EXISTS (SELECT student_id FROM '$x-1');";
                         $res1 = mysqli_query($db,$t);
 
                         $r = "INSERT INTO `$x`(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT DISTINCT * FROM student ORDER BY rand() LIMIT $lmt;";
