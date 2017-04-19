@@ -28,7 +28,7 @@ else {
 
         $snum = $data['total'] / $gnum;
 
-        $lmt = round($snum, PHP_ROUND_HALF_UP);
+        $lmt = round($snum, 0);
         echo $lmt.'.'.$snum.'.'.$data['total'];
 
         $x = 1;
