@@ -16,7 +16,7 @@ else
 
     if ($npass === $n1pass) {
         mysqli_select_db($db, 'stu');
-        $sql = "SELECT uid FROM student WHERE num = '$uname' AND password='$olpass'";
+        $sql = "SELECT student_id FROM student WHERE num = '$uname' AND password='$olpass'";
 
         $result = mysqli_query($db, $sql);
 
