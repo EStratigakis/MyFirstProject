@@ -3,18 +3,20 @@ session_start();
 include_once('../dbConnect.php');
 
 if(empty($_POST["olpass"]) || empty($_POST["npswd"] || empty($_POST["n1pswd"])))
-{
-    echo "<script type='text/javascript'>alert('All fields are required!')</script>";
-    header('Location: /stuchange/stuchange.html');
-}else {
-
+    {
+        echo "<script type='text/javascript'>alert('All fields are required!')</script>";
+        header('Location: /stuchange/stuchange.html');
+    }
+else
+    {
+    $uname = $_SESSION['nou'];
     $olpass = $_POST['olpass'];
     $npass = $_POST['npass'];
     $n1pass = $_POST['n1pass'];
 
     if ($npass === $n1pass) {
         mysqli_select_db($db, 'stu');
-        $sql = "SELECT uid FROM student WHERE password='$olpass'";
+        $sql = "SELECT uid FROM student WHERE num = '$uname' AND password='$olpass'";
 
         $result = mysqli_query($db, $sql);
 
