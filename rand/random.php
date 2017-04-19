@@ -30,8 +30,8 @@ session_start();
                 $t = "INSERT INTO assign_group(student_id,group_id) VALUES ($row,$gcount);";
                 $res2 = mysqli_query($db,$t);
 
-                if ($res2) {}
-                else{echo "<script type='text/javascript'>alert('Error Importing Values!')</script>";}
+                if ($res2) {?><script type="text/javascript">window.history.go(-2);</script><?php}
+                else{echo "<script type='text/javascript'>alert('Error Importing Values !')</script>";}
             }
             else
             {
@@ -39,7 +39,7 @@ session_start();
                 $t = "INSERT INTO assign_group(student_id,group_id) VALUES ($row,$gcount);";
                 $res2 = mysqli_query($db,$t);
 
-                if ($res2) {}
+                if ($res2) {?><script type="text/javascript">window.history.go(-2);</script><?php}
                 else{echo "<script type='text/javascript'>alert('Error Importing Values!')</script>";}
             }
         }
