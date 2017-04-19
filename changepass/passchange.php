@@ -22,7 +22,7 @@ else
 
         if (mysqli_num_rows($result) == 1)
         {
-            $result1 = mysqli_query($db, "UPDATE `users` SET `password`='$nepass' WHERE `num`= '$usename'");
+            $result1 = mysqli_query($db, "UPDATE `users` SET `password`='$nepass' WHERE `username`= '$usename'");
             if ($result1)
             {
                 echo "<script type='text/javascript'>alert('Your password was changed!')</script>";
