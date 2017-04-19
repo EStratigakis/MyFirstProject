@@ -35,13 +35,11 @@ else
         else
         {
             echo "Wrong Password";
-            header('Location: /stuchange/stuchange.html');
         }
     }
     else
     {
         echo "New passwords are not the same!";
-        header('Location: /stuchange/stuchange.html');
     }
 }
 ?>
