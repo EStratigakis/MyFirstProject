@@ -29,7 +29,6 @@ else {
         $snum = $data['total'] / $gnum;
 
         $lmt = round($snum, 0);
-        echo $lmt.'.'.$snum.'.'.$data['total'];
 
         $x = 1;
 
@@ -43,7 +42,7 @@ else {
 
             if ($result) {
 
-                $r = "INSERT INTO $x(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT * FROM student WHERE student_id = $ruid LIMIT $lmt';'";
+                $r = "INSERT INTO $x(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT * FROM student WHERE student_id = $ruid LIMIT $lmt;";
                 mysqli_select_db($db, "$db_name") or die("cannot select DB");
                 $s = mysqli_query($db, $r);
                 if ($r) {
