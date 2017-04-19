@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['permissions_id'] != 1 or $_SESSION['permissions_id'] != 3)
+if (($_SESSION['permissions_id']) != 1 or ($_SESSION['permissions_id'] != 3))
 {
     header("Refresh: 3; url= /index.html");
     echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
