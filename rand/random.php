@@ -17,15 +17,15 @@ session_start();
         $w = "SELECT student_id FROM student;";
         $res = mysqli_query($db, $w);
 
-        $e = "SELECT COUNT(*) AS total1 FROM groups;";
+        $e = "SELECT COUNT(*) AS total FROM groups;";
         $res1 = mysqli_query($db, $e);
-        $data1 = mysqli_fetch_assoc($res1);
+        $data = mysqli_fetch_assoc($res1);
 
         $gcount = 0;
 
         foreach ($res AS $row)
         {
-            if ($gcount <= $data1['total1'])
+            if ($gcount <= $data['total'])
             {
                 $t = "INSERT INTO assign_group(student_id,group_id) VALUES ($row,$gcount);";
                 $res2 = mysqli_query($db,$t);
@@ -36,10 +36,10 @@ session_start();
             else
             {
                 $gcount = 1;
-                $i = "INSERT INTO assign_group(student_id,group_id) VALUES ($row,$gcount);";
-                $res2 = mysqli_query($db,$i);
+                $q = "INSERT INTO assign_group(student_id,group_id) VALUES ($row,$gcount);";
+                $res3 = mysqli_query($db,$q);
 
-                if ($res2) {?><script type="text/javascript">window.history.go(-2);</script><?php}
+                if ($res3) {?><script type="text/javascript">window.history.go(-2);</script><?php}
                 else{echo "<script type='text/javascript'>alert('Error Importing Values!')</script>";}
             }
         }
