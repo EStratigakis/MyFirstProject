@@ -45,7 +45,7 @@ else {
 
             if ($result) {
 
-                $r = "INSERT INTO $x(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT DISTINCT * FROM student LIMIT $lmt;";
+                $r = "INSERT INTO `$x`(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT DISTINCT * FROM student LIMIT $lmt;";
                 mysqli_select_db($db, "$db_name") or die("cannot select DB");
                 $s = mysqli_query($db, $r);
                 echo "no im here";
