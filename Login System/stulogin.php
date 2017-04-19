@@ -31,7 +31,7 @@ if(empty($_POST["nou"]) || empty($_POST["pass"]))
         if ($_POST["remember_me"] == '1' || $_POST["remember_me"] == 'on') {
             $hour = time() + 3600 * 24 * 30;
             setcookie('nou', $nou, $hour);
-            setcookie('password', $pss, $hour);
+            setcookie('pass', $pss, $hour);
         }
         $_SESSION['nou'] = $nou;
         $_SESSION['pass'] = $pss;
