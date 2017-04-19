@@ -82,7 +82,7 @@ else {
 
 <div style="width:100%">
     <div style="width:100%">
-        <h1 align="center"><?php echo "Hello, " .$_SESSION['username']. "!";?></h1>
+        <h1 align="center"><?php echo "Hello, " .$_SESSION['nou']. "!";?></h1>
     </div>
     <div class="container">
         <div class="table-responsive">
