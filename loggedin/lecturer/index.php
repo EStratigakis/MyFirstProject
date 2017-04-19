@@ -27,6 +27,15 @@ else {
 // OREDER BY id DESC is order result by descending
 
     $result1 = mysqli_query($db, $sql1);
+
+    $tbl_name2="uload";
+    $db_name2="uploads";
+    mysqli_select_db($db,"uploads")or die("cannot select DB");
+
+    $sql2="SELECT * FROM $tbl_name2 ORDER BY id DESC";
+// OREDER BY id DESC is order result by descending
+
+    $result2=mysqli_query($db,$sql2);
 }
 ?>
 
