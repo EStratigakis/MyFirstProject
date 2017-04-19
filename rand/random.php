@@ -21,14 +21,14 @@ else {
         $gname = $_POST['gname'];
         $snum = $_POST['snum'];
         mysqli_select_db($db, 'stu');
-        $sql = "CREATE TABLE `$gname`(student_id int(4) NOT NULL, fname varchar(65) NOT NULL, lname varchar(65) NOT NULL, num int(7) NOT NULL DEFAULT '0', mail varchar(65) NOT NULL, dg varchar(25) NOT NULL, yr VARCHAR (25) NOT NULL)";
+        $sql = "CREATE TABLE `$gname`(student_id int(4) NOT NULL, fname varchar(65) NOT NULL, lname varchar(65) NOT NULL, num int(7) NOT NULL DEFAULT '0', mail varchar(65) NOT NULL, dg varchar(25) NOT NULL, yr VARCHAR (25) NOT NULL, password VARCHAR (25) NOT NULL, perm_id int(1) NOT NULL DEFAULT '2')";
 
         $result = mysqli_query($db, $sql);
 
 
         if ($result) {
 
-            $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr) SELECT DISTINCT * FROM student ORDER BY rand() LIMIT $snum;";
+            $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT DISTINCT * FROM student ORDER BY rand() LIMIT $snum;";
             mysqli_select_db($db, "$db_name") or die("cannot select DB");
             $s = mysqli_query($db, $r);
 
