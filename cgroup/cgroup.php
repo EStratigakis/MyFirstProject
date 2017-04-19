@@ -1,6 +1,14 @@
 <?php
 session_start();
-
+if ($_SESSION['permissions_id'] != 3)
+{
+    header("Refresh: 3; url= /index.html");
+    echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
+    echo 'You will be redirected in 3 seconds';
+    session_destroy();
+    exit();
+}
+else {
     include_once("../dbConnect.php");
 
     $tbl_name = "groups";
@@ -30,6 +38,6 @@ session_start();
             echo "<script type='text/javascript'>alert('Table Name Created!')</script>";
             header('Refresh: 1; URL = http://strato1.azurewebsites.net/cgroup/cgroup.html');
         }
-
+    }
 }
 ?>
