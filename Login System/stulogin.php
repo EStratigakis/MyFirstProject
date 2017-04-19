@@ -11,7 +11,7 @@ if(empty($_POST["nou"]) || empty($_POST["password"]))
     $nou = $_POST['nou'];
     $pss = $_POST['pass'];
     mysqli_select_db($db, 'stu');
-    $sql = "SELECT student_id FROM students WHERE num='$nou' and password='$password'";
+    $sql = "SELECT student_id FROM students WHERE num='$nou' and password='$pss'";
 
     $result = mysqli_query($db, $sql);
 
