@@ -1,5 +1,14 @@
 <?php
 session_start();
+if (($_SESSION['permissions_id'] != 3))
+{
+    header("Refresh: 3; url= /index.html");
+    echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
+    echo 'You will be redirected in 3 seconds';
+    session_destroy();
+    exit();
+}
+else {
     include_once("../dbConnect.php");
 
     $db_name = "stu"; // Database name
@@ -31,7 +40,7 @@ session_start();
                 $res2 = mysqli_query($db,$t);
 
                 if ($res2) {?><script type="text/javascript">window.history.go(-2);</script><?php}
-                else{echo "<script type='text/javascript'>alert('Error Importing Values !')</script>";}
+                else{echo "<script type='text/javascript'>alert('Error Importing Values!')</script>";}
             }
             else
             {
@@ -44,4 +53,5 @@ session_start();
             }
         }
     }
+}
 ?>
