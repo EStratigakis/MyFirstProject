@@ -34,7 +34,7 @@ else {
 
             if ($r) {
                 echo "<script type='text/javascript'>alert('Table has been created and populated')</script>";
-                header('Refresh: 1; URL = http://strato1.azurewebsites.net/rand/rform.html');
+                ?><script type="text/javascript">window.history.go(-2);</script><?php
             }
         }
     }
