@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (($_SESSION['permissions_id'] != 1) or ($_SESSION['permissions_id'] != 3))
+if (($_SESSION['permissions_id'] != 1) || ($_SESSION['permissions_id'] != 3))
 {
     header("Refresh: 3; url= /index.html");
     echo '<h3>ACCESS DENIED - YOU DO NOT HAVE PERMISSIONS TO ACCESS THIS PAGE</h3>';
@@ -28,7 +28,7 @@ else {
 
     if ($result) {
         echo "<script type='text/javascript'>alert('Student Added!')</script>";
-        header('Refresh: 1; URL = http://strato1.azurewebsites.net');
+        ?><script type="text/javascript">window.history.go(-2);</script><?php
     } else {
         echo "ERROR";
     }
