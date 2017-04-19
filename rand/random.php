@@ -39,11 +39,11 @@ else {
             echo "im here";
             $result = mysqli_query($db, $sql);
 
-            $ruid = rand(1, $data['total']);
+            $ruid = rand(1,$data['total']);
 
             if ($result) {
 
-                $r = "INSERT INTO $x(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT * FROM student WHERE student_id = $ruid LIMIT 0,$lmt;";
+                $r = "INSERT INTO $x(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT DISTINCT * FROM student WHERE student_id BETWEEN 1 and $ruid LIMIT 0,$lmt;";
                 mysqli_select_db($db, "$db_name") or die("cannot select DB");
                 $s = mysqli_query($db, $r);
                 echo "no im here";
