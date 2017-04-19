@@ -9,13 +9,13 @@ if(empty($_POST["nou"]) || empty($_POST["password"]))
 }else {
 
     $nou = $_POST['nou'];
-    $password = $_POST['password'];
+    $pss = $_POST['pass'];
     mysqli_select_db($db, 'stu');
     $sql = "SELECT student_id FROM students WHERE num='$nou' and password='$password'";
 
     $result = mysqli_query($db, $sql);
 
-    $q = mysqli_query($db, "SELECT student_id, perm_id FROM students WHERE num = '$nou' AND password = '$password' LIMIT 0,1");
+    $q = mysqli_query($db, "SELECT student_id, perm_id FROM students WHERE num = '$nou' AND password = '$pss' LIMIT 0,1");
 
     if ($q && mysqli_num_rows($q) > 0) {
 
@@ -31,11 +31,11 @@ if(empty($_POST["nou"]) || empty($_POST["password"]))
         if ($_POST["remember_me"] == '1' || $_POST["remember_me"] == 'on') {
             $hour = time() + 3600 * 24 * 30;
             setcookie('nou', $nou, $hour);
-            setcookie('password', $password, $hour);
+            setcookie('password', $pss, $hour);
         }
         $_SESSION['nou'] = $nou;
-        $_SESSION['password'] = $password;
-        $result1 = mysqli_query($db, "SELECT * from students WHERE num = '$nou' and password = '$password'");
+        $_SESSION['pass'] = $pss;
+        $result1 = mysqli_query($db, "SELECT * from students WHERE num = '$nou' and password = '$pss'");
         if (mysqli_num_rows($result1) == 1) {
             switch ($_SESSION['perm_id']) {
                 default:
