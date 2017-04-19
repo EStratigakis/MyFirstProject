@@ -69,6 +69,7 @@ else {
                     <li><a href="/Forum/main_forum.php">Forum</a></li>
                     <li><a href="/Upload/upload.html">Upload</a></li>
                     <li><a href="/group/index.php">Student</a></li>
+                    <li><a href="/stuchange/stuchange.html">Change Password</a></li>
                 </ul>
             </li>
         </ul>

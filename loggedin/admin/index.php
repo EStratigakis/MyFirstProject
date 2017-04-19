@@ -79,6 +79,8 @@ else {
                     <li><a href="/Upload/upload.html">Upload</a></li>
                     <li><a href="/Registration/regi.html">Add Student</a></li>
                     <li><a href="/NewAccount/account.html">Add User Account</a></li>
+                    <li><a href="/group/index.php">Students</a></li>
+                    <li><a href="/changepass/passchange.html">Change Password</a></li>
                 </ul>
             </li>
         </ul>
