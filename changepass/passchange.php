@@ -2,7 +2,7 @@
 session_start();
 include_once('../dbConnect.php');
 
-if(empty($_POST["oldpass"]) || empty($_POST["nepswd"] || empty($_POST["ne1pswd"])))
+if(empty($_POST["olpass"]) || empty($_POST["nepswd"] || empty($_POST["ne1pswd"])))
 {
     echo "<script type='text/javascript'>alert('All fields are required!')</script>";
     header('Location: /stuchange/stuchange.html');
@@ -26,7 +26,7 @@ else
             if ($result1)
             {
                 echo "<script type='text/javascript'>alert('Your password was changed!')</script>";
-                ?>window.history.go(-1);<?php
+                ?><script type="text/javascript">window.history.go(-2);</script><?php
             }
             else {
                 echo "There is a problem! Try again later or contact an administrator!";
