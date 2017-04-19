@@ -47,7 +47,11 @@ if(empty($_POST["nou"]) || empty($_POST["pass"]))
             }
         } else {
             echo "Incorrect username or password.";
+            header('Location: /Login System/login.php');
         }
+    }else {
+        echo "<script type='text/javascript'>alert('Incorrect username or password!')</script>";
+        header('Location: /Login System/stulogin.html');
     }
 }
 ?>
