@@ -11,8 +11,8 @@ else
     {
     $uname = $_SESSION['nou'];
     $olpass = $_POST['olpass'];
-    $npass = $_POST['npass'];
-    $n1pass = $_POST['n1pass'];
+    $npass = $_POST['npswd'];
+    $n1pass = $_POST['n1pswd'];
 
     if ($npass === $n1pass) {
         mysqli_select_db($db, 'stu');
@@ -34,13 +34,13 @@ else
         }
         else
         {
-            echo "<script type='text/javascript'>alert('Wrong Password')</script>";
+            echo "Wrong Password";
             header('Location: /stuchange/stuchange.html');
         }
     }
     else
     {
-        echo "<script type='text/javascript'>alert('New passwords are not the same!')</script>";
+        echo "New passwords are not the same!";
         header('Location: /stuchange/stuchange.html');
     }
 }
