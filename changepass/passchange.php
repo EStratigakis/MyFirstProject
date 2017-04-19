@@ -10,9 +10,9 @@ if(empty($_POST["oldpass"]) || empty($_POST["nepswd"] || empty($_POST["ne1pswd"]
 else
 {
     $usename = $_SESSION['username'];
-    $oldpass = $_POST['oldpass'];
-    $nepass = $_POST['nepswd'];
-    $ne1pass = $_POST['ne1pswd'];
+    $oldpass = md5($_POST['oldpass']);
+    $nepass = md5($_POST['nepswd']);
+    $ne1pass = md5($_POST['ne1pswd']);
 
     if ($nepass === $ne1pass) {
         mysqli_select_db($db, 'user');

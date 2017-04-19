@@ -9,7 +9,7 @@ if(empty($_POST["nou"]) || empty($_POST["pass"]))
 }else {
 
     $nou = $_POST['nou'];
-    $pss = $_POST['pass'];
+    $pss = md5($_POST['pass']);
     mysqli_select_db($db, 'stu');
     $sql = "SELECT student_id FROM student WHERE num='$nou' and password='$pss'";
 

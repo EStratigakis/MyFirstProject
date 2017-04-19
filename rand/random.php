@@ -5,12 +5,7 @@ session_start();
     $db_name = "stu"; // Database name
     mysqli_select_db($db, "$db_name") or die("cannot select DB");
 
-    if (empty($_POST["gnum"])) {
-        echo "<script type='text/javascript'>alert('The required field is not filled!')</script>";
-        header('Refresh: 1; URL = http://strato1.azurewebsites.net');
-    } else {
-
-        $gnum = $_POST['gnum'];
+         $gnum = $_POST['gnum'];
 
         mysqli_select_db($db, 'stu');
 
@@ -23,7 +18,7 @@ session_start();
 
         $gcount = 0;
 
-        foreach ($res AS $row)
+        while ($res)
         {
             if ($gcount <= $data['total'])
             {
@@ -43,5 +38,4 @@ session_start();
                 else{echo "<script type='text/javascript'>alert('Error Importing Values!')</script>";}
             }
         }
-    }
 ?>

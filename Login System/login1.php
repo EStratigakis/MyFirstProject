@@ -9,7 +9,7 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
 }else {
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     mysqli_select_db($db, 'user');
     $sql = "SELECT uid FROM users WHERE username='$username' and password='$password'";
 

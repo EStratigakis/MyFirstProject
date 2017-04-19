@@ -16,7 +16,7 @@ else {
     mysqli_select_db($db, "$db_name") or die("cannot select DB");
 // get data that sent from form
     $usr = $_POST['usr'];
-    $pass = $_POST['pswd'];
+    $pass = md5($_POST['pswd']);
     $rle = $_POST['rle'];
 
     $count = 0;

@@ -10,9 +10,9 @@ if(empty($_POST["olpass"]) || empty($_POST["npswd"] || empty($_POST["n1pswd"])))
 else
     {
     $uname = $_SESSION['nou'];
-    $olpass = $_POST['olpass'];
-    $npass = $_POST['npswd'];
-    $n1pass = $_POST['n1pswd'];
+    $olpass = md5($_POST['olpass']);
+    $npass = md5($_POST['npswd']);
+    $n1pass = md5($_POST['n1pswd']);
 
     if ($npass === $n1pass) {
         mysqli_select_db($db, 'stu');

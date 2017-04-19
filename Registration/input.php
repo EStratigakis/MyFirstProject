@@ -21,7 +21,7 @@ else {
     $mail = $_POST['mail'];
     $deg = $_POST['dg'];
     $yer = $_POST['yr'];
-    $dpass = $_POST['pass'];
+    $dpass = md5($_POST['pass']);
 
     $sql = "INSERT INTO student(fname, lname, num, mail, dg, yr, password, perm_id) VALUES ('$fname', '$lname', '$numb', '$mail', '$deg', '$yer', '$dpass', 2)";
     $result = mysqli_query($db, $sql);
