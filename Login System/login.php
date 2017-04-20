@@ -60,8 +60,14 @@
 
 
 </body>
-<footer>
-    <A HREF="http://strato1.azurewebsites.net">Home Page</A>
-</footer>
+    <footer>
+
+        <a href="https://www.facebook.com/robertgordonuniversity" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/RobertGordonUni" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/edu/school?id=12660" class="fa fa-linkedin"></a>
+        <a href="https://www.youtube.com/user/RobertGordonUni" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/robertgordonuni/" class="fa fa-instagram"></a>
+
+    </footer>
 </html>
 
