@@ -15,7 +15,7 @@ session_start();
         $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT dg FROM student WHERE dg = '$deg'";
         $s = mysqli_query($db, $r);
 
-        if ($r) {
+        if ($s) {
             echo "<script type='text/javascript'>alert('Table has been created and populated')</script>";
             ?>
             <script type="text/javascript">window.history.go(-2);</script><?php
