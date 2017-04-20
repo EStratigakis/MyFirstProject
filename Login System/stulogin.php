@@ -15,7 +15,7 @@ if(empty($_POST["nou"]) || empty($_POST["pass"]))
 
     $result = mysqli_query($db, $sql);
 
-    $q = mysqli_query($db, "SELECT student_id, perm_id FROM student WHERE num = '$nou' AND password = '$pss' LIMIT 0,1");
+    $q = mysqli_query($db, "SELECT student_id, perm_id, dg FROM student WHERE num = '$nou' AND password = '$pss' LIMIT 0,1");
 
     if ($q && mysqli_num_rows($q) > 0) {
 
