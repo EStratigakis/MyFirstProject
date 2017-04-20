@@ -5,7 +5,7 @@ session_start();
     $db_name = "stu"; // Database name
 
 
-        $gname = $_POST['gname'];
+        $grname = $_POST['grname'];
         $deg = $_POST['deg'];
 
         mysqli_select_db($db, 'stu') or die("cannot select DB");
