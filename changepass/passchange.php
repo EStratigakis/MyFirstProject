@@ -15,6 +15,12 @@ else
     $ne1pass = md5($_POST['ne1pswd']);
 
     if ($nepass === $ne1pass) {
+
+        if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $nepass)) {
+            echo "<script type='text/javascript'>alert('Password not meeting requirements')</script>";
+            ?><script type="text/javascript">window.history.go(-1);</script><?php
+        }
+
         mysqli_select_db($db, 'user');
         $sql = "SELECT uid FROM users WHERE username = '$usename' AND password='$oldpass'";
 
