@@ -57,7 +57,8 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
         }
 
     }else {
-        echo "<script type='text/javascript'>alert('Incorrect username or password!')</script>";
+
+        echo "'Incorrect username or password!";
         header('Location: /Login System/login.php');
     }
 }
