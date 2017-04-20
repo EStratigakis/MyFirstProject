@@ -14,6 +14,7 @@ else
 
         if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!-@#$%]{8,16}$/', $_POST['npswd'])) {
             echo "<script type='text/javascript'>alert('Password requirements not met!')</script>";
+            ?><script type="text/javascript">window.history.go(-1);</script><?php
         }
         else{
 
@@ -38,18 +39,19 @@ else
                 }
                 else {
                     echo "There is a problem! Try again later or contact an administrator!";
+                    ?><script type="text/javascript">window.history.go(-1);</script><?php
                 }
             }
             else
             {
                 echo "<script type='text/javascript'>alert('Wrong Password!')</script>";
-                header('Location: /stuchange/stuchange.html');
+                ?><script type="text/javascript">window.history.go(-1);</script><?php
             }
         }
         else
         {
             echo "<script type='text/javascript'>alert('New passwords does not match')</script>";
-            header('Location: /stuchange/stuchange.html');
+            ?><script type="text/javascript">window.history.go(-1);</script><?php
         }
         }
 }
