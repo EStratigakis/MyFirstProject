@@ -227,7 +227,7 @@ else {
             <?php
 
             // Start looping table row
-            while($rows = mysqli_fetch_array($result1)){
+            while($rows = mysqli_fetch_array($result3)){
                 ?>
                 <tr>
                     <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
