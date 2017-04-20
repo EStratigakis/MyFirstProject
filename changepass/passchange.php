@@ -11,7 +11,7 @@ else
     $usename = $_SESSION['username'];
 
 
-    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!-@#$%]{8,12}$/', $_POST['nepswd'])) {
+    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!-@#$%]{8,16}$/', $_POST['nepswd'])) {
         echo "Password not meeting requirements";
     }
 

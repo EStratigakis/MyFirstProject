@@ -9,39 +9,46 @@ if(empty($_POST["olpass"]) || empty($_POST["npswd"] || empty($_POST["n1pswd"])))
     }
 else
     {
-    $uname = $_SESSION['nou'];
-    $olpass = md5($_POST['olpass']);
-    $npass = md5($_POST['npswd']);
-    $n1pass = md5($_POST['n1pswd']);
 
-    if ($npass === $n1pass) {
-        mysqli_select_db($db, 'stu');
-        $sql = "SELECT student_id FROM student WHERE num = '$uname' AND password='$olpass'";
+        $uname = $_SESSION['username'];
 
-        $result = mysqli_query($db, $sql);
+        if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!-@#$%]{8,16}$/', $_POST['npswd'])) {
+            echo "Password not meeting requirements";
+        }
 
-        if (mysqli_num_rows($result) == 1)
-        {
-            $result1 = mysqli_query($db, "UPDATE `student` SET `password`='$npass' WHERE `num`= '$uname'");
-            if ($result1)
+        if ($_POST['npswd'] === $_POST['n1pswd']) {
+
+            $olpass = md5($_POST['olpass']);
+            $npass = md5($_POST['npswd']);
+            $nepass = md5($_POST['n1pswd']);
+
+            mysqli_select_db($db, 'stu');
+            $sql = "SELECT student_id FROM student WHERE num = '$uname' AND password='$olpass'";
+
+            $result = mysqli_query($db, $sql);
+
+            if (mysqli_num_rows($result) == 1)
             {
-                echo "<script type='text/javascript'>alert('Your password was changed!')</script>";
-                header('Location: /loggedin/student/index.php');
+                $result1 = mysqli_query($db, "UPDATE `student` SET `password`='$npass' WHERE `num`= '$uname'");
+                if ($result1)
+                {
+                    echo "<script type='text/javascript'>alert('Your password was changed!')</script>";
+                    header('Location: /loggedin/student/index.php');
+                }
+                else {
+                    echo "There is a problem! Try again later or contact an administrator!";
+                }
             }
-            else {
-                echo "There is a problem! Try again later or contact an administrator!";
+            else
+            {
+                echo "<script type='text/javascript'>alert('Wrong Password!')</script>";
+                header('Location: /stuchange/stuchange.html');
             }
         }
         else
         {
-            echo "Wrong Password";
+            echo "<script type='text/javascript'>alert('New passwords does not match')</script>";
             header('Location: /stuchange/stuchange.html');
         }
-    }
-    else
-    {
-        echo "New passwords are not the same!";
-        header('Location: /stuchange/stuchange.html');
-    }
 }
 ?>
