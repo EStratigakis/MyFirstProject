@@ -204,18 +204,16 @@ else {
         </table><br>
     </div>
 </div>
-
-
-</body>
 <footer>
 
-    <a href="http://www.facebook.com" class="fa fa-facebook"></a>
-    <a href="http://www.twitter.com" class="fa fa-twitter"></a>
-    <a href="http://www.google.com" class="fa fa-google"></a>
-    <a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
-    <a href="http://www.youtube.com" class="fa fa-youtube"></a>
-    <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-    <a href="http://www.reddit.com" class="fa fa-reddit"></a>
+    <a href="https://www.facebook.com/robertgordonuniversity" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/RobertGordonUni" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/edu/school?id=12660" class="fa fa-linkedin"></a>
+    <a href="https://www.youtube.com/user/RobertGordonUni" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/robertgordonuni/" class="fa fa-instagram"></a>
 
 </footer>
+
+</body>
+
 </html>

@@ -110,4 +110,13 @@ $result=mysqli_query($db,$sql);
         <td colspan="5" align="right" bgcolor="#E6E6E6"><a href="new_topic.php"><strong>Create New Topic</strong> </a></td>
     </tr>
 </table>
+<footer>
+
+    <a href="https://www.facebook.com/robertgordonuniversity" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/RobertGordonUni" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/edu/school?id=12660" class="fa fa-linkedin"></a>
+    <a href="https://www.youtube.com/user/RobertGordonUni" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/robertgordonuni/" class="fa fa-instagram"></a>
+
+</footer>
 </body>
