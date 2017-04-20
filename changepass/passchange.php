@@ -5,7 +5,6 @@ include_once('../dbConnect.php');
 if(empty($_POST["oldpass"]) || empty($_POST["nepswd"] || empty($_POST["ne1pswd"])))
 {
     echo "<script type='text/javascript'>alert('All fields are required!')</script>";
-    header('Location: /changepass/passchange.html');
 }
 else
 {
@@ -42,13 +41,13 @@ else
         else
         {
             echo "Wrong Password";
-            header('Location: /changepass/passchange.html');
+
         }
     }
     else
     {
         echo "New passwords are not the same!";
-        header('Location: /changepass/passchange.html');
+
     }
 }
 ?>
