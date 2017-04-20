@@ -14,7 +14,8 @@ else
 
         if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!-@#$%]{8,16}$/', $_POST['npswd'])) {
             echo "<script type='text/javascript'>alert('Password requirements not met!')</script>";
-
+        }
+        else{
 
         if ($_POST['npswd'] === $_POST['n1pswd']) {
 
