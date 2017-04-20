@@ -17,7 +17,7 @@ else
     if ($nepass === $ne1pass) {
 
         if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $nepass)) {
-            echo "<script type='text/javascript'>alert('Password not meeting requirements')</script>";
+            echo "Password not meeting requirements";
         }
 
         mysqli_select_db($db, 'user');
