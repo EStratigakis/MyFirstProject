@@ -10,16 +10,13 @@ if(empty($_POST["oldpass"]) || empty($_POST["nepswd"] || empty($_POST["ne1pswd"]
 else
 {
     $usename = $_SESSION['username'];
-    $oldpass = $_POST['oldpass'];
-    $nepass = $_POST['nepswd'];
-    $ne1pass = $_POST['ne1pswd'];
 
 
-    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $nepass)) {
+    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $_POST['nepswd'])) {
         echo "Password not meeting requirements";
     }
 
-    if ($nepass === $ne1pass) {
+    if ($_POST['nepswd'] === $_POST['ne1pswd']) {
 
         $oldpass = md5($_POST['oldpass']);
         $nepass = md5($_POST['nepswd']);
