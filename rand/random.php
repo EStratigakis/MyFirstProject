@@ -12,9 +12,9 @@ session_start();
         $result = mysqli_query($db, $sql);
 
     if ($result) {
-        $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT dg FROM student WHERE dg = '$deg'";
+        $r = "INSERT INTO `$gname`(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT * FROM student WHERE dg = '$deg'";
         $s = mysqli_query($db, $r);
-
+echo "im here";
         if ($s) {
             echo "<script type='text/javascript'>alert('Table has been created and populated')</script>";
             ?>
