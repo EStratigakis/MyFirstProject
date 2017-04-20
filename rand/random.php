@@ -14,7 +14,7 @@ session_start();
 
     if ($result) {
         mysqli_select_db($db, $db_name) or die("cannot select DB");
-        $r = "INSERT INTO `$grname`(student_id, fname, lname, num, mail, dg, yr, password, perm_id) SELECT * FROM student WHERE dg = '$deg'";
+        $r = "INSERT INTO ".$grname."(student_id, fname, lname, num, mail, dg, yr, password, perm_id) (SELECT * FROM student WHERE dg = '$deg')";
         $s = mysqli_query($db, $r);
 echo "im here";
         if ($s) {
