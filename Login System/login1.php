@@ -58,8 +58,8 @@ if(empty($_POST["username"]) || empty($_POST["password"]))
 
     }else {
 
-        echo "'Incorrect username or password!";
-        header('Location: /Login System/login.php');
+        echo "Incorrect username or password!";
+
     }
 }
 ?>
