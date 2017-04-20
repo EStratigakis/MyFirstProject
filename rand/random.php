@@ -26,6 +26,6 @@ echo "im here";
     else{
         echo "<script type='text/javascript'>alert('Table already exists')</script>";
         ?>
-        <script type="text/javascript">window.history.go(-2);</script><?php
+        <script type="text/javascript">window.history.go(-1);</script><?php
     }
 ?>
