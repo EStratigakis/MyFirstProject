@@ -11,26 +11,32 @@ if (($_SESSION['permissions_id'] != 3))
 else {
     include_once("../dbConnect.php");
 
-    $tbl_name = "student";
-    $db_name = "stu"; // Database name
-    mysqli_select_db($db, "$db_name") or die("cannot select DB");
-// get data that sent from form
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $numb = $_POST['matric'];
-    $mail = $_POST['mail'];
-    $deg = $_POST['dg'];
-    $yer = $_POST['yr'];
-    $dpass = md5($_POST['pass']);
-
-    $sql = "INSERT INTO student(fname, lname, num, mail, dg, yr, password, perm_id) VALUES ('$fname', '$lname', '$numb', '$mail', '$deg', '$yer', '$dpass', 2)";
-    $result = mysqli_query($db, $sql);
-
-    if ($result) {
-        echo "<script type='text/javascript'>alert('Student Added!')</script>";
-        ?><script type="text/javascript">window.history.go(-2);</script><?php
+    if (empty($_POST['fname']) || empty($_POST['lname']) || empty($_POST['matric'])||empty($_POST['mail']) || empty($_POST['pass']) ){
+        echo "<script type='text/javascript'>alert('All fields are required!')</script>";
+        header('Location: /stuchange/stuchange.html');
     } else {
-        echo "ERROR";
+        $tbl_name = "student";
+        $db_name = "stu"; // Database name
+        mysqli_select_db($db, "$db_name") or die("cannot select DB");
+// get data that sent from form
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $numb = $_POST['matric'];
+        $mail = $_POST['mail'];
+        $deg = $_POST['dg'];
+        $yer = $_POST['yr'];
+        $dpass = md5($_POST['pass']);
+
+        $sql = "INSERT INTO student(fname, lname, num, mail, dg, yr, password, perm_id) VALUES ('$fname', '$lname', '$numb', '$mail', '$deg', '$yer', '$dpass', 2)";
+        $result = mysqli_query($db, $sql);
+
+        if ($result) {
+            echo "<script type='text/javascript'>alert('Student Added!')</script>";
+            ?>
+            <script type="text/javascript">window.history.go(-2);</script><?php
+        } else {
+            echo "ERROR";
+        }
     }
 }
 ?>
