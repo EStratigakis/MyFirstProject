@@ -11,7 +11,7 @@ else
     $usename = $_SESSION['username'];
 
 
-    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $_POST['nepswd'])) {
+    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!-@#$%]{8,12}$/', $_POST['nepswd'])) {
         echo "Password not meeting requirements";
     }
 
@@ -40,13 +40,13 @@ else
         }
         else
         {
-            echo "Wrong Password";
+            echo "<script type='text/javascript'>alert('Wrong Password')</script>";
 
         }
     }
     else
     {
-        echo "New passwords are not the same!";
+        echo "<script type='text/javascript'>alert('New passwords are not the same!')</script>";
 
     }
 }
