@@ -10,15 +10,20 @@ if(empty($_POST["oldpass"]) || empty($_POST["nepswd"] || empty($_POST["ne1pswd"]
 else
 {
     $usename = $_SESSION['username'];
-    $oldpass = md5($_POST['oldpass']);
-    $nepass = md5($_POST['nepswd']);
-    $ne1pass = md5($_POST['ne1pswd']);
+    $oldpass = $_POST['oldpass'];
+    $nepass = $_POST['nepswd'];
+    $ne1pass = $_POST['ne1pswd'];
+
+
+    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $nepass)) {
+        echo "Password not meeting requirements";
+    }
 
     if ($nepass === $ne1pass) {
 
-        if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $nepass)) {
-            echo "Password not meeting requirements";
-        }
+        $oldpass = md5($_POST['oldpass']);
+        $nepass = md5($_POST['nepswd']);
+        $ne1pass = md5($_POST['ne1pswd']);
 
         mysqli_select_db($db, 'user');
         $sql = "SELECT uid FROM users WHERE username = '$usename' AND password='$oldpass'";
