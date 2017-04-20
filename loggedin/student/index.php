@@ -24,9 +24,15 @@ else {
     mysqli_select_db($db, "stu") or die("cannot select DB");
 
     $sql1 = "SELECT * FROM $tbl_name1 ORDER BY student_id ASC";
+
+    $db_name1 = "stu";
+    mysqli_select_db($db, "stu") or die("cannot select DB");
+
+    $sql3 = "SELECT * FROM $tbl_name1 WHERE dg = ".$_SESSION['dg']." ORDER BY student_id ASC";
 // OREDER BY id DESC is order result by descending
 
     $result1 = mysqli_query($db, $sql1);
+    $result3 = mysqli_query($db, $sql3);
 
     $tbl_name2="uload";
     $db_name2="uploads";
@@ -36,6 +42,8 @@ else {
 // OREDER BY id DESC is order result by descending
 
     $result2=mysqli_query($db,$sql2);
+
+
 }
 ?>
 
@@ -93,7 +101,12 @@ else {
     <div style="width:100%">
         <h1 align="center"><?php echo "Hello, " .$_SESSION['nou']. "!";?></h1>
     </div>
-    <div class="container">
+</div>
+</div>
+<div class="col-sm-3">
+
+</div>
+<div class="col-sm-6">
         <div class="table-responsive">
             <div><b>Forum</b></div>
             <p></p><table class="table table-bordered">
@@ -129,9 +142,8 @@ else {
             </table><br><br>
         </div>
     </div>
-
-
 </div>
+
 <div class="container">
     <div class="table-responsive">
         <div><b>Students</b></div>
@@ -201,6 +213,32 @@ else {
     </div>
 </div>
 
+<div class="col-sm-3">
+    <div class="table-responsive">
+        <div><b><?php echo $_SESSION['dg'] ?></b></div>
+        <p></p><table class="table table-bordered">
+            <tr>
+                <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Last Name</strong></td>
+                <td width="50%" align="center" bgcolor="#E6E6E6"><strong>Matriculation Number</strong></td>
+            </tr>
+
+            <?php
+
+            // Start looping table row
+            while($rows = mysqli_fetch_array($result1)){
+                ?>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['lname']; ?></td>
+                    <td align="center" bgcolor="#FFFFFF"><?php echo $rows['dg']; ?></td>
+                </tr>
+
+                <?php
+// Exit looping and close connection
+            }
+            ?>
+        </table><br><br>
+    </div>
+</div>
 
 </body>
 <footer>

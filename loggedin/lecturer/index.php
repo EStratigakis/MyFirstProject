@@ -80,6 +80,7 @@ else {
                     <li><a href="/Upload/upload.html">Upload</a></li>
                     <li><a href="/Registration/regi.html">Add Student</a></li>
                     <li><a href="/group/index.php">Students</a></li>
+                    <li><a href="/rand/rform.html">Create a group</a></li>
                     <li><a href="/changepass/passchange.html">Change Password</a></li>
                 </ul>
             </li>
