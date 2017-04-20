@@ -13,8 +13,8 @@ else
         $uname = $_SESSION['username'];
 
         if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!-@#$%]{8,16}$/', $_POST['npswd'])) {
-            echo "Password not meeting requirements";
-        }
+            echo "<script type='text/javascript'>alert('Password requirements not met!')</script>";
+
 
         if ($_POST['npswd'] === $_POST['n1pswd']) {
 
@@ -49,6 +49,7 @@ else
         {
             echo "<script type='text/javascript'>alert('New passwords does not match')</script>";
             header('Location: /stuchange/stuchange.html');
+        }
         }
 }
 ?>
