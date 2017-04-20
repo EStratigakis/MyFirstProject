@@ -12,7 +12,7 @@ else
 
         $uname = $_SESSION['username'];
 
-        if(!preg_match('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$', $_POST['npswd'])) {
+        if(!preg_match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$", $_POST['npswd'])) {
             echo "<script type='text/javascript'>alert('Password requirements not met!')</script>";
             ?><script type="text/javascript">window.history.go(-1);</script><?php
         }
