@@ -11,7 +11,7 @@ if ($_SESSION['permissions_id'] != 1)
 else {
     include_once("../dbConnect.php");
 
-    if (empty($_POST["olpass"]) || empty($_POST["npswd"] || empty($_POST["n1pswd"]))) {
+    if (empty($_POST['usr']) || empty($_POST['pswd'])) {
         echo "<script type='text/javascript'>alert('All fields are required!')</script>";
         header('Location: /stuchange/stuchange.html');
     } else {
