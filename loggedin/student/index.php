@@ -141,10 +141,10 @@ else {
                 </tr>
             </table><br><br>
         </div>
-    </div>
-</div>
 
-<div class="container">
+
+
+
     <div class="table-responsive">
         <div><b>Students</b></div>
         <p></p><table class="table table-bordered">
@@ -169,10 +169,10 @@ else {
             ?>
         </table><br><br>
     </div>
-</div>
 
 
-<div class="container">
+
+
     <div class="table-responsive">
         <div><b>Uploads</b></div>
         <p></p><table class="table table-bordered">
@@ -211,7 +211,9 @@ else {
             </tr>
         </table><br>
     </div>
+
 </div>
+
 
 <div class="col-sm-3">
     <div class="table-responsive">
